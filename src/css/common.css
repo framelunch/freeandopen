@@ -22,3 +22,13 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+
+.layout {
+    width: 1224px;
+    max-width: 100%;
+    margin: 0 auto;
+    @media (--sp) {
+        width: auto;
+    }
+}

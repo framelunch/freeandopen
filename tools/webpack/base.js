@@ -10,12 +10,12 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/',
   },
-  optimization: {
-    splitChunks: {
-      name: 'js/vendor.bundle',
-      chunks: 'initial',
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     name: 'js/vendor.bundle',
+  //     chunks: 'initial',
+  //   },
+  // },
   resolve: {
     modules: ['node_modules'],
     extensions: ['json', '.tsx', '.ts', '.jsx', '.js'],

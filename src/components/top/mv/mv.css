@@ -1,0 +1,11 @@
+.mv {
+    .image {
+        width: 80%;
+        img {
+            width: 100%;
+        }
+        @media (--sp) {
+            width: 40%;
+        }
+    }
+}
