@@ -1,3 +1,32 @@
 .header {
     /* header style here */
+    border-bottom: 1px solid #e5e5e5;
+    .layout {
+        padding: 2vw 6.25vw 2vw 6.25vw;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .pc_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--list {
+            display: flex;
+            gap: 30px;
+
+            a {
+                text-decoration: none;
+                font-family: "Raleway", sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .btn {
+                background-color: #000;
+                color: #fff;
+                padding: 10px 12px;
+            }
+        }
+    }
 }

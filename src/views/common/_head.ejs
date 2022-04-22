@@ -1,45 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="<%= lang %>">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title><%= conf.title %></title>
-    <meta name="description" content="<%= conf.description %>">
+    <meta name="description" content="<%= conf.description %>" />
 
     <meta itemprop="name" content="<%= conf.title %>" />
     <meta itemprop="description" content="<%= conf.description %>" />
-<% if (typeof conf.metaImage === 'string') { %>
+    <% if (typeof conf.metaImage === 'string') { %>
     <meta itemprop="image" content="<%- conf.metaImage %>" />
-<% } %>
+    <% } %>
 
     <meta property="og:title" content="<%= conf.title %>" />
     <meta property="og:description" content="<%= conf.description %>" />
-<% if (typeof og === 'object') { %>
+    <% if (typeof og === 'object') { %>
     <meta property="og:type" content="<%= og.type %>" />
     <meta property="og:image" content="<%= og.image %>" />
     <meta property="og:url" content="<%= og.url %>" />
     <meta property="og:site_name" content="<%= og.siteName %>" />
-<% } %>
-
-<% if (typeof twitter === 'object') { %>
+    <% } %> <% if (typeof twitter === 'object') { %>
     <meta name="twitter:card" content="<%= twitter.card %>" />
     <meta name="twitter:site" content="<%= twitter.site %>" />
-<% } %>
+    <% } %>
 
-    <link rel="stylesheet" href="/css/common.css">
-<%
-    conf.style = conf.style || [];
-    if (typeof conf.style === 'string') {
-        conf.style = [conf.style];
-    }
-    conf.style.forEach(style => {
-%>
-    <link rel="stylesheet" href="<%= style.match(/^https?:/) != null ? style : `/css/${style}` %>">
-<% }) %>
-<% if (typeof conf.ldJson === 'object') { %>
-    <script type="application/ld+json"><%- JSON.stringify(conf.ldJson) %></script>
-<% } %>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
+    <link rel="stylesheet" href="/css/common.css" />
+    <% conf.style = conf.style || []; if (typeof conf.style === 'string') { conf.style = [conf.style]; }
+    conf.style.forEach(style => { %>
+    <link rel="stylesheet" href="<%= style.match(/^https?:/) != null ? style : `/css/${style}` %>" />
+    <% }) %> <% if (typeof conf.ldJson === 'object') { %>
+    <script type="application/ld+json">
+      <%- JSON.stringify(conf.ldJson) %>
+    </script>
+    <% } %>
+  </head>
+  <body></body>
+</html>

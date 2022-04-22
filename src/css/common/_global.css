@@ -1,8 +1,14 @@
 @import "libraries-frontend-framelunch/css/_variables.css";
 @import "libraries-frontend-framelunch/css/_keyframes.css";
 
+html {
+    font-size: 62.5%;
+}
+
 body {
-    font-family: var(--fontFamily-base);
+    background-color: #f7f7f7;
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 /* stylelint-disable-next-line */
@@ -38,4 +44,72 @@ pre {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* Aboutのスタイル */
+.about {
+    .layout {
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        padding: 15.1rem 6.25vw;
+    }
+
+    &_head {
+        display: flex;
+        justify-content: space-between;
+        &--text {
+            h2 {
+                font-size: 5rem;
+                font-family: "Raleway", sans-serif;
+                margin-bottom: 3.1rem;
+            }
+
+            span {
+                font-size: 1.8rem;
+                color: #e74c3c;
+            }
+
+            p {
+                font-size: 1.8rem;
+                letter-spacing: 0.18em;
+                line-height: 2.22;
+                margin-top: 4.9rem;
+            }
+        }
+    }
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 8rem;
+
+        &--img {
+            img {
+                width: 540px;
+            }
+        }
+
+        &--text {
+            h3 {
+                font-size: 2.6rem;
+                color: #e74c3c;
+                font-weight: bold;
+                letter-spacing: 0.1em;
+                line-height: 1.85;
+            }
+
+            p {
+                margin-top: 3.7rem;
+                font-size: 1.8rem;
+                letter-spacing: 0.035em;
+                line-height: 1.66;
+
+                span {
+                    background-color: #e74c3c;
+                    color: #fff;
+                    padding: 0 0.6rem;
+                }
+            }
+        }
+    }
 }

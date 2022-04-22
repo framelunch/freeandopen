@@ -23,9 +23,8 @@
     border: 0;
 }
 
-
 .layout {
-    width: 1224px;
+    width: 1360px;
     max-width: 100%;
     margin: 0 auto;
     @media (--sp) {

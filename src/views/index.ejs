@@ -1,20 +1,45 @@
-<%
-const conf = {
-    title : 'top',
-    description : 'This is top page',
-    style: 'index.css',
-    script: 'index.js',
-    assets: {
-        image: '/top/image'
-    }
-};
-%>
-
-<%- include('./common/_head.ejs', { conf }) %>
-<%- include('../components/header/header.ejs', { conf }) %>
+<% const conf = { title : 'top', description : 'This is top page', style: 'index.css', script: 'index.js', assets: {
+image: '/top/image' } }; %> <%- include('./common/_head.ejs', { conf }) %> <%-
+include('../components/header/header.ejs', { conf }) %>
 
 <main id="main" class="main" role="main">
+  <div class="about">
+    <div class="layout">
+      <div class="about_head">
+        <div class="about_head--text">
+          <h2>About US</h2>
+          <span>Freeandopenについて</span>
+          <p>
+            お客様に喜んでいただけることを最大の使命とし、FileMakerとアジャイル開発を用いて、<br />
+            お客様の業務や要望に合うエンドユーザーファーストなシステムをご提供いたします。
+          </p>
+        </div>
+        <div class="about_head--img">
+          <img src="<%= conf.assets.image %>/mark.png" alt="" />
+        </div>
+      </div>
+
+      <div class="about_wrapper">
+        <div class="about_wrapper--img">
+          <img src="<%= conf.assets.image %>/claris-partner.png" alt="" />
+        </div>
+
+        <div class="about_wrapper--text">
+          <h3>
+            Freeandopenは<br />
+            FileMaker Business Alliance<br />
+            認定企業です。
+          </h3>
+
+          <p>
+            FileMaker Business AllianceとはClaris社（旧FileMaker社）からFileMakerを利用した<span
+              >開発における高い技術力</span
+            ><br />FileMakerを利用した<span>システム開発の実績</span>を<br />評価されている企業にのみ与えられるライセンスです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
-<%- include('../components/footer/footer.ejs', { conf }) %>
-<%- include('./common/_foot.ejs', { conf }) %>
+<%- include('../components/footer/footer.ejs', { conf }) %> <%- include('./common/_foot.ejs', { conf }) %>
