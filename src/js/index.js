@@ -8,7 +8,8 @@ import subscribeEvents from './modules/_events';
 
 class Main {
   onDOMContentLoaded = () => {
-    console.log(`DOMContentLoaded: ${format(new Date())}`);
+    // eslint-disable-next-line
+    const swiper = new Swiper('.swiper', {});
   };
 }
 
