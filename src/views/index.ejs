@@ -93,70 +93,7 @@ include('../components/header/header.ejs', { conf }) %>
       </div>
     </div>
   </div>
-
-  <div class="about_detail">
-    <div class="layout">
-      <div class="about_detail--list">
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number01.png" alt="" />
-            <h2>実務経験者揃いの開発集団</h2>
-            <p>
-              小売業（生産管理、商品管理など）を中心に、<br class="pc-br" />
-              経理や人事などのエグゼクティブレイヤー経験者が<br class="pc-br" />
-              多数在籍しているため、業務改善に関するアドバイスや<br class="pc-br" />
-              システムの運用・保守などトータルでのサポートも可能です。<br />
-              システム開発のみに留まらずお客様の様々な課題を解決する、<br class="pc-br" />
-              提案型のシステムインテグレーションサービスを<br class="pc-br" />
-              ご提供いたします。
-            </p>
-          </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development01.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
-        </div>
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number02.png" alt="" />
-            <h2>
-              長年培ったノウハウや<br />
-              幅広いスキルによる対応
-            </h2>
-            <p>
-              長年FileMakerの開発に携わったメンバーや、<br class="pc-br" />
-              大手のシステム開発を手掛ける企業から<br class="pc-br" />
-              転職してきたメンバーも在籍しているため、<br class="pc-br" />
-              多種多様のスキルを用いた開発が可能です。<br class="pc-br" />
-              FileMakerのみでの開発が難しい要望でも、<br class="pc-br" />
-              お客様に適したソリューションで対応することができます。<br class="pc-br" />
-            </p>
-          </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development02.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
-        </div>
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number03.png" alt="" />
-            <h2>コミュニケーションを重視した開発</h2>
-            <p>
-              決まった開発内容や計画性にとらわれず、<br class="pc-br" />
-              実際にシステムを使用するお客様とのコミュニケーションを重視して<br class="pc-br" />
-              柔軟性を持った開発を行い、変化し成長していくことができる<br class="pc-br" />
-              システムを実現します。
-            </p>
-          </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development03.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <%- include('../components/top/aboutDetail/aboutDetail.ejs', { conf }) %>
   <div class="filemaker_development">
     <div class="layout">
       <h2 class="section-title">Filemaker Development</h2>

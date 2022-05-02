@@ -1,0 +1,87 @@
+
+/* about_detail */
+.about_detail {
+    position: relative;
+    background-color: #fff;
+    .layout {
+        padding: 0 0 0 10rem;
+        border-right: 1px solid #e5e5e5;
+        @media (--sp) {
+            padding: 0 5.3vw;
+        }
+    }
+
+    &--list {
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            @media (--sp) {
+                flex-direction: column;
+                gap: 3.5rem;
+            }
+            &--text {
+                margin-top: 6.7rem;
+                @media (--sp) {
+                    margin-top: 7.5rem;
+                }
+                img {
+                    margin-left: -10rem;
+                    @media (--sp) {
+                        margin-left: 0;
+                        width: 8.7rem;
+                    }
+                }
+
+                h2 {
+                    font-size: 3rem;
+                    line-height: 1.8;
+                    font-weight: 500;
+                    margin-top: 11.5rem;
+                    @media (--sp) {
+                        font-size: 1.9rem;
+                        line-height: 1.42;
+                        margin-top: 4rem;
+                    }
+                }
+
+                p {
+                    line-height: 2.375;
+                    font-weight: 300;
+                    letter-spacing: 0.1em;
+                    margin-top: 6rem;
+                    @media (--sp) {
+                        font-size: 1.3rem;
+                        line-height: 2;
+                        margin-top: 3rem;
+                    }
+                }
+            }
+
+            &--img {
+                position: relative;
+                z-index: 100;
+                @media (--sp) {
+                    padding-left: 8vw;
+                }
+                img {
+                    @media (--sp) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .reception-bg {
+                position: absolute;
+                bottom: 0;
+                left: -22rem;
+                z-index: 50;
+                @media (--sp) {
+                    width: 88%;
+                    bottom: 40%;
+                    left: -5.3vw;
+                }
+            }
+        }
+    }
+}
