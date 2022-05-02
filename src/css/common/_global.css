@@ -13,10 +13,6 @@ body {
     margin: 0 auto;
 }
 
-main {
-    overflow-x: hidden;
-}
-
 /* stylelint-disable-next-line */
 *,
 *::before,

@@ -8,6 +8,7 @@
 .mv {
     background-color: #f7f7f7;
     position: relative;
+    overflow: hidden;
 
     .layout {
         text-align: right;
@@ -308,6 +309,7 @@
 /* filemaker_development */
 .filemaker_development {
     background-color: #fff;
+    overflow: hidden;
     .layout {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
@@ -549,6 +551,7 @@
 /* our_work */
 .our_work {
     background-color: #fff;
+    overflow: hidden;
     .layout {
         padding: 19.2rem 10rem 15.1rem;
         border-left: 1px solid #e7e7e7;
