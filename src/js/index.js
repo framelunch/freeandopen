@@ -6,10 +6,14 @@ import notice from 'libraries-frontend-framelunch/js/notice';
 
 import subscribeEvents from './modules/_events';
 
+import '../components/top/mv/mv';
+
 class Main {
   onDOMContentLoaded = () => {
     // eslint-disable-next-line
     const swiper = new Swiper('.swiper', {});
+
+    notice.publish('init', []);
   };
 }
 
