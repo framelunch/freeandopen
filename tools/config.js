@@ -94,6 +94,7 @@ exports.script = {
   watch: ['src/**/*.{js,jsx,ts,tsx}', 'src/components/**/*.{js,jsx,ts,tsx}'],
   entry: {
     'js/index': './src/js/index.js',
+    'js/work': './src/js/work.js',
   },
 };
 

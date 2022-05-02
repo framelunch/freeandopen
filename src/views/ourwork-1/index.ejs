@@ -1,0 +1,21 @@
+<%
+const conf = {
+    title : 'top',
+    description : 'This is top page',
+    style: 'work.css',
+    script: 'work.js',
+    assets: {
+        image: '/work/image'
+    }
+};
+%>
+
+<%- include('../common/_head.ejs', { conf }) %>
+<%- include('../../components/header/header.ejs', { conf }) %>
+
+<main id="main" class="main" role="main">
+
+</main>
+
+<%- include('../../components/footer/footer.ejs', { conf }) %>
+<%- include('../common/_foot.ejs', { conf }) %>
