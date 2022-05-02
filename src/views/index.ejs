@@ -3,20 +3,74 @@ image: '/top/image' } }; %> <%- include('./common/_head.ejs', { conf }) %> <%-
 include('../components/header/header.ejs', { conf }) %>
 
 <main id="main" class="main" role="main">
+  <div class="mv">
+    <div class="layout">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<%= conf.assets.image %>/fv1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <div class="copy_wrapper">
+          <div class="copy_wrapper--top">
+            <div>
+              <span>F</span><span>i</span><span>l</span><span>e</span><span>M</span><span>a</span><span>k</span
+              ><span>e</span><span>r</span>
+            </div>
+            <div><img src="<%= conf.assets.image %>/multiplicative.png" alt="" /></div>
+            <div>
+              <span>ア</span><span>ジ</span><span>ャ</span><span>イ</span><span>ル</span><span>開</span><span>発</span>
+            </div>
+          </div>
+          <div class="copy_wrapper--bottom">
+            <div><img src="<%= conf.assets.image %>/equal.png" alt="" /></div>
+            <div><span>D</span><span>X</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        日々進化し変化する市場に合わせた、<br />
+        スピーディかつ柔軟なシステム開発でDXを実現し、<br />
+        NEXTSTAGEへの扉を開く。
+      </p>
+
+      <div class="scrolldown">
+        Scroll
+      </div>
+    </div>
+
+    <div class="loop_wrapper">
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+      <div>Freeandopen Inc.</div>
+    </div>
+  </div>
+
   <div class="about">
     <div class="layout">
       <div class="about_head">
-        <div class="about_head--text">
-          <h2>About US</h2>
-          <span>Freeandopenについて</span>
-          <p>
-            お客様に喜んでいただけることを最大の使命とし、FileMakerとアジャイル開発を用いて、<br />
-            お客様の業務や要望に合うエンドユーザーファーストなシステムをご提供いたします。
-          </p>
+        <div class="about_head--inner">
+          <div class="about_head--inner--text">
+            <h2 class="section-title">About US</h2>
+            <span class="section-title-child">Freeandopenについて</span>
+          </div>
+          <div class="about_head--inner--img">
+            <img src="<%= conf.assets.image %>/mark.png" alt="" />
+          </div>
         </div>
-        <div class="about_head--img">
-          <img src="<%= conf.assets.image %>/mark.png" alt="" />
-        </div>
+        <p>
+          お客様に喜んでいただけることを最大の使命とし、FileMakerとアジャイル開発を用いて、<br
+            class="pc-br"
+          />お客様の業務や要望に合うエンドユーザーファーストなシステムをご提供いたします。
+        </p>
       </div>
 
       <div class="about_wrapper">
@@ -31,11 +85,371 @@ include('../components/header/header.ejs', { conf }) %>
             認定企業です。
           </h3>
 
+          <p>FileMaker Business Allianceとは<br class="sp-br" />Claris社（旧FileMaker社）から</p>
+          <p>FileMakerを利用した<span>開発における高い技術力</span></p>
+          <p>FileMakerを利用した<span>システム開発の実績</span>を</p>
+          <p>評価されている企業にのみ与えられる<br class="sp-br" />ライセンスです。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about_detail">
+    <div class="layout">
+      <div class="about_detail--list">
+        <div class="about_detail--list--item">
+          <div class="about_detail--list--item--text">
+            <img src="<%= conf.assets.image %>/section-number01.png" alt="" />
+            <h2>実務経験者揃いの開発集団</h2>
+            <p>
+              小売業（生産管理、商品管理など）を中心に、<br class="pc-br" />
+              経理や人事などのエグゼクティブレイヤー経験者が<br class="pc-br" />
+              多数在籍しているため、業務改善に関するアドバイスや<br class="pc-br" />
+              システムの運用・保守などトータルでのサポートも可能です。<br />
+              システム開発のみに留まらずお客様の様々な課題を解決する、<br class="pc-br" />
+              提案型のシステムインテグレーションサービスを<br class="pc-br" />
+              ご提供いたします。
+            </p>
+          </div>
+          <div class="about_detail--list--item--img">
+            <img src="<%= conf.assets.image %>/agile_development01.jpg" alt="" />
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+        <div class="about_detail--list--item">
+          <div class="about_detail--list--item--text">
+            <img src="<%= conf.assets.image %>/section-number02.png" alt="" />
+            <h2>
+              長年培ったノウハウや<br />
+              幅広いスキルによる対応
+            </h2>
+            <p>
+              長年FileMakerの開発に携わったメンバーや、<br class="pc-br" />
+              大手のシステム開発を手掛ける企業から<br class="pc-br" />
+              転職してきたメンバーも在籍しているため、<br class="pc-br" />
+              多種多様のスキルを用いた開発が可能です。<br class="pc-br" />
+              FileMakerのみでの開発が難しい要望でも、<br class="pc-br" />
+              お客様に適したソリューションで対応することができます。<br class="pc-br" />
+            </p>
+          </div>
+          <div class="about_detail--list--item--img">
+            <img src="<%= conf.assets.image %>/agile_development02.jpg" alt="" />
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+        <div class="about_detail--list--item">
+          <div class="about_detail--list--item--text">
+            <img src="<%= conf.assets.image %>/section-number03.png" alt="" />
+            <h2>コミュニケーションを重視した開発</h2>
+            <p>
+              決まった開発内容や計画性にとらわれず、<br class="pc-br" />
+              実際にシステムを使用するお客様とのコミュニケーションを重視して<br class="pc-br" />
+              柔軟性を持った開発を行い、変化し成長していくことができる<br class="pc-br" />
+              システムを実現します。
+            </p>
+          </div>
+          <div class="about_detail--list--item--img">
+            <img src="<%= conf.assets.image %>/agile_development03.jpg" alt="" />
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filemaker_development">
+    <div class="layout">
+      <h2 class="section-title">Filemaker Development</h2>
+      <span class="section-title-child">ファイルメーカー開発</span>
+      <p>
+        FileMakerは、米Appleの100%子会社・Claris社が開発しており、<br class="pc-br" />
+        常にバージョンアップが続けられている、日本国内で20万以上の組織で利用されるほど<br class="pc-br" />
+        人気の高いクロスプラットフォームのデータベースソフトウェアです。
+      </p>
+      <div class="filemaker_development--wrapper">
+        <div class="filemaker_development--wrapper--inner">
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img1.png" alt="" />
+            </div>
+            <div class="number">01</div>
+            <h3>小規模～中規模の<br class="pc-br" />システムに最適</h3>
+            <p>
+              大規模システムの開発も可能ですが、費用が高く、改修スピードが遅い基幹システムのサブシステム的な立ち位置にも最適です。
+            </p>
+          </div>
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img2.png" alt="" />
+            </div>
+            <div class="number">02</div>
+            <h3>他システムとの<br class="pc-br" />スムーズな連携</h3>
+            <p>
+              FTPやAPIを使用することで、他システムやWEBアプリケーションとのデータ連携をスムーズに行うことができます。
+            </p>
+          </div>
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img3.png" alt="" />
+            </div>
+            <div class="number">03</div>
+            <h3>企業の成長とともに<br class="pc-br" />進化するシステム</h3>
+            <p>
+              「データ」「データベース構造」「プログラム」が一体化していることにより簡単に機能拡張ができ、「小さく始めて大きく育てる」システム開発が可能です。
+            </p>
+          </div>
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img4.png" alt="" />
+            </div>
+            <div class="number">04</div>
+            <h3>優れたデザイン性と操作性</h3>
+            <p>
+              他のデータベースシステムよりも、優れたデザイン性・操作性のインターフェイスを手軽に作ることができます。
+            </p>
+          </div>
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img5.png" alt="" />
+            </div>
+            <div class="number">05</div>
+            <h3>スピーディなシステム構築</h3>
+            <p>
+              ローコード開発プラットフォームの為、他システムに比べて短納期で構築することができます。
+            </p>
+          </div>
+          <div class="filemaker_development--wrapper--inner--item">
+            <div class="img-wrapper">
+              <img src="<%= conf.assets.image %>/filemaker_development_img6.png" alt="" />
+            </div>
+            <div class="number">06</div>
+            <h3>OS依存がなくiOSとの<br class="pc-br" />親和性も高い</h3>
+            <p>
+              Windows や Mac
+              などのOSに依存せずにシステムが稼働します。また、iOSとの相性も良く、モバイル端末を使用したシステム構築も可能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="agile_development">
+    <div class="layout">
+      <h2 class="section-title">Agile Development</h2>
+      <span class="section-title-child">アジャイル開発</span>
+      <p>
+        システム開発において、最初から要件定義や開発内容を明確にすることは難しく、<br class="pc-br" />
+        機能不足や使いづらさが完成後に浮き彫りになり、システム自体が使われなくなることは少なくありません。
+      </p>
+      <p>
+        そこで弊社は、取引先企業様の成長と共に柔軟に変化し対応する「アジャイル開発」を採用しています。<br
+          class="pc-br"
+        />
+        実際にシステムを使用するご担当者様の意見を取り入れ、スピーディに改修や機能実装を行い、<br class="pc-br" />
+        使い勝手の良いシステム構築ができる開発手法です。
+      </p>
+    </div>
+  </div>
+
+  <div class="agile_development_detail">
+    <div class="agile_development_detail--wrapper">
+      <div class="agile_development_detail--wrapper--item">
+        <div class="layout">
+          <div class="agile_development_detail--wrapper--item--title">
+            <span class="number">01</span>
+            <h3>プロトタイプを用いた<br class="sp-br" />システムの構築</h3>
+          </div>
+
+          <div class="agile_development_detail--wrapper--item--text">
+            <p>
+              要件のヒアリングから2ヶ月～3ヶ月でプロトタイプシステムを作成し、実際にお客様にシステムを使用して頂きUI改善や機能追加などのフィードバックをもらいながら改修を繰り返すため、自社の運用にフィットしたシステムの構築ができます。
+            </p>
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+      </div>
+
+      <div class="agile_development_detail--wrapper--item">
+        <div class="layout">
+          <div class="agile_development_detail--wrapper--item--title">
+            <span class="number">02</span>
+            <h3>仕様変更や機能追加などに<br />スムーズに対応</h3>
+          </div>
+
+          <div class="agile_development_detail--wrapper--item--text">
+            <p>
+              要件や仕様ありきではなく、「システムは変化する」前提として、改修や機能追加に柔軟に対応します。開発途中でもお客様の意見を取り入れることで、最大限ニーズに応えた満足度の高いシステムを開発いたします。
+            </p>
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+      </div>
+
+      <div class="agile_development_detail--wrapper--item">
+        <div class="layout">
+          <div class="agile_development_detail--wrapper--item--title">
+            <span class="number">03</span>
+            <h3>素早い開発</h3>
+          </div>
+
+          <div class="agile_development_detail--wrapper--item--text">
+            <p>
+              ウォーターフォール開発のような要件定義や仕様検討はせず、優先度の高い機能から着手してその都度部分リリースするため、手戻りを最小限に抑え、素早い開発を実現できます。
+            </p>
+          </div>
+          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="our_work">
+    <div class="layout">
+      <h2 class="section-title">Our Work</h2>
+      <span class="section-title-child">開発・運用実績</span>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="img-wrapper">
+                <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+              </div>
+              <h2>株式会社グラニフ様</h2>
+              <p>派遣登録者管理／派遣引当管理</p>
+              <p>派遣登録者管理／派遣引当管理</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="img-wrapper">
+                <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+              </div>
+              <h2>株式会社グラニフ様</h2>
+              <p>派遣登録者管理／派遣引当管理</p>
+              <p>派遣登録者管理／派遣引当管理</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="img-wrapper">
+                <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+              </div>
+              <h2>株式会社グラニフ様</h2>
+              <p>派遣登録者管理／派遣引当管理</p>
+              <p>派遣登録者管理／派遣引当管理</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="img-wrapper">
+                <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+              </div>
+              <h2>株式会社グラニフ様</h2>
+              <p>派遣登録者管理／派遣引当管理</p>
+              <p>派遣登録者管理／派遣引当管理</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="layout">
+      <h2 class="section-title">Company</h2>
+      <span class="section-title-child">会社概要</span>
+    </div>
+
+    <div class="company_detail">
+      <div class="layout">
+        <img src="<%= conf.assets.image %>/logo-white.png" alt="" />
+        <div class="address">
+          <p>〒150-6139</p>
+          <p>東京都渋谷区渋谷2-24-12 39F</p>
+          <p>WeWork 渋谷スクランブルスクエア(38-105)</p>
+        </div>
+
+        <div class="president">
+          <span>代表取締役社長</span>
+          <p>兼子 佳也</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="//maps.googleapis.com/maps/api/js?key=AIzaSyA6vkhf5YgGQmOPqQ1TQdhD15Tk0dRYPxM&callback=initMap"
+      async
+    ></script>
+    <script>
+      function initMap() {
+        var mapPosition = { lat: 35.65853708026859, lng: 139.70220304684628 };
+        var mapArea = document.getElementById('maps');
+        var mapOptions = {
+          center: mapPosition,
+          zoom: 16,
+          styles: [
+            {
+              stylers: [
+                {
+                  saturation: -100,
+                },
+              ],
+            },
+          ],
+        };
+
+        var map = new google.maps.Map(mapArea, mapOptions);
+
+        var markerOptions = {
+          map: map,
+          position: mapPosition,
+          icon: '<%= conf.assets.image %>/map-pin.png',
+        };
+
+        var marker = new google.maps.Marker(markerOptions);
+      }
+    </script>
+    <div id="maps"></div>
+  </div>
+
+  <div class="contact">
+    <div class="layout">
+      <h2 class="section-title">Contact Us</h2>
+      <span class="section-title-child">お問い合わせ</span>
+
+      <div class="contact_wrapper">
+        <div class="contact_wrapper--text">
           <p>
-            FileMaker Business AllianceとはClaris社（旧FileMaker社）からFileMakerを利用した<span
-              >開発における高い技術力</span
-            ><br />FileMakerを利用した<span>システム開発の実績</span>を<br />評価されている企業にのみ与えられるライセンスです。
+            開発に関するご相談など弊社への<br class="pc-br" />お問い合わせはこちらのフォームから<br
+              class="pc-br"
+            />お願いいたします。
           </p>
+          <span>＊は必須です</span>
+        </div>
+
+        <div class="contact_wrapper--form">
+          <form action="" method="">
+            <div class="form-item">
+              <label for="name">Name<span>*</span></label>
+              <input id="name" type="text" name="name" />
+            </div>
+            <div class="form-item">
+              <label for="tel">Tel<span>*</span></label>
+              <input id="tel" type="text" name="tel" />
+            </div>
+            <div class="form-item">
+              <label for="email">E-mail<span>*</span></label>
+              <input id="email" type="text" name="email" />
+            </div>
+            <div class="form-item">
+              <label for="Message">Message</label>
+              <textarea name="Message" id="Message"></textarea>
+            </div>
+            <div class="submit_wrapper">
+              <input type="submit" value="Submit" class="submit" />
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -2,18 +2,33 @@
     /* header style here */
     border-bottom: 1px solid #e5e5e5;
     .layout {
-        padding: 2vw 6.25vw 2vw 6.25vw;
+        padding: 3.2rem 10rem;
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
+        @media (max-width: 767px) {
+            padding: 1.9rem 5.3vw;
+        }
     }
 
-    .pc_nav {
+    .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &--list {
+
+        a {
+            img {
+                @media (--sp) {
+                    width: 14rem;
+                }
+            }
+        }
+
+        &_list {
             display: flex;
             gap: 30px;
+            @media (max-width: 767px) {
+                display: none;
+            }
 
             a {
                 text-decoration: none;
@@ -27,6 +42,99 @@
                 color: #fff;
                 padding: 10px 12px;
             }
+        }
+
+        .drawer-hidden {
+            display: none;
+        }
+
+        .drawer-open {
+            display: flex;
+            width: 3rem;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 5.3vw;
+            z-index: 100;
+            cursor: pointer;
+
+            & span,
+            & span::before,
+            & span::after {
+                content: "";
+                display: block;
+                height: 0.2rem;
+                width: 3rem;
+                background: #000;
+                transition: 0.5s;
+                position: absolute;
+            }
+
+            & span::before {
+                bottom: 8px;
+            }
+
+            & span::after {
+                top: 8px;
+            }
+        }
+
+        #drawer-check:checked ~ .drawer-open span {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #drawer-check:checked ~ .drawer-open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+            background: #fff;
+        }
+
+        #drawer-check:checked ~ .drawer-open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+            background: #fff;
+        }
+
+        .drawer-content {
+            width: 87%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            z-index: 99;
+            background: #000;
+            transition: 0.5s;
+            .drawer-list {
+                margin: 8rem 3rem 0;
+
+                .drawer-item {
+                    &.contact-btn {
+                        background-color: #fff;
+                        text-align: center;
+                        a {
+                            display: block;
+                            color: #000;
+                            font-size: 1.4rem;
+                            padding: 2rem 0;
+                        }
+                    }
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 2rem;
+                        letter-spacing: 0.1em;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 5.2rem;
+                    }
+                }
+            }
+        }
+
+        #drawer-check:checked ~ .drawer-content {
+            left: 13%;
         }
     }
 }
