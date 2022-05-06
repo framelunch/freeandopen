@@ -68,7 +68,7 @@
                         font-size: 3.2rem;
                     }
                     &:not(.-start) {
-                        transform: translateX(16px);
+                        transform: translateX(40px);
                         opacity: 0;
                     }
                     &:not(.-color) {

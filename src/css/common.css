@@ -45,6 +45,7 @@
 .section-title-child {
     font-size: 1.4rem;
     color: #e74c3c;
+    display: block;
     @media (--sp) {
         font-size: 1.2rem;
     }

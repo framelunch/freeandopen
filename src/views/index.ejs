@@ -9,8 +9,10 @@ include('../components/header/header.ejs', { conf }) %>
       <div class="about_head">
         <div class="about_head--inner">
           <div class="about_head--inner--text">
-            <h2 class="section-title">About US</h2>
-            <span class="section-title-child">Freeandopenについて</span>
+            <div class="show-animation" data-animation="title">
+              <h2 class="section-title">About US</h2>
+              <span class="section-title-child">Freeandopenについて</span>
+            </div>
           </div>
           <div class="about_head--inner--img">
             <img src="<%= conf.assets.image %>/mark.png" alt="" />
@@ -46,15 +48,17 @@ include('../components/header/header.ejs', { conf }) %>
   <%- include('../components/top/aboutDetail/aboutDetail.ejs', { conf }) %>
   <div class="filemaker_development">
     <div class="layout">
-      <h2 class="section-title">Filemaker Development</h2>
-      <span class="section-title-child">ファイルメーカー開発</span>
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title">Filemaker Development</h2>
+        <span class="section-title-child">ファイルメーカー開発</span>
+      </div>
       <p>
         FileMakerは、米Appleの100%子会社・Claris社が開発しており、<br class="pc-br" />
         常にバージョンアップが続けられている、日本国内で20万以上の組織で利用されるほど<br class="pc-br" />
         人気の高いクロスプラットフォームのデータベースソフトウェアです。
       </p>
       <div class="filemaker_development--wrapper">
-        <div class="filemaker_development--wrapper--inner">
+        <div class="filemaker_development--wrapper--inner show-animation" data-animation="filemaker">
           <div class="filemaker_development--wrapper--inner--item">
             <div class="img-wrapper">
               <img src="<%= conf.assets.image %>/filemaker_development_img1.png" alt="" />
@@ -123,8 +127,10 @@ include('../components/header/header.ejs', { conf }) %>
 
   <div class="agile_development">
     <div class="layout">
-      <h2 class="section-title">Agile Development</h2>
-      <span class="section-title-child">アジャイル開発</span>
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title">Agile Development</h2>
+        <span class="section-title-child">アジャイル開発</span>
+      </div>
       <p>
         システム開発において、最初から要件定義や開発内容を明確にすることは難しく、<br class="pc-br" />
         機能不足や使いづらさが完成後に浮き彫りになり、システム自体が使われなくなることは少なくありません。
@@ -143,8 +149,10 @@ include('../components/header/header.ejs', { conf }) %>
 
   <div class="company">
     <div class="layout">
-      <h2 class="section-title">Company</h2>
-      <span class="section-title-child">会社概要</span>
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title">Company</h2>
+        <span class="section-title-child">会社概要</span>
+      </div>
     </div>
 
     <div class="company_detail">
@@ -200,8 +208,10 @@ include('../components/header/header.ejs', { conf }) %>
 
   <div class="contact">
     <div class="layout">
-      <h2 class="section-title">Contact Us</h2>
-      <span class="section-title-child">お問い合わせ</span>
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title">Contact Us</h2>
+        <span class="section-title-child">お問い合わせ</span>
+      </div>
 
       <div class="contact_wrapper">
         <div class="contact_wrapper--text">
