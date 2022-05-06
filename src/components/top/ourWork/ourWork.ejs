@@ -1,0 +1,46 @@
+<%
+  const ourwork = [
+    {
+      title: 'グラニフ',
+      text: '生産管理／商品企画管理／EC情報管理／<br class="-hidden-sp">経理／コラボレーション管理',
+      image: 'graniph_logo1_Red_0621@2x.png'
+    },
+    {
+      title: 'シューズセレクション',
+      text: '【商品管理システム】<br>商品マスタ／発注管理／入荷管理／在庫管理<br>【営業管理システム】<br>テレアポ管理／営業活動管理／取引先管理／予算管理',
+      image: 'graniph_logo1_Red_0621@2x.png'
+    },
+    {
+      title: '大手インテリア',
+      text: '商品情報管理システム／品質管理システム／<br class="-hidden-sp">各種帳票の自動化',
+      image: 'graniph_logo1_Red_0621@2x.png'
+    },
+    {
+      title: 'アスタリスク',
+      text: '派遣者情報管理／採用情報管理／取引先・案件管理／<br class="-hidden-sp">支給・寮管理／給与管理',
+      image: 'graniph_logo1_Red_0621@2x.png'
+    },
+  ]
+%>
+<div class="our_work">
+  <div class="layout">
+    <h2 class="section-title">Our Work</h2>
+    <span class="section-title-child">開発・運用実績</span>
+    <div class="swiper" id="ourWorkSlide">
+      <div class="swiper-wrapper">
+        <% ourwork.forEach(function (value, key) { %>
+          <div class="swiper-slide">
+            <div class="box">
+              <div class="img-wrapper">
+                <img src="<%= conf.assets.image %>/<%- value.image %>" alt="" />
+              </div>
+              <h2><%- value.title %></h2>
+              <p><%- value.text %></p>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+/* agile_development */
+.agile_development {
+    background-color: #fff;
+    .layout {
+        padding: 0 10rem 5.2rem;
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+        @media (--sp) {
+            padding: 0 5.3vw 4rem;
+        }
+    }
+
+    p {
+        margin-top: 5rem;
+        line-height: 1.75;
+        font-weight: 300;
+        @media (--sp) {
+            margin-top: 3rem;
+            font-size: 1.3rem;
+            line-height: 2;
+        }
+    }
+
+    &_detail--wrapper {
+        background-color: #fff;
+        &--item {
+            padding: 7.2rem 10rem 9.8rem;
+            position: relative;
+            border-top: 1px solid #e7e7e7;
+            transition: all 0.5s;
+            @media (--sp) {
+                padding: 4rem 5.3vw 5.8rem;
+                background-color: #000;
+                color: #fff;
+            }
+            &:last-child {
+                border-bottom: 1px solid #e7e7e7;
+            }
+            .layout {
+                display: flex;
+                @media (--sp) {
+                    flex-direction: column;
+                }
+            }
+
+            &--title {
+                width: 50%;
+                @media (--sp) {
+                    width: 100%;
+                }
+
+                .number {
+                    font-size: 6.4rem;
+                    letter-spacing: 0.1em;
+                    color: #e74c3c;
+                    font-family: "Montserrat", sans-serif;
+                    @media (--sp) {
+                        color: #fff;
+                        font-size: 4rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 2.6rem;
+                    line-height: 1.85;
+                    letter-spacing: 0.08em;
+                    @media (--sp) {
+                        font-size: 1.8rem;
+                        line-height: 1.77;
+                        font-weight: 700;
+                        margin-top: 3.2rem;
+                    }
+                }
+            }
+
+            &--text {
+                width: 50%;
+                @media (--sp) {
+                    width: 100%;
+                }
+
+                p {
+                    line-height: 2.375;
+                    letter-spacing: 0.1em;
+                    margin-top: 7.3rem;
+                    @media (--sp) {
+                        font-size: 1.3rem;
+                        line-height: 2.77;
+                        margin-top: 4.1rem;
+                    }
+                }
+            }
+
+            img {
+                position: absolute;
+                bottom: 0;
+                left: -10rem;
+                width: 36rem;
+                @media (--sp) {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #000;
+                .number {
+                    color: #fff;
+                    transition: all 0.5s;
+                }
+
+                img {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

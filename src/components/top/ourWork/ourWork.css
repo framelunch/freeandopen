@@ -1,0 +1,93 @@
+/* our_work */
+.our_work {
+    background-color: #fff;
+    .layout {
+        padding: 19.2rem 10rem 15.1rem;
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+        @media (--sp) {
+            padding: 10.2rem 5.3vw 0;
+        }
+    }
+
+    .box {
+        background-color: #e74c3c;
+        color: #fff;
+        display: inline-block;
+        padding-left: 4rem;
+        padding-bottom: 1.8rem;
+        height: 100%;
+        @media (--sp) {
+            padding-left: 2.1rem;
+            padding-bottom: 2rem;
+        }
+
+        .img-wrapper {
+            background-color: #fff;
+            padding: 4.8rem 8.2rem;
+            @media (--sp) {
+                padding: 3.7rem 4.25rem;
+            }
+            img {
+                width: 23.6rem;
+                @media (--sp) {
+                    width: 17rem;
+                }
+            }
+        }
+
+        h2 {
+            margin: 1.9rem 0;
+            font-size: 1.8rem;
+            @media (--sp) {
+                margin: 1.9rem 0 1rem;
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 2;
+            letter-spacing: 0.1em;
+            @media (--sp) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .swiper {
+        padding: 8rem 0 11.2rem 10rem;
+        margin-top: 8rem;
+        margin-left: -10rem;
+        overflow: visible;
+        position: relative;
+        @media (--sp) {
+            margin-top: 4rem;
+            padding: 5rem 2rem 8.4rem;
+            margin-left: -5.3vw;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: #f7f7f7;
+            content: "";
+        }
+        &-wrapper {
+            /* gap: 3rem;
+            @media (--sp) {
+                gap: 2.5rem;
+            } */
+        }
+
+        &-slide {
+            height: auto;
+            width: 44rem;
+            @media (--sp) {
+                width: 27.5rem;
+            }
+        }
+    }
+}

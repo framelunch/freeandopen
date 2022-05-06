@@ -7,12 +7,10 @@ import notice from 'libraries-frontend-framelunch/js/notice';
 import subscribeEvents from './modules/_events';
 
 import '../components/top/aboutDetail/aboutDetail';
+import '../components/top/ourWork/ourWork';
 
 class Main {
   onDOMContentLoaded = () => {
-    // eslint-disable-next-line
-    // const swiper = new Swiper('.swiper', {});
-
     notice.publish('init', []);
   };
 }
