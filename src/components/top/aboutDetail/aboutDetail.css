@@ -3,9 +3,16 @@
 .about_detail {
     position: relative;
     background-color: #fff;
+    @media (--not-sp) {
+        height: 3000px;
+    }
     .layout {
         padding: 0 0 0 10rem;
         border-right: 1px solid #e5e5e5;
+        @media (--not-sp) {
+            position: sticky;
+            top: 0;
+        }
         @media (--sp) {
             padding: 0 5.3vw;
         }
@@ -22,14 +29,35 @@
             }
             &--text {
                 margin-top: 6.7rem;
+                @media (--not-sp) {
+                    width: calc(620 / 1160 * 100%);
+                }
                 @media (--sp) {
                     margin-top: 7.5rem;
                 }
-                img {
+                
+                &No {
                     margin-left: -10rem;
+                    position: relative;
+                    overflow: hidden;
                     @media (--sp) {
                         margin-left: 0;
                         width: 8.7rem;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        padding-top: calc(183 / 106 * 10%);
+                    }
+                    & img {
+                        position: absolute;
+                        top: 0;
+                        transition-property: top;
+                        transition-duration: 1s;
+                        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                        &:not(.-show) {
+                            top: calc(100% + 10px);
+                        }
                     }
                 }
 
@@ -61,12 +89,39 @@
             &--img {
                 position: relative;
                 z-index: 100;
+                @media (--not-sp) {
+                    width: calc(540 / 1160 * 100%);
+                }
                 @media (--sp) {
                     padding-left: 8vw;
                 }
-                img {
-                    @media (--sp) {
+                & li {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    overflow: hidden;
+                    transition-property: top;
+                    transition-duration: 1s;
+                    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+                    & img {
+                        display: block;
+                        vertical-align: bottom;
                         width: 100%;
+                        transform: none;
+                        transition-property: top;
+                        transition-duration: 1s;
+                        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                        position: relative;
+                        top: 0;
+                    }
+
+                    &:not(.-show) {
+                        top: 100%;
+                        & img {
+                            top: -100%;
+                        }
                     }
                 }
             }
