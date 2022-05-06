@@ -3,57 +3,7 @@ image: '/top/image' } }; %> <%- include('./common/_head.ejs', { conf }) %> <%-
 include('../components/header/header.ejs', { conf }) %>
 
 <main id="main" class="main" role="main">
-  <div class="mv">
-    <div class="layout">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="<%= conf.assets.image %>/fv1.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="copy">
-        <div class="copy_wrapper">
-          <div class="copy_wrapper--top">
-            <div>
-              <span>F</span><span>i</span><span>l</span><span>e</span><span>M</span><span>a</span><span>k</span
-              ><span>e</span><span>r</span>
-            </div>
-            <div><img src="<%= conf.assets.image %>/multiplicative.png" alt="" /></div>
-            <div>
-              <span>ア</span><span>ジ</span><span>ャ</span><span>イ</span><span>ル</span><span>開</span><span>発</span>
-            </div>
-          </div>
-          <div class="copy_wrapper--bottom">
-            <div><img src="<%= conf.assets.image %>/equal.png" alt="" /></div>
-            <div><span>D</span><span>X</span></div>
-          </div>
-        </div>
-      </div>
-
-      <p>
-        日々進化し変化する市場に合わせた、<br />
-        スピーディかつ柔軟なシステム開発でDXを実現し、<br />
-        NEXTSTAGEへの扉を開く。
-      </p>
-
-      <div class="scrolldown">
-        Scroll
-      </div>
-    </div>
-
-    <div class="loop_wrapper">
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-      <div>Freeandopen Inc.</div>
-    </div>
-  </div>
-
+  <%- include('../components/top/mv/mv.ejs', { conf }) %>
   <div class="about">
     <div class="layout">
       <div class="about_head">
