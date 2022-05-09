@@ -151,7 +151,7 @@
             display: inline-block;
             position: absolute;
             bottom: 0;
-            left: 10rem;
+            left: 3rem;
             z-index: 2;
             padding: 1rem 1rem 14rem;
             overflow: hidden;
@@ -161,9 +161,6 @@
             text-transform: uppercase;
             text-decoration: none;
             writing-mode: vertical-lr;
-            @media (--tb) {
-                left: 4rem;
-            }
             @media (--sp) {
                 left: 20px;
                 font-size: 0.9rem;

@@ -1,13 +1,14 @@
 import $ from 'jquery';
 import notice from 'libraries-frontend-framelunch/js/notice';
+import { preloadImage, getQueryName } from '../../js/modules/utils';
 
 notice.listen('init', () => {
-  $('.nav_list li a').each((index, element) => {
-    $(element).on('click', e => {
-      const targetName = $(element).data('anchor-id');
-      e.preventDefault();
-      const targetTop = $(`.${targetName}`).offset().top;
+  const images = document.querySelectorAll('img');
+  preloadImage(images, () => {
+    const queryName = getQueryName('anchor');
+    if (queryName) {
+      const targetTop = $(`.${queryName}`).offset().top;
       $('html, body').animate({ scrollTop: targetTop });
-    });
+    }
   });
 });
