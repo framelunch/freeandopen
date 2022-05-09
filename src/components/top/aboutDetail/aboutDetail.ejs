@@ -1,61 +1,87 @@
+<%
+  const about = [
+    {
+      id: '01',
+      numberImage: 'section-number01.png',
+      title: '実務経験者揃いの開発集団',
+      text: '小売業（生産管理、商品管理など）を中心に、<br class="pc-br" />経理や人事などのエグゼクティブレイヤー経験者が<br class="pc-br" />多数在籍しているため、業務改善に関するアドバイスや<br class="pc-br" />システムの運用・保守などトータルでのサポートも可能です。<br />システム開発のみに留まらずお客様の様々な課題を解決する、<br class="pc-br" />提案型のシステムインテグレーションサービスを<br class="pc-br" />ご提供いたします。',
+      image: 'agile_development01.jpg'
+    },
+    {
+      id: '02',
+      numberImage: 'section-number02.png',
+      title: '長年培ったノウハウや<br />幅広いスキルによる対応',
+      text: '長年FileMakerの開発に携わったメンバーや、<br class="pc-br" />大手のシステム開発を手掛ける企業から<br class="pc-br" />転職してきたメンバーも在籍しているため、<br class="pc-br" />多種多様のスキルを用いた開発が可能です。<br class="pc-br" />FileMakerのみでの開発が難しい要望でも、<br class="pc-br" />お客様に適したソリューションで対応することができます。<br class="pc-br" />',
+      image: 'agile_development02.jpg'
+    },
+    {
+      id: '03',
+      numberImage: 'section-number03.png',
+      title: 'コミュニケーションを重視した開発',
+      text: '決まった開発内容や計画性にとらわれず、<br class="pc-br" />実際にシステムを使用するお客様とのコミュニケーションを重視して<br class="pc-br" />柔軟性を持った開発を行い、変化し成長していくことができる<br class="pc-br" />システムを実現します。',
+      image: 'agile_development03.jpg'
+    },
+  ]
+%>
 <div class="about_detail">
     <div class="layout">
       <div class="about_detail--list">
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number01.png" alt="" />
-            <h2>実務経験者揃いの開発集団</h2>
-            <p>
-              小売業（生産管理、商品管理など）を中心に、<br class="pc-br" />
-              経理や人事などのエグゼクティブレイヤー経験者が<br class="pc-br" />
-              多数在籍しているため、業務改善に関するアドバイスや<br class="pc-br" />
-              システムの運用・保守などトータルでのサポートも可能です。<br />
-              システム開発のみに留まらずお客様の様々な課題を解決する、<br class="pc-br" />
-              提案型のシステムインテグレーションサービスを<br class="pc-br" />
-              ご提供いたします。
-            </p>
+        <div class="-hidden-sp">
+          <div class="about_detail--list--item">
+            <div class="about_detail--list--item--text">
+              <div class="about_detail--list--item--textNo">
+                <% about.forEach(function (value, key) { %>
+                  <img class="-number<%= value.id %>" src="<%= conf.assets.image %>/<%- value.numberImage %>" alt="" />
+                <% }); %>
+              </div>
+              <div class="about_detail--list--itemTextWrapper swiper" id="aboutDetailSwiper">
+                <div class="swiper-wrapper">
+                  <% about.forEach(function (value, key) { %>
+                  <div class="about_detail--list--itemText swiper-slide">
+                    <h2><%- value.title %></h2>
+                    <p><%- value.text %></p>
+                  </div>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
+            <div class="about_detail--list--item--img">
+              <ul>
+                <% about.forEach(function (value, key) { %>
+                <li><img src="<%= conf.assets.image %>/<%- value.image %>" alt="" /></li>
+                <% }); %>
+              </ul>
+            </div>
+            <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+            <div class="about_detail--pagination -hidden-sp">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development01.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
         </div>
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number02.png" alt="" />
-            <h2>
-              長年培ったノウハウや<br />
-              幅広いスキルによる対応
-            </h2>
-            <p>
-              長年FileMakerの開発に携わったメンバーや、<br class="pc-br" />
-              大手のシステム開発を手掛ける企業から<br class="pc-br" />
-              転職してきたメンバーも在籍しているため、<br class="pc-br" />
-              多種多様のスキルを用いた開発が可能です。<br class="pc-br" />
-              FileMakerのみでの開発が難しい要望でも、<br class="pc-br" />
-              お客様に適したソリューションで対応することができます。<br class="pc-br" />
-            </p>
+        <div class="-hidden-pc">
+          <% about.forEach(function (value, key) { %>
+          <div class="about_detail--list--item">
+            <div class="about_detail--list--item--text">
+              <div class="about_detail--list--item--textNo">
+                <img class="-number<%= value.id %>" src="<%= conf.assets.image %>/<%- value.numberImage %>" alt="" />
+              </div>
+              <div class="about_detail--list--itemTextWrapper">
+                <div class="about_detail--list--itemText">
+                  <h2><%- value.title %></h2>
+                  <p><%- value.text %></p>
+                </div>
+              </div>
+            </div>
+            <div class="about_detail--list--item--img">
+              <ul>
+                <li><img src="<%= conf.assets.image %>/<%- value.image %>" alt="" /></li>
+              </ul>
+            </div>
+            <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
           </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development02.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
-        </div>
-        <div class="about_detail--list--item">
-          <div class="about_detail--list--item--text">
-            <img src="<%= conf.assets.image %>/section-number03.png" alt="" />
-            <h2>コミュニケーションを重視した開発</h2>
-            <p>
-              決まった開発内容や計画性にとらわれず、<br class="pc-br" />
-              実際にシステムを使用するお客様とのコミュニケーションを重視して<br class="pc-br" />
-              柔軟性を持った開発を行い、変化し成長していくことができる<br class="pc-br" />
-              システムを実現します。
-            </p>
-          </div>
-          <div class="about_detail--list--item--img">
-            <img src="<%= conf.assets.image %>/agile_development03.jpg" alt="" />
-          </div>
-          <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+          <% }); %>
         </div>
       </div>
     </div>

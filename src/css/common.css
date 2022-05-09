@@ -1,3 +1,4 @@
+@import "libraries-frontend-framelunch/css/_variables.css";
 @import "libraries-frontend-framelunch/css/_reset.css";
 
 .-hidden-pc {
@@ -35,16 +36,22 @@
 .section-title {
     font-family: "Raleway", sans-serif;
     font-size: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    @media (--tb) {
+        font-size: calc(5rem * 0.8);
+    }
     @media (--sp) {
         font-size: 3rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 }
 
 .section-title-child {
     font-size: 1.4rem;
     color: #e74c3c;
+    display: block;
+    letter-spacing: 0.06em;
     @media (--sp) {
         font-size: 1.2rem;
     }
