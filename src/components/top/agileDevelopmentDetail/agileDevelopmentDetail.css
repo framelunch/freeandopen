@@ -2,7 +2,7 @@
 .agile_development {
     background-color: #fff;
     .layout {
-        padding: 0 10rem 5.2rem;
+        padding: 15rem 10rem 5.2rem;
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
         @media (--not-sp) {

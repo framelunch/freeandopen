@@ -41,6 +41,13 @@ notice.listen('scroll', $scrollTop => {
         $(element).addClass('-show');
       }
     });
+
+    $('.about_detail--pagination span')
+      .eq(currentNumber)
+      .removeClass('-current');
     currentNumber = slideNumber;
+    $('.about_detail--pagination span')
+      .eq(currentNumber)
+      .addClass('-current');
   }
 });

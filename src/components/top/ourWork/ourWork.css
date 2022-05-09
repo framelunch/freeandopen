@@ -2,7 +2,7 @@
 .our_work {
     background-color: #fff;
     .layout {
-        padding: 19.2rem 10rem 15.1rem;
+        padding: 15rem 10rem 0;
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
         @media (--sp) {
@@ -87,6 +87,16 @@
             width: 44rem;
             @media (--sp) {
                 width: 27.5rem;
+            }
+        }
+
+        & .swiper-pagination {
+            position: relative;
+            text-align: right;
+            bottom: auto;
+            margin-top: 8px;
+            & .swiper-pagination-bullet-active {
+                background-color: #e74c3c;
             }
         }
     }

@@ -20,4 +20,17 @@ notice.listen('init', () => {
   });
 
   $('.mv__text').addClass('-start');
+
+  // eslint-disable-next-line
+  const swiper = new Swiper('#mvSlider', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 500,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 5000,
+    },
+  });
 });

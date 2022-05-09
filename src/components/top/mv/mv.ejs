@@ -1,13 +1,24 @@
 <div class="mv">
-  <div class="layout">
-    <div class="swiper">
+  <div class="mv__slider">
+    <div class="swiper" id="mvSlider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="<%= conf.assets.image %>/fv1.jpg" alt="" />
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/mv_img1_pc.jpg" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/mv_img1_sp.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/mv_img2_pc.jpg" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/mv_img2_sp.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/mv_img3_pc.jpg" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/mv_img3_sp.jpg" alt="" />
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="layout">
     <div class="copy">
       <div class="copy_wrapper">
         <div class="copy_wrapper--top">

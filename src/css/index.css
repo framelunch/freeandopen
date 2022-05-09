@@ -74,7 +74,10 @@ body {
 
         &--img {
             img {
-                width: 47.5rem;
+                width: 62.1rem;
+                @media (--not-sp) {
+                    margin-left: -4.4rem;
+                }
                 @media (--sp) {
                     width: 100%;
                 }
@@ -98,7 +101,7 @@ body {
 
             p {
                 font-size: 1.8rem;
-                letter-spacing: 0.035em;
+                letter-spacing: 0.05em;
                 font-weight: 500;
                 @media (--sp) {
                     font-size: 1.4rem;
@@ -115,7 +118,7 @@ body {
                 }
 
                 &:not(:last-child) {
-                    margin-bottom: 1.6rem;
+                    margin-bottom: 2rem;
                 }
             }
         }
@@ -128,9 +131,9 @@ body {
     .layout {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
-        padding: 16rem 10rem 15rem;
+        padding: 16rem 10rem 0;
         @media (--sp) {
-            padding: 10.2rem 5.3vw 10.2rem;
+            padding: 10.2rem 5.3vw 0;
         }
     }
 
@@ -248,6 +251,7 @@ body {
 .company {
     background-color: #fff;
     position: relative;
+    padding-top: 15rem;
     .layout {
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
