@@ -25,10 +25,14 @@
 
     &_detail {
         background-color: #fff;
-        padding: 10rem 6rem 4rem 6rem;
+        padding: 4rem 6rem 4rem 6rem;
         margin-top: 2.7rem;
         @media (--sp) {
-            padding: 7.5rem 3rem 3rem 3rem;
+            padding: 0 3rem 3rem;
+        }
+
+        & img {
+            width: 100%;
         }
 
         &--text {

@@ -1,14 +1,24 @@
-<% const conf = { title : 'top', description : 'This is top page', style: 'work.css', script: 'work.js', assets: {
-image: '/work/image' } }; %> <%- include('../common/_head.ejs', { conf }) %> <%-
-include('../../components/header/header.ejs', { conf }) %>
-
+<%
+  const conf = {
+    title : 'top',
+    description : 'This is top page',
+    style: 'work.css',
+    script: 'work.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/work/work1/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %> <%- include('../../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
   <div class="client">
     <div class="layout">
       <h2 class="section-title-sub">Client</h2>
       <span class="section-title-child">クライアント</span>
       <div class="client_detail">
-        <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+        <img class="-hidden-sp" src="<%= conf.assets.commonImage %>/graniph_logo_pc.jpg" alt="" />
+        <img class="-hidden-pc" src="<%= conf.assets.commonImage %>/graniph_logo_sp.jpg" alt="" />
         <div class="client_detail--text">
           <h3>株式会社グラニフ様</h3>
           <span>アパレル・雑貨</span>
