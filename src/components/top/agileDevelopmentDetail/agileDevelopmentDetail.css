@@ -8,6 +8,10 @@
         @media (--not-sp) {
             position: relative;
         }
+        @media (--tb) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
         @media (--sp) {
             padding: 9.5rem 5.3vw 4rem;
         }
@@ -17,6 +21,10 @@
         margin-top: 5rem;
         line-height: 1.75;
         font-weight: 300;
+        @media (--tb) {
+            font-size: calc(1.6rem * 0.8);
+            margin-top: calc(5rem * 0.8);
+        }
         @media (--sp) {
             margin-top: 3rem;
             font-size: 1.3rem;
@@ -32,6 +40,10 @@
             border-top: 1px solid #e7e7e7;
             transition: all 0.5s;
             z-index: 0;
+            @media (--tb) {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
             @media (--sp) {
                 padding: 4rem 5.3vw 5.8rem;
                 background-color: #000;
@@ -58,6 +70,9 @@
                     letter-spacing: 0.1em;
                     color: #e74c3c;
                     font-family: "Montserrat", sans-serif;
+                    @media (--tb) {
+                        font-size: calc(6.4rem * 0.8);
+                    }
                     @media (--sp) {
                         color: #fff;
                         font-size: 4rem;
@@ -68,6 +83,9 @@
                     font-size: 2.6rem;
                     line-height: 1.85;
                     letter-spacing: 0.08em;
+                    @media (--tb) {
+                        font-size: calc(2.6rem * 0.8);
+                    }
                     @media (--sp) {
                         font-size: 1.8rem;
                         line-height: 1.77;
@@ -87,6 +105,9 @@
                     line-height: 2.375;
                     letter-spacing: 0.1em;
                     margin-top: 7.3rem;
+                    @media (--tb) {
+                        font-size: calc(1.6rem * 0.8);
+                    }
                     @media (--sp) {
                         font-size: 1.3rem;
                         line-height: 2.77;

@@ -26,6 +26,10 @@ body {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
         padding: 15.1rem 10rem;
+        @media (--tb) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
         @media (--sp) {
             padding: 6.8rem 5.3vw 7.5rem;
         }
@@ -41,6 +45,9 @@ body {
 
             &--img {
                 img {
+                    @media (--tb) {
+                        width: calc(16.4rem * 0.8);
+                    }
                     @media (--sp) {
                         width: 8.2rem;
                     }
@@ -53,6 +60,9 @@ body {
             font-size: 1.6rem;
             line-height: 2.5;
             font-weight: 300;
+            @media (--tb) {
+                padding-right: 8rem;
+            }
             @media (--sp) {
                 width: 100%;
                 margin-top: 2.9rem;
@@ -73,18 +83,21 @@ body {
         }
 
         &--img {
+            @media (--not-sp) {
+                width: 50%;
+            }
             img {
-                width: 62.1rem;
+                width: 100%;
                 @media (--not-sp) {
                     margin-left: -4.4rem;
-                }
-                @media (--sp) {
-                    width: 100%;
                 }
             }
         }
 
         &--text {
+            @media (--not-sp) {
+                width: 50%;
+            }
             @media (--sp) {
                 margin-top: 2rem;
             }
@@ -95,6 +108,9 @@ body {
                 letter-spacing: 0.1em;
                 line-height: 1.85;
                 margin-bottom: 3.7rem;
+                @media (--tb) {
+                    font-size: calc(2.6rem * 0.8);
+                }
                 @media (--sp) {
                     font-size: 1.8rem;
                     line-height: 1.72;
@@ -107,6 +123,10 @@ body {
                 letter-spacing: 0.05em;
                 font-weight: 500;
                 line-height: 2.2;
+                @media (--tb) {
+                    font-size: calc(1.8rem * 0.8);
+                }
+
                 @media (--sp) {
                     font-size: 1.4rem;
                     line-height: 2;
@@ -132,6 +152,10 @@ body {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
         padding: 16rem 10rem 0;
+        @media (--tb) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
         @media (--sp) {
             padding: 10.2rem 5.3vw 0;
         }
@@ -154,6 +178,9 @@ body {
         margin-left: -10rem;
         margin-top: 5rem;
         width: 100vw;
+        @media (--tb) {
+            padding-right: 4rem;
+        }
         @media (--sp) {
             margin-top: 4rem;
             padding: 6rem 5.3vw;
@@ -180,6 +207,9 @@ body {
                 background: #fff;
                 box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff;
                 position: relative;
+                @media (--tb) {
+                    width: calc(50% - 2rem);
+                }
                 @media (--sp) {
                     width: 100%;
                     padding: 3rem;
@@ -226,6 +256,9 @@ body {
                     line-height: 1.7;
                     font-weight: 700;
                     margin-top: 3.3rem;
+                    @media (--tb) {
+                        font-size: calc(2rem * 0.8);
+                    }
                     @media (--sp) {
                         font-size: 1.6rem;
                     }
@@ -236,6 +269,10 @@ body {
                     line-height: 2.29;
                     letter-spacing: 0.1em;
                     margin-top: 3rem;
+                    @media (--tb) {
+                        font-size: calc(1.4rem * 0.8);
+                        margin-top: calc(3rem * 0.8);
+                    }
                     @media (--sp) {
                         font-size: 1.2rem;
                         line-height: 1.92;
@@ -265,6 +302,9 @@ body {
     }
 
     &_detail {
+        @media (--tb) {
+            padding-top: 32rem;
+        }
         @media (--sp) {
             padding: 27.5rem 5.3vw 5rem;
             background-color: #262626;
@@ -286,6 +326,9 @@ body {
                     top: 0;
                     z-index: -1;
                 }
+            }
+            @media (--tb) {
+                padding-top: 12rem;
             }
             @media (--sp) {
                 padding: 0;
@@ -340,6 +383,10 @@ body {
         position: absolute;
         right: 0;
         top: 18rem;
+        @media (--tb) {
+            width: 80%;
+            top: 28rem;
+        }
         @media (--sp) {
             width: 86.66%;
             height: 32.5rem;
@@ -379,6 +426,9 @@ body {
                 line-height: 2.375;
                 letter-spacing: 0.18em;
                 font-weight: 300;
+                @media (--tb) {
+                    font-size: calc(1.6rem * 0.8);
+                }
                 @media (--sp) {
                     font-size: 1.3rem;
                     line-height: 2.077;
