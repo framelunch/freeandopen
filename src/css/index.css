@@ -165,9 +165,10 @@ body {
         margin-top: 5rem;
         line-height: 2.5;
         font-weight: 300;
+        font-size: 1.6rem;
         @media (--sp) {
             margin-top: 3rem;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             line-height: 2;
         }
     }
