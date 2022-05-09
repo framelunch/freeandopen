@@ -5,6 +5,10 @@
         padding: 3.2rem 10rem;
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
+        @media (--tb) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
         @media (max-width: 767px) {
             padding: 1.9rem 5.3vw;
         }
@@ -17,6 +21,9 @@
 
         a {
             img {
+                @media (--not-sp) {
+                    width: 18rem;
+                }
                 @media (--sp) {
                     width: 14rem;
                 }

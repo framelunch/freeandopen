@@ -258,6 +258,10 @@ body {
         @media (--sp) {
             padding: 7.8rem 5.3vw 14rem;
         }
+
+        & .company_detail_logo {
+            width: 18rem;
+        }
     }
 
     &_detail {
