@@ -1,21 +1,126 @@
-<%
-const conf = {
-    title : 'top',
-    description : 'This is top page',
-    style: 'work.css',
-    script: 'work.js',
-    assets: {
-        image: '/work/image'
-    }
-};
-%>
-
-<%- include('../common/_head.ejs', { conf }) %>
-<%- include('../../components/header/header.ejs', { conf }) %>
+<% const conf = { title : 'top', description : 'This is top page', style: 'work.css', script: 'work.js', assets: {
+image: '/work/image' } }; %> <%- include('../common/_head.ejs', { conf }) %> <%-
+include('../../components/header/header.ejs', { conf }) %>
 
 <main id="main" class="main" role="main">
+  <div class="client">
+    <div class="layout">
+      <h2 class="section-title-sub">Client</h2>
+      <span class="section-title-child">クライアント</span>
+      <div class="client_detail">
+        <img src="<%= conf.assets.image %>/graniph_logo1_Red_0621@2x.png" alt="" />
+        <div class="client_detail--text">
+          <h3>株式会社グラニフ様</h3>
+          <span>アパレル・雑貨</span>
+          <p>
+            グラフィックで彩られたアパレルや雑貨をリーズナブルな価格で展開。
+            毎週新作がリリースされるアイテムはオリジナルデザインから、アーティスト作品・絵本・音楽・アニメなどの多様なバリエーション。
+            幅広い年代にお楽しみいただける、さまざまなグラフィックアイテムをとりそろえている。
+          </p>
+          <a href="https://graniph.co.jp/">https://graniph.co.jp/</a>
+        </div>
+      </div>
+      <h4 class="pagetitle">Work 01</h4>
+    </div>
+  </div>
 
+  <div class="system">
+    <div class="layout">
+      <h2 class="section-title-sub">System</h2>
+      <span class="section-title-child">対応システム</span>
+      <div class="system_detail">
+        <div class="system_detail--item supported">
+          <h3>対応システム</h3>
+          <ul>
+            <li>生産管理システム</li>
+            <li>商品企画管理システム</li>
+            <li>EC情報管理システム</li>
+            <li>経理システム</li>
+            <li>コラボレーション管理システム</li>
+          </ul>
+        </div>
+        <div class="system_detail--item collaboration">
+          <h3>外部連携</h3>
+          <ul>
+            <li>基幹システム</li>
+            <li>WMS</li>
+            <li>MAツール</li>
+            <li>分析ツール</li>
+            <li>外部ECモール</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem">
+    <div class="layout">
+      <h2 class="section-title-sub">Problem</h2>
+      <span class="section-title-child">クライアントの課題</span>
+    </div>
+    <div class="problem_detail">
+      <div class="layout">
+        <div class="problem_detail--item">
+          <p>
+            企画書、発注書等の情報ファイル（Excel,Word,PDF等）が社内に点在しており、どこに何があるか、何が最新か不明だった。
+          </p>
+          <div class="number">01</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            複数システムで同じ情報の入力、情報を更新/修正した際のメール送信や、手書きでの資料作成などの手間が多く、入力ミスも多発していた。
+          </p>
+          <div class="number">02</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            生産の進捗管理など、Googleスプレッドシートでの管理に限界を感じていた。
+          </p>
+          <div class="number">03</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="solution">
+    <div class="layout">
+      <h2 class="section-title-sub">solution</h2>
+      <span class="section-title-child">freeandopenのソリューション</span>
+    </div>
+    <div class="solution_detail">
+      <div class="layout">
+        <div class="before">
+          <h3>Before</h3>
+        </div>
+        <div class="after">
+          <h3>After</h3>
+          <h4>情報共有がスムーズで正確になり、業務時間の大幅削減を実現。</h4>
+          <p>
+            大量の情報を一元管理でき、自由に見やすいレイアウトの作成が行える、社内情報の全てを網羅したシステムを開発しました。紙とExcelを扱うことがなくなり、入力ミスや同じ情報の入力などがほぼゼロになりました。外部データとの連携も容易です。また、情報を更新/修正した際には内容が自動でメール配信され、大幅な時間短縮を実現しました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="voice">
+    <div class="layout">
+      <h2 class="section-title-sub">Voice</h2>
+      <span class="section-title-child">お客様の声</span>
+      <div class="voice_detail">
+        <p>
+          以前は終電で帰る日や1日5時間ほど残業が発生していた管理作業が、今ではほぼ業務時間内で済んでいます。それによって、「どうすれば売上が伸びるか」などについて考える時間を確保することができました。開発の際は問題点をお話しするだけで、改善の提案を次々にいただきました。
+          システムに詳しくない現場の担当者も本当に助かりました。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-contact">
+    <span>Contact <br class="sp-br" />US</span>
+    <p>開発に関するご相談など弊社へのお問い合わせは<br />こちらのフォームからお願いいたします。</p>
+    <a href="#">Submit</a>
+  </div>
 </main>
 
-<%- include('../../components/footer/footer.ejs', { conf }) %>
-<%- include('../common/_foot.ejs', { conf }) %>
+<%- include('../../components/footer/footer.ejs', { conf }) %> <%- include('../common/_foot.ejs', { conf }) %>

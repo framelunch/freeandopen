@@ -5,9 +5,9 @@
     .layout {
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
-        padding: 4.9rem 3.9rem;
+        padding: 4.4rem 4.4rem;
         @media (--sp) {
-            padding: 2.6rem 2.5rem;
+            padding: 2.5rem 2.5rem;
         }
 
         small {
