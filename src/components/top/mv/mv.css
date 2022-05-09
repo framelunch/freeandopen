@@ -88,7 +88,7 @@
             }
         }
 
-        p {
+        .mv__text {
             text-align: left;
             position: absolute;
             top: 22.8rem;
@@ -98,11 +98,20 @@
             line-height: 2.5;
             letter-spacing: 0.14em;
             font-weight: 500;
+            transition-property: transform, opacity;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+            transition-delay: 1.5s;
 
             @media (--sp) {
                 font-size: 1.3rem;
                 top: 20rem;
                 left: 5.3vw;
+            }
+
+            &:not(.-start) {
+                transform: translateX(40px);
+                opacity: 0;
             }
         }
 

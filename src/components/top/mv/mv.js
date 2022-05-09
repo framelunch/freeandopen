@@ -18,4 +18,6 @@ notice.listen('init', () => {
       }, delay);
     });
   });
+
+  $('.mv__text').addClass('-start');
 });
