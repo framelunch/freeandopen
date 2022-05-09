@@ -2,11 +2,16 @@
 .mv {
     background-color: #f7f7f7;
     position: relative;
+    z-index: -1;
 
     &__slider {
         @media (--not-sp) {
             margin-left: auto;
             width: calc(1000 / 1600 * 100%);
+        }
+        @media (--sp) {
+            width: calc(650 / 750 * 100%);
+            margin-left: auto;
         }
         .swiper {
             &-wrapper {
@@ -23,15 +28,11 @@
     .layout {
         text-align: right;
         border-left: 1px solid #e7e7e7;
-        position: relative;
-
-        @media (--not-sp) {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 100%;
-        }
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
 
         .copy {
             text-align: left;
@@ -56,6 +57,7 @@
                     gap: 1.5rem;
                     @media (--sp) {
                         flex-direction: column;
+                        gap: 1rem;
                     }
                 }
 
@@ -93,6 +95,13 @@
                         transform: translateX(16px);
                         opacity: 0;
                     }
+
+                    img {
+                        width: 3.8rem;
+                        @media (--sp) {
+                            width: 2.4rem;
+                        }
+                    }
                 }
             }
         }
@@ -114,7 +123,7 @@
 
             @media (--sp) {
                 font-size: 1.3rem;
-                top: 20rem;
+                top: 18rem;
                 left: 5.3vw;
             }
 
@@ -140,9 +149,9 @@
             text-decoration: none;
             writing-mode: vertical-lr;
             @media (--sp) {
-                left: 5.3vw;
+                left: 20px;
                 font-size: 0.9rem;
-                padding: 0.5rem 0.5rem 10rem;
+                padding: 0.5rem 0 10rem;
             }
 
             &::after {
@@ -197,7 +206,7 @@
         display: flex;
         width: 100vw;
         position: absolute;
-        bottom: -90px;
+        bottom: -80px;
 
         div {
             font-size: 34rem;
@@ -206,6 +215,10 @@
             color: #fff;
             flex: 0 0 auto;
             white-space: nowrap;
+            font-family: 'Raleway', sans-serif;
+            @media (--sp) {
+                font-size: 15rem;
+            }
         }
     }
 

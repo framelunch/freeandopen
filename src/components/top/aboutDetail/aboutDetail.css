@@ -5,6 +5,9 @@
     @media (--not-sp) {
         height: 3000px;
     }
+    @media (--sp) {
+        background-color: #fff;
+    }
     .layout {
         padding: 0 0 0 10rem;
         border-right: 1px solid #e5e5e5;
@@ -56,13 +59,12 @@
                         position: relative;
                         overflow: hidden;
                     }
-                    @media (--sp) {
-                        width: 8.7rem;
-                    }
                     &::after {
-                        content: "";
-                        display: block;
-                        padding-top: calc(183 / 106 * 10%);
+                        @media (--not-sp) {
+                            content: "";
+                            display: block;
+                            padding-top: calc(183 / 106 * 10%);
+                        }
                     }
                     & img {
                         @media (--not-sp) {
@@ -75,6 +77,27 @@
                                 top: calc(100% + 10px);
                             }
                         }
+                        &.-number01 {
+                            width: calc(141 / 580 * 100%);
+                            max-width: 14.1rem;
+                            @media (--sp) {
+                                width: calc(141 / 650 * 100%);
+                            }
+                        }
+                        &.-number02 {
+                            width: calc(179 / 580 * 100%);
+                            max-width: 17.9rem;
+                            @media (--sp) {
+                                width: calc(179 / 650 * 100%);
+                            }
+                        }
+                        &.-number03 {
+                            width: calc(177 / 580 * 100%);
+                            max-width: 17.7rem;
+                            @media (--sp) {
+                                width: calc(177 / 650 * 100%);
+                            }
+                        }
                     }
                 }
 
@@ -85,8 +108,9 @@
                     margin-top: 11.5rem;
                     @media (--sp) {
                         font-size: 1.9rem;
-                        line-height: 1.42;
+                        line-height: 1.8;
                         margin-top: 4rem;
+                        letter-spacing: 0.05em;
                     }
                 }
 
@@ -154,7 +178,7 @@
                 z-index: 50;
                 @media (--sp) {
                     width: 88%;
-                    bottom: 40%;
+                    bottom: 30%;
                     left: -5.3vw;
                 }
             }

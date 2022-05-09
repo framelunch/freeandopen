@@ -51,19 +51,20 @@
             letter-spacing: 0.1em;
             @media (--sp) {
                 font-size: 1.2rem;
+                padding-right: 2rem;
             }
         }
     }
 
     .swiper {
-        padding: 8rem 0 11.2rem 10rem;
+        padding: 8rem 0 8rem 10rem;
         margin-top: 8rem;
         margin-left: -10rem;
         overflow: visible;
         position: relative;
         @media (--sp) {
             margin-top: 4rem;
-            padding: 5rem 2rem 8.4rem;
+            padding: 5rem 2rem 2rem;
             margin-left: -5.3vw;
         }
         &::after {
@@ -94,7 +95,10 @@
             position: relative;
             text-align: right;
             bottom: auto;
-            margin-top: 8px;
+            margin-top: 8rem;
+            @media (--sp) {
+                margin-top: 4rem;
+            }
             & .swiper-pagination-bullet-active {
                 background-color: #e74c3c;
             }

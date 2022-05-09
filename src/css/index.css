@@ -69,7 +69,7 @@ body {
         margin-top: 8rem;
         @media (--sp) {
             flex-direction: column;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
 
         &--img {
@@ -85,6 +85,9 @@ body {
         }
 
         &--text {
+            @media (--sp) {
+                margin-top: 2rem;
+            }
             h3 {
                 font-size: 2.6rem;
                 color: #e74c3c;
@@ -103,6 +106,7 @@ body {
                 font-size: 1.8rem;
                 letter-spacing: 0.05em;
                 font-weight: 500;
+                line-height: 2.2;
                 @media (--sp) {
                     font-size: 1.4rem;
                     line-height: 2;
@@ -115,10 +119,6 @@ body {
                     @media (--sp) {
                         padding: 0 1rem;
                     }
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 2rem;
                 }
             }
         }
@@ -251,11 +251,10 @@ body {
 .company {
     background-color: #fff;
     position: relative;
-    padding-top: 15rem;
     .layout {
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
-        padding: 0 10rem 8.2rem;
+        padding: 15rem 10rem 8.2rem;
         @media (--sp) {
             padding: 7.8rem 5.3vw 14rem;
         }
@@ -336,7 +335,7 @@ body {
         height: 42rem;
         position: absolute;
         right: 0;
-        top: 2.8rem;
+        top: 18rem;
         @media (--sp) {
             width: 86.66%;
             height: 32.5rem;
