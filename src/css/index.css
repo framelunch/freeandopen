@@ -2,6 +2,7 @@
 @import "../components/header/header.css";
 @import "../components/footer/footer.css";
 
+@import "../components/common/pagetop/pagetop.css";
 @import "../components/top/animation/animation.css";
 @import "../components/top/mv/mv.css";
 @import "../components/top/aboutDetail/aboutDetail.css";
@@ -402,9 +403,9 @@ body {
     .layout {
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
-        padding: 15rem 10rem 23rem;
+        padding: 15rem 10rem 10rem;
         @media (--sp) {
-            padding: 10.2rem 5.3vw 14.5rem;
+            padding: 10.2rem 5.3vw 6rem;
         }
     }
 
@@ -514,62 +515,6 @@ body {
                         padding: 1.95rem 7rem;
                     }
                 }
-            }
-        }
-    }
-}
-
-/* pagetop */
-.pagetop {
-    .layout {
-        position: relative;
-        padding: 0 10rem;
-    }
-
-    &_btn {
-        position: fixed;
-        right: 20px;
-        bottom: 50px;
-        z-index: 100;
-        a {
-            text-decoration: none;
-            background-color: #e74c3c;
-            color: #fff;
-            display: inline-block;
-            width: 10rem;
-            height: 10rem;
-            border-radius: 50%;
-            @media (--sp) {
-                width: 7rem;
-                height: 7rem;
-            }
-
-            &::before {
-                content: url("/assets/top/image/triangle.png");
-                position: absolute;
-                width: 30px;
-                height: 25px;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                margin: auto;
-                text-align: center;
-            }
-
-            &::after {
-                content: "TOP";
-                font-size: 1.4rem;
-                letter-spacing: 0.2em;
-                color: #fff;
-                position: absolute;
-                top: 50%;
-                transform: rotateY(-50%);
-                bottom: 0;
-                right: 0;
-                left: 0;
-                margin: auto;
-                text-align: center;
             }
         }
     }

@@ -1,6 +1,16 @@
-<% const conf = { title : 'top', description : 'This is top page', style: 'index.css', script: 'index.js', assets: {
-image: '/top/image', commonImage: '/common/image', } }; %> <%- include('./common/_head.ejs', { conf }) %> <%-
-include('../components/header/header.ejs', { conf }) %>
+<%
+  const conf = {
+    title : 'top',
+    description : 'This is top page',
+    style: 'index.css',
+    script: 'index.js',
+    assets: {
+      image: '/top/image',
+      commonImage: '/common/image'
+    }
+  };
+%>
+<%- include('./common/_head.ejs', { conf }) %> <%- include('../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
   <%- include('../components/top/mv/mv.ejs', { conf }) %>
   <div class="about">
@@ -248,14 +258,7 @@ include('../components/header/header.ejs', { conf }) %>
       </div>
     </div>
   </div>
-
-  <div class="pagetop">
-    <div class="layout">
-      <div class="pagetop_btn">
-        <a href="#header"></a>
-      </div>
-    </div>
-  </div>
+  <%- include('../components/common/pagetop/pagetop.ejs', { conf }) %>
 </main>
 
 <%- include('../components/footer/footer.ejs', { conf }) %> <%- include('./common/_foot.ejs', { conf }) %>

@@ -1,6 +1,16 @@
-<% const conf = { title : 'top', description : 'This is top page', style: 'work.css', script: 'work.js', assets: {
-commonImage: '/common/image', image: '/work/work1/image' } }; %> <%- include('../common/_head.ejs', { conf }) %> <%-
-include('../../components/header/header.ejs', { conf }) %>
+<%
+  const conf = {
+    title : 'top',
+    description : 'This is top page',
+    style: 'work.css',
+    script: 'work.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/work/work1/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %> <%- include('../../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
   <div class="client">
     <div class="layout">
@@ -91,10 +101,13 @@ include('../../components/header/header.ejs', { conf }) %>
       <div class="layout">
         <div class="before">
           <h3>Before</h3>
-          <img src="<%= conf.assets.image %>/before_img.png" alt="" />
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/before_img_pc.png" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/before_img_sp.png" alt="" />
         </div>
         <div class="after">
           <h3>After</h3>
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/after_img_pc.png" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/after_img_sp.png" alt="" />
           <h4>情報共有がスムーズで正確になり、業務時間の大幅削減を実現。</h4>
           <p>
             大量の情報を一元管理でき、自由に見やすいレイアウトの作成が行える、社内情報の全てを網羅したシステムを開発しました。紙とExcelを扱うことがなくなり、入力ミスや同じ情報の入力などがほぼゼロになりました。外部データとの連携も容易です。また、情報を更新/修正した際には内容が自動でメール配信され、大幅な時間短縮を実現しました。
@@ -117,19 +130,14 @@ include('../../components/header/header.ejs', { conf }) %>
     </div>
   </div>
 
+  <%- include('../../components/common/pagetop/pagetop.ejs', { conf }) %>
+
   <div class="sub-contact">
     <span>Contact <br class="sp-br" />US</span>
     <p>開発に関するご相談など弊社へのお問い合わせは<br />こちらのフォームからお願いいたします。</p>
     <a href="#">Submit</a>
   </div>
 
-  <div class="pagetop">
-    <div class="layout">
-      <div class="pagetop_btn">
-        <a href="#header"></a>
-      </div>
-    </div>
-  </div>
 </main>
 
 <%- include('../../components/footer/footer.ejs', { conf }) %> <%- include('../common/_foot.ejs', { conf }) %>

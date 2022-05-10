@@ -2,6 +2,8 @@
 @import "../components/header/header.css";
 @import "../components/footer/footer.css";
 
+@import "../components/common/pagetop/pagetop.css";
+
 /* client */
 .client {
     .layout {
@@ -9,6 +11,14 @@
         border-right: 1px solid #e5e5e5;
         padding: 8rem 23rem 10rem;
         position: relative;
+        @media (--tb-h) {
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+        @media (--tb) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
         @media (--sp) {
             padding: 4.3rem 5.3vw 10rem;
         }
@@ -106,6 +116,15 @@
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
         padding: 0 23rem 10rem;
+        @media (--tb-h) {
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+        @media (--tb) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
+
         @media (--sp) {
             padding: 0 5.3vw 7.5rem;
         }
@@ -169,6 +188,14 @@
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
         padding: 0 23rem 2.8rem;
+        @media (--tb-h) {
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+        @media (--tb) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
         @media (--sp) {
             padding: 0 5.3vw 0;
         }
@@ -178,11 +205,6 @@
         .layout {
             border-left: none;
             border-right: none;
-            @media (--sp) {
-                background-color: #fff;
-                padding: 5rem 5.3vw 7.65rem;
-                margin-top: 3rem;
-            }
             @media (--not-sp) {
                 padding: 6rem 23rem 10rem;
                 position: relative;
@@ -197,6 +219,19 @@
                     top: 0;
                     z-index: -1;
                 }
+            }
+            @media (--tb-h) {
+                padding-left: 12rem;
+                padding-right: 12rem;
+            }
+            @media (--tb) {
+                padding-left: 8rem;
+                padding-right: 8rem;
+            }
+            @media (--sp) {
+                background-color: #fff;
+                padding: 5rem 5.3vw 7.65rem;
+                margin-top: 3rem;
             }
         }
 
@@ -272,6 +307,14 @@
                 z-index: -1;
             }
         }
+        @media (--tb-h) {
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+        @media (--tb) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
 
         @media (--sp) {
             padding: 0 5.3vw 3.5rem;
@@ -289,6 +332,15 @@
                 background-color: #f7f7f7;
                 width: 100vw;
             }
+            @media (--tb-h) {
+                padding-left: 12rem;
+                padding-right: 12rem;
+            }
+            @media (--tb) {
+                padding-left: 8rem;
+                padding-right: 8rem;
+            }
+
             @media (--sp) {
                 padding: 4rem 5.3vw 7.5rem;
                 background-color: #f7f7f7;
@@ -297,6 +349,10 @@
 
         .before {
             margin-bottom: 4rem;
+
+            & img {
+                width: 100%;
+            }
         }
 
         h3 {
@@ -311,6 +367,10 @@
         .after {
             h3 {
                 color: #e74c3c;
+            }
+
+            & img {
+                width: 100%;
             }
 
             h4 {
@@ -348,6 +408,15 @@
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
         padding: 8rem 23rem 10rem;
+        @media (--tb-h) {
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+        @media (--tb) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
+
         @media (--sp) {
             padding: 7.75rem 5.3vw 13.4rem;
         }
@@ -387,6 +456,11 @@
         top: 0;
         left: 0;
         z-index: 20;
+        @media (--sp) {
+            font-size: 7rem;
+            line-height: 1;
+            text-align: left;
+        }
     }
 
     p {
@@ -395,6 +469,12 @@
         z-index: 50;
         line-height: 1.875;
         letter-spacing: 0.14em;
+        @media (--sp) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 1.3rem;
+            line-height: 2;
+        }
     }
 
     a {
@@ -406,61 +486,14 @@
         line-height: 1;
         font-size: 1.8rem;
         font-weight: 700;
-    }
-}
-
-/* pagetop */
-.pagetop {
-    .layout {
-        position: relative;
-        padding: 0 10rem;
-    }
-
-    &_btn {
-        position: fixed;
-        right: 20px;
-        bottom: 50px;
-        z-index: 100;
-        a {
-            text-decoration: none;
-            background-color: #e74c3c;
-            color: #fff;
-            display: inline-block;
-            width: 10rem;
-            height: 10rem;
-            border-radius: 50%;
-            @media (--sp) {
-                width: 7rem;
-                height: 7rem;
-            }
-
-            &::before {
-                content: url("/assets/top/image/triangle.png");
-                position: absolute;
-                width: 30px;
-                height: 25px;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                margin: auto;
-                text-align: center;
-            }
-
-            &::after {
-                content: "TOP";
-                font-size: 1.4rem;
-                letter-spacing: 0.2em;
-                color: #fff;
-                position: absolute;
-                top: 50%;
-                transform: rotateY(-50%);
-                bottom: 0;
-                right: 0;
-                left: 0;
-                margin: auto;
-                text-align: center;
-            }
+        @media (--sp) {
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            width: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
         }
     }
 }

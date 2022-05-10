@@ -1,0 +1,67 @@
+/* pagetop */
+.pagetop {
+    background-color: #fff;
+    padding-bottom: 3rem;
+    .layout {
+        position: relative;
+        padding: 0 10rem;
+        @media (--sp) {
+            padding-left: 5.3vw;
+            padding-right: 5.3vw;
+        }
+    }
+
+    &_btn {
+        a {
+            position: relative;
+            text-decoration: none;
+            background-color: #e74c3c;
+            color: #fff;
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            margin-left: auto;
+            @media (--sp) {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            &::before {
+                content: "";
+                background-image: url("/common/image/triangle.png");
+                background-size: 12px auto;
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 12px;
+                top: 3rem;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                text-align: center;
+                @media (--sp) {
+                    top: 1.5rem;
+                }
+            }
+
+            &::after {
+                content: "TOP";
+                font-size: 1.4rem;
+                letter-spacing: 0.2em;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                transform: rotateY(-50%);
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                text-align: center;
+                @media (--sp) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
