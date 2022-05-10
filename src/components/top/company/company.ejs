@@ -1,0 +1,58 @@
+<div class="company">
+  <div class="layout">
+    <div class="show-animation" data-animation="title">
+      <h2 class="section-title">Company</h2>
+      <span class="section-title-child">会社概要</span>
+    </div>
+  </div>
+
+  <div class="company_detail">
+    <div class="layout">
+      <img class="company_detail_logo" src="<%= conf.assets.commonImage %>/logo-white.png" alt="" />
+      <div class="address">
+        <p>〒150-6139</p>
+        <p>東京都渋谷区渋谷2-24-12 39F</p>
+        <p>WeWork 渋谷スクランブルスクエア(38-105)</p>
+      </div>
+
+      <div class="president">
+        <span>代表取締役社長</span>
+        <p>兼子 佳也</p>
+      </div>
+    </div>
+  </div>
+  <script
+    src="//maps.googleapis.com/maps/api/js?key=AIzaSyABHu-tc2_2rbh4rIFc9eWP0Dzdjm6vyjI&callback=initMap"
+    async
+  ></script>
+  <script>
+    function initMap() {
+      var mapPosition = { lat: 35.65853708026859, lng: 139.70220304684628 };
+      var mapArea = document.getElementById('maps');
+      var mapOptions = {
+        center: mapPosition,
+        zoom: 16,
+        styles: [
+          {
+            stylers: [
+              {
+                saturation: -100,
+              },
+            ],
+          },
+        ],
+      };
+
+      var map = new google.maps.Map(mapArea, mapOptions);
+
+      var markerOptions = {
+        map: map,
+        position: mapPosition,
+        icon: '<%= conf.assets.image %>/map-pin.png',
+      };
+
+      var marker = new google.maps.Marker(markerOptions);
+    }
+  </script>
+  <div id="maps"></div>
+</div>

@@ -1,0 +1,123 @@
+
+/* contact */
+.contact {
+    background-color: #fff;
+    .layout {
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+        padding: 15rem 10rem 10rem;
+        @media (--sp) {
+            padding: 10.2rem 5.3vw 6rem;
+        }
+    }
+
+    &_wrapper {
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-between;
+        @media (--sp) {
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+
+        &--text {
+            width: 32%;
+            @media (--sp) {
+                width: 100%;
+            }
+            p {
+                font-size: 1.6rem;
+                line-height: 2.375;
+                letter-spacing: 0.18em;
+                font-weight: 300;
+                @media (--tb) {
+                    font-size: calc(1.6rem * 0.8);
+                }
+                @media (--sp) {
+                    font-size: 1.3rem;
+                    line-height: 2.077;
+                }
+            }
+
+            span {
+                font-size: 1.1rem;
+                line-height: 2.545;
+                letter-spacing: 0.1em;
+                color: #e74c3c;
+            }
+        }
+
+        &--form {
+            width: 62%;
+            @media (--sp) {
+                width: 100%;
+                margin-top: 4rem;
+            }
+
+            .form-item {
+                label {
+                    display: block;
+                    font-weight: 600;
+                    line-height: 1.75;
+                    @media (--sp) {
+                        font-size: 1.3rem;
+                        letter-spacing: 0.1em;
+                    }
+                    span {
+                        color: #e74c3c;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    height: 5rem;
+                    background-color: #f7f7f7;
+                    border: none;
+                    padding: 1rem;
+
+                    @media (--sp) {
+                        height: 4rem;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 18rem;
+                    background-color: #f7f7f7;
+                    border: none;
+                    padding: 1rem;
+                    @media (--sp) {
+                        height: 17rem;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .submit_wrapper {
+                text-align: center;
+                margin-top: 2.8rem;
+                @media (--sp) {
+                    margin-top: 2rem;
+                }
+                .submit {
+                    display: inline-block;
+                    border: none;
+                    background-color: #262626;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    line-height: 1;
+                    letter-spacing: 0.1em;
+                    font-weight: 700;
+                    padding: 2.3rem 8.2rem;
+                    @media (--sp) {
+                        font-size: 1.4rem;
+                        padding: 1.95rem 7rem;
+                    }
+                }
+            }
+        }
+    }
+}
