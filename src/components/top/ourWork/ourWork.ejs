@@ -1,24 +1,28 @@
 <%
   const ourwork = [
     {
-      title: 'グラニフ',
+      title: 'グラニフ様',
       text: '生産管理／商品企画管理／EC情報管理／<br class="-hidden-sp">経理／コラボレーション管理',
-      image: 'graniph_logo'
+      image: 'graniph_logo',
+      link: 'ourwork-1'
     },
     {
-      title: 'シューズセレクション',
+      title: 'シューズセレクション様',
       text: '【商品管理システム】<br>商品マスタ／発注管理／入荷管理／在庫管理<br>【営業管理システム】<br>テレアポ管理／営業活動管理／取引先管理／予算管理',
-      image: 'shusselection_logo'
+      image: 'shusselection_logo',
+      link: 'ourwork-2'
     },
     {
-      title: '大手インテリア',
+      title: '大手インテリア様',
       text: '商品情報管理システム／品質管理システム／<br class="-hidden-sp">各種帳票の自動化',
-      image: ''
+      image: '',
+      link: 'ourwork-3'
     },
     {
-      title: 'アスタリスク',
+      title: 'アスタリスク様',
       text: '派遣者情報管理／採用情報管理／取引先・案件管理／<br class="-hidden-sp">支給・寮管理／給与管理',
-      image: 'asterisk_logo'
+      image: 'asterisk_logo',
+      link: 'ourwork-4'
     },
   ]
 %>
@@ -32,14 +36,14 @@
       <div class="swiper-wrapper">
         <% ourwork.forEach(function (value, key) { %>
           <div class="swiper-slide">
-            <div class="box">
+            <a class="box" href="<%- value.link %>">
               <div class="img-wrapper">
                 <img class="-hidden-sp" src="<%= conf.assets.commonImage %>/<%- value.image %>_pc.jpg" alt="" />
                 <img class="-hidden-pc" src="<%= conf.assets.commonImage %>/<%- value.image %>_sp.jpg" alt="" />
               </div>
               <h2><%- value.title %></h2>
               <p><%- value.text %></p>
-            </div>
+            </a>
           </div>
         <% }); %>
       </div>
