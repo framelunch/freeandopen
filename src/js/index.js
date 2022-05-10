@@ -11,6 +11,7 @@ import '../components/top/animation/animation';
 import '../components/top/mv/mv';
 import '../components/top/aboutDetail/aboutDetail';
 import '../components/top/ourWork/ourWork';
+import '../components/top/company/company';
 
 class Main {
   onDOMContentLoaded = () => {
