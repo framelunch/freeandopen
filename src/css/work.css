@@ -43,10 +43,19 @@
 
         & img {
             width: 100%;
+            @media (--sp) {
+                margin-left: -3rem;
+                width: calc(100% + 6rem);
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
         }
 
         &--text {
             border-top: 1px solid #e5e5e5;
+            @media (--not-sp) {
+                margin-top: 4rem;
+            }
 
             h3 {
                 margin-top: 2.9rem;
@@ -87,6 +96,8 @@
                 text-decoration: none;
                 color: #e82d19;
                 font-size: 1.3rem;
+                margin-top: 1.5rem;
+                display: block;
                 @media (--sp) {
                     font-size: 1.2rem;
                 }
@@ -359,6 +370,7 @@
             font-size: 2rem;
             letter-spacing: 0.08em;
             font-weight: 500;
+            margin-bottom: 1rem;
             @media (--sp) {
                 font-size: 1.5rem;
             }
@@ -377,7 +389,8 @@
                 font-size: 2rem;
                 letter-spacing: 0.1em;
                 font-weight: 500;
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
                 line-height: 1;
                 @media (--sp) {
                     font-size: 1.8rem;
@@ -427,8 +440,41 @@
         color: #fff;
         padding: 4rem 8rem;
         margin-top: 2.8rem;
+        position: relative;
         @media (--sp) {
             padding: 5rem 3rem;
+        }
+        &::before,
+        &::after {
+            content: "";
+            background-image: url('/work/common/image/voice_figure.png');
+            background-repeat: no-repeat;
+            background-size: 32px auto;
+            width: 32px;
+            height: 29px;
+            position: absolute;
+            @media (--sp) {
+                width: 22px;
+                height: 19px;
+                background-size: 22px auto;
+            }
+        }
+        &::before {
+            top: 1.5rem;
+            left: 3rem;
+            @media (--sp) {
+                top: 2rem;
+                left: 1.5rem;
+            }
+        }
+        &::after {
+            bottom: 1.5rem;
+            right: 3rem;
+            transform: scale(-1, -1);
+            @media (--sp) {
+                bottom: 2rem;
+                right: 1.5rem;
+            }
         }
         p {
             line-height: 2.375;

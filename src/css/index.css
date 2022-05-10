@@ -123,14 +123,13 @@ body {
                 font-size: 1.8rem;
                 letter-spacing: 0.05em;
                 font-weight: 500;
-                line-height: 2.2;
+                line-height: 2.4;
                 @media (--tb) {
                     font-size: calc(1.8rem * 0.8);
                 }
 
                 @media (--sp) {
                     font-size: 1.4rem;
-                    line-height: 2;
                 }
 
                 span {

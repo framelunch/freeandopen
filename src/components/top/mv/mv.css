@@ -128,7 +128,7 @@
             transition-property: transform, opacity;
             transition-duration: 1s;
             transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-            transition-delay: 1.5s;
+            transition-delay: 2s;
 
             @media (--tb) {
                 top: 14.8rem;

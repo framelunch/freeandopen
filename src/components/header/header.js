@@ -8,7 +8,7 @@ notice.listen('init', () => {
     const queryName = getQueryName('anchor');
     if (queryName) {
       const targetTop = $(`.${queryName}`).offset().top;
-      $('html, body').animate({ scrollTop: targetTop });
+      $('html, body').animate({ scrollTop: targetTop }, { duration: 1000 });
     }
   });
 });
