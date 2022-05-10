@@ -1,16 +1,6 @@
-<%
-  const conf = {
-    title : 'top',
-    description : 'This is top page',
-    style: 'work.css',
-    script: 'work.js',
-    assets: {
-      commonImage: '/common/image',
-      image: '/work/work1/image'
-    }
-  };
-%>
-<%- include('../common/_head.ejs', { conf }) %> <%- include('../../components/header/header.ejs', { conf }) %>
+<% const conf = { title : 'top', description : 'This is top page', style: 'work.css', script: 'work.js', assets: {
+commonImage: '/common/image', image: '/work/work1/image' } }; %> <%- include('../common/_head.ejs', { conf }) %> <%-
+include('../../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
   <div class="client">
     <div class="layout">
@@ -101,6 +91,7 @@
       <div class="layout">
         <div class="before">
           <h3>Before</h3>
+          <img src="<%= conf.assets.image %>/before_img.png" alt="" />
         </div>
         <div class="after">
           <h3>After</h3>
@@ -130,6 +121,14 @@
     <span>Contact <br class="sp-br" />US</span>
     <p>開発に関するご相談など弊社へのお問い合わせは<br />こちらのフォームからお願いいたします。</p>
     <a href="#">Submit</a>
+  </div>
+
+  <div class="pagetop">
+    <div class="layout">
+      <div class="pagetop_btn">
+        <a href="#header"></a>
+      </div>
+    </div>
   </div>
 </main>
 
