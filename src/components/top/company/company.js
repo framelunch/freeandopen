@@ -3,7 +3,7 @@ import notice from 'libraries-frontend-framelunch/js/notice';
 
 import { Loader } from '@googlemaps/js-api-loader';
 
-notice.listen('init', () => {
+const embedMap = () => {
   const mapArea = document.getElementById('maps');
   const loader = new Loader({
     apiKey: 'AIzaSyABHu-tc2_2rbh4rIFc9eWP0Dzdjm6vyjI',
@@ -44,4 +44,24 @@ notice.listen('init', () => {
     .catch(e => {
       // do something
     });
+};
+
+notice.listen('init', () => {
+  const target = document.querySelector('.company');
+
+  const options = {
+    root: null,
+    rootMargin: '0px 0px',
+    threshold: 0,
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        embedMap();
+        observer.unobserve(target);
+      }
+    });
+  }, options);
+
+  observer.observe(target);
 });

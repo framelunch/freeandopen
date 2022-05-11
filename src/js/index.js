@@ -13,9 +13,14 @@ import '../components/top/aboutDetail/aboutDetail';
 import '../components/top/ourWork/ourWork';
 import '../components/top/company/company';
 
+import { preloadImage, getQueryName } from './modules/utils';
+
 class Main {
   onDOMContentLoaded = () => {
-    notice.publish('init', []);
+    const images = document.querySelectorAll('img');
+    preloadImage(images, () => {
+      notice.publish('init', []);
+    });
   };
 }
 

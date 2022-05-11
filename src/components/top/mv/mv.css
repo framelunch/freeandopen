@@ -81,6 +81,7 @@
                     transition-duration: 1s;
                     transition-property: transform, opacity, color;
                     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                    transform: translate3d(0,0,0);
                     @media (--tb) {
                         font-size: 3.2rem;
                     }
