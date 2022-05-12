@@ -5,6 +5,9 @@
     z-index: -1;
 
     &__slider {
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
         @media (--not-sp) {
             margin-left: auto;
             width: calc(1000 / 1600 * 100%);
@@ -16,13 +19,27 @@
             width: calc(650 / 750 * 100%);
             margin-left: auto;
         }
-        .swiper {
-            &-wrapper {
-                .swiper-slide {
-                    img {
-                        width: 100%;
-                    }
-                }
+
+        & .slide {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            &:first-of-type {
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &.-lastCurrent {
+                z-index: 10;
+            }
+
+            &.-current {
+                z-index: 20;
             }
         }
 

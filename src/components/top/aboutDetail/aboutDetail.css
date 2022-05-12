@@ -72,7 +72,7 @@
                         @media (--not-sp) {
                             content: "";
                             display: block;
-                            padding-top: calc(179 / 102 * 10%);
+                            padding-top: 18%;
                         }
                     }
                     & img {

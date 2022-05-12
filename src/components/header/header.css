@@ -1,10 +1,30 @@
 .header {
     /* header style here */
     border-bottom: 1px solid #e5e5e5;
+    height: 10rem;
+    @media (--sp) {
+        height: 6rem;
+    }
+    .headerFixed {
+        position: fixed;
+        top: 0;
+        width: calc(1360px - 20rem);
+        z-index: 300;
+        height: 10rem;
+        @media (--tb-h) {
+            width: auto;
+            left: 4rem;
+            right: 4rem;
+        }
+        @media (--sp) {
+            height: 6rem;
+        }
+    }
     .layout {
-        padding: 3.2rem 10rem;
+        padding: 0 10rem;
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
+        height: 100%;
         @media (--tb-h) {
             padding-left: 4rem;
             padding-right: 4rem;
@@ -22,9 +42,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 10rem;
 
         @media (--tb) {
             display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            height: auto;
+        }
+        @media (--sp) {
+            height: 6rem;
         }
 
         a {
@@ -48,7 +76,7 @@
                 gap: 25px;
             }
             @media (--tb) {
-                margin-top: 1.6rem;
+                margin-top: 1.0rem;
             }
 
             a {
