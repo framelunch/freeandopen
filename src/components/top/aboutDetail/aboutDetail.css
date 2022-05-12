@@ -175,6 +175,12 @@
                         transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
                     }
 
+                    &:first-of-type {
+                        @media (--not-sp) {
+                            position: relative;
+                        }
+                    }
+
                     & img {
                         width: 100%;
                         display: block;

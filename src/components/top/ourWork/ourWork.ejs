@@ -1,25 +1,25 @@
 <%
   const ourwork = [
     {
-      title: 'グラニフ様',
+      title: '株式会社グラニフ様',
       text: '生産管理／商品企画管理／EC情報管理／<br class="-hidden-sp">経理／コラボレーション管理',
       image: 'graniph_logo',
       link: 'ourwork-1'
     },
     {
-      title: 'シューズセレクション様',
+      title: '株式会社シューズセレクション様',
       text: '【商品管理システム】<br>商品マスタ／発注管理／入荷管理／在庫管理<br>【営業管理システム】<br>テレアポ管理／営業活動管理／取引先管理／予算管理',
       image: 'shusselection_logo',
       link: 'ourwork-2'
     },
     {
-      title: '大手インテリア様',
+      title: '大手インテリア会社様',
       text: '商品情報管理システム／品質管理システム／<br class="-hidden-sp">各種帳票の自動化',
       image: '',
       link: 'ourwork-3'
     },
     {
-      title: 'アスタリスク様',
+      title: '株式会社アスタリスク様',
       text: '派遣者情報管理／採用情報管理／取引先・案件管理／<br class="-hidden-sp">支給・寮管理／給与管理',
       image: 'asterisk_logo',
       link: 'ourwork-4'
@@ -37,9 +37,11 @@
         <% ourwork.forEach(function (value, key) { %>
           <div class="swiper-slide">
             <a class="box" href="<%- value.link %>">
+              <% if (value.image) { %>
               <div class="img-wrapper">
                 <img src="<%= conf.assets.commonImage %>/<%- value.image %>.jpg" alt="" />
               </div>
+              <% } %>
               <h2><%- value.title %></h2>
               <p><%- value.text %></p>
             </a>

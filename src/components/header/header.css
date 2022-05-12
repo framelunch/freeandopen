@@ -78,6 +78,8 @@
 
             @media (--sp) {
                 display: block;
+                position: relative;
+                z-index: 200;
             }
         }
 

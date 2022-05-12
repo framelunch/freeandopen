@@ -1,14 +1,27 @@
+<%
+  const menu = [
+    { id: 'about', name: 'About Us' },
+    { id: 'filemaker_development', name: 'Filemaker Development' },
+    { id: 'agile_development', name: 'Agile Development' },
+    { id: 'our_work', name: 'Our Work' },
+    { id: 'company', name: 'Company' },
+    { id: 'contact', name: 'Contact Us', class: 'btn', classSp: 'contact-btn' },
+  ]
+%>
 <header id="header" class="header" role="banner">
   <div class="layout">
     <div class="nav">
       <a href="/"><img src="<%= conf.assets.commonImage %>/logo.png" alt=""/></a>
       <ul class="nav_list">
-        <li><a href="/?anchor=about">About Us</a></li>
-        <li><a href="/?anchor=filemaker_development">Filemaker Development</a></li>
-        <li><a href="/?anchor=agile_development">Agile Development</a></li>
-        <li><a href="/?anchor=our_work">Our Work</a></li>
-        <li><a href="/?anchor=company">Company</a></li>
-        <li><a href="/?anchor=contact" class="btn">Contact Us</a></li>
+        <% menu.forEach(function (value, key) { %>
+          <li>
+            <% if (conf.category === 'top') { %>
+              <a href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
+            <% } else { %>
+              <a href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+            <% } %>
+          </li>
+        <% }); %>
       </ul>
 
       <div class="drawer -hidden-pc">
@@ -18,24 +31,17 @@
 
         <nav class="drawer-content">
           <ul class="drawer-list">
-            <li class="drawer-item">
-              <a href="/?anchor=about">About Us</a>
-            </li>
-            <li class="drawer-item">
-              <a href="/?anchor=filemaker_development">Filemaker Development</a>
-            </li>
-            <li class="drawer-item">
-              <a href="/?anchor=agile_development">Agile Development </a>
-            </li>
-            <li class="drawer-item">
-              <a href="/?anchor=our_work">Our Work </a>
-            </li>
-            <li class="drawer-item">
-              <a href="/?anchor=company">Company </a>
-            </li>
-            <li class="drawer-item contact-btn">
-              <a href="/?anchor=contact">Contact Us</a>
-            </li>
+            <% menu.forEach(function (value, key) { %>
+                <% if (conf.category === 'top') { %>
+                  <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                    <a href="#" class="-anchor" data-anchor="<%= value.id %>"><%= value.name %></a>
+                  </li>
+                <% } else { %>
+                  <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                    <a href="/?anchor=<%= value.id %>"><%= value.name %></a>
+                  </li>
+                <% } %>
+            <% }); %>
           </ul>
         </nav>
       </div>

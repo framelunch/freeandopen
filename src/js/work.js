@@ -7,6 +7,7 @@ import notice from 'libraries-frontend-framelunch/js/notice';
 import subscribeEvents from './modules/_events';
 
 import '../components/common/pagetop/pagetop';
+import '../components/top/animation/animation';
 
 class Main {
   onDOMContentLoaded = () => {

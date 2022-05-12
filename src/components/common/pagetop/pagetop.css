@@ -1,10 +1,11 @@
 /* pagetop */
 .pagetop {
     background-color: #fff;
-    padding-bottom: 3rem;
     .layout {
         position: relative;
-        padding: 0 10rem;
+        padding: 0 10rem 3rem;
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
         @media (--sp) {
             padding-left: 5.3vw;
             padding-right: 5.3vw;

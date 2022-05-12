@@ -19,6 +19,7 @@ notice.listen('init', () => {
 });
 
 notice.listen('scroll', $scrollTop => {
+  if (!$swiper) return;
   const slideStartY = $('.about_detail').offset().top;
   const slideEndY = slideStartY + $('.about_detail').height() - $('.about_detail--list').height();
   const progress = ($scrollTop - slideStartY) / (slideEndY - slideStartY);

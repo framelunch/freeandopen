@@ -8,4 +8,15 @@ notice.listen('init', () => {
     const targetTop = $(`.${queryName}`).offset().top;
     $('html, body').animate({ scrollTop: targetTop }, { duration: 1000 });
   }
+
+  $('.nav_list li, .drawer-list li').each((index, element) => {
+    $('a.-anchor', element).on('click', e => {
+      const targetId = $(e.currentTarget).data('anchor');
+      e.preventDefault();
+      const targetTop = $(`.${targetId}`).offset().top;
+      $('html, body').animate({ scrollTop: targetTop }, { duration: 1000 });
+
+      $('#drawer-check').prop('checked', false);
+    });
+  });
 });

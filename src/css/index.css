@@ -216,6 +216,7 @@ body {
                 @media (--sp) {
                     width: 100%;
                     padding: 3rem;
+                    border-radius: 32px;
                 }
 
                 .number {
@@ -241,15 +242,20 @@ body {
                 }
 
                 .img-wrapper {
-                    height: 17rem;
                     text-align: center;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    @media (--not-sp) {
+                        height: 17rem;
+                    }
 
                     img {
-                        width: fit-content;
+                        width: 100%;
+                        @media (--sp) {
+                            width: calc(420 / 550 * 100%);
+                        }
                     }
                 }
 
@@ -264,22 +270,23 @@ body {
                     }
                     @media (--sp) {
                         font-size: 1.6rem;
+                        margin-top: 2rem;
                     }
                 }
 
                 p {
                     font-size: 1.4rem;
-                    line-height: 2.29;
+                    line-height: 2;
                     letter-spacing: 0.1em;
-                    margin-top: 3rem;
+                    margin-top: 2rem;
                     @media (--tb) {
                         font-size: calc(1.4rem * 0.8);
                         margin-top: calc(3rem * 0.8);
                     }
                     @media (--sp) {
                         font-size: 1.2rem;
-                        line-height: 1.92;
-                        margin-top: 1.9rem;
+                        line-height: 1.8;
+                        margin-top: 1rem;
                     }
                 }
             }

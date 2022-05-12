@@ -13,7 +13,7 @@
     .box {
         background-color: #e74c3c;
         color: #fff;
-        display: inline-block;
+        display: block;
         padding-left: 4rem;
         padding-bottom: 1.8rem;
         height: 100%;
@@ -38,10 +38,10 @@
         }
 
         h2 {
-            margin: 1.9rem 0;
+            padding: 1.9rem 0;
             font-size: 1.8rem;
             @media (--sp) {
-                margin: 1.9rem 0 1rem;
+                padding: 1.9rem 0 1rem;
                 font-size: 1.4rem;
             }
         }

@@ -3,6 +3,7 @@
 @import "../components/footer/footer.css";
 
 @import "../components/common/pagetop/pagetop.css";
+@import "../components/top/animation/animation.css";
 
 /* client */
 .client {
