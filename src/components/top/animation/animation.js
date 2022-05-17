@@ -5,7 +5,7 @@ const $window = $(window);
 
 notice.listen('scroll', $scrollTop => {
   $('.show-animation').each((index, element) => {
-    const targetY = $(element).offset().top - $window.height() / 2;
+    const targetY = $(element).offset().top - $window.height() / 1.5;
     if ($scrollTop > targetY) {
       $(element).addClass('-show');
     } else {

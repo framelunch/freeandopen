@@ -40,7 +40,7 @@ notice.listen('init', () => {
     const targetSlide = slide.eq(currentSlide);
     gsap.fromTo(targetSlide, { left: '100%' }, { left: 0, duration: 1.5, ease: 'power4.inOut' });
     gsap.fromTo($('img', targetSlide), { x: '-100%' }, { x: 0, duration: 1.5, ease: 'power4.inOut' });
-  }, 7000);
+  }, 3000);
 
   slide.eq(currentSlide).addClass('-current');
 });

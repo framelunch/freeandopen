@@ -1,6 +1,5 @@
 .header {
     /* header style here */
-    border-bottom: 1px solid #e5e5e5;
     height: 10rem;
     @media (--sp) {
         height: 6rem;
@@ -8,13 +7,15 @@
     .headerFixed {
         position: fixed;
         top: 0;
-        width: calc(1360px - 20rem);
+        width: 100%;
         z-index: 300;
         height: 10rem;
+        @media (--not-sp) {
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #e5e5e5;
+        }
         @media (--tb-h) {
             width: auto;
-            left: 4rem;
-            right: 4rem;
         }
         @media (--sp) {
             height: 6rem;

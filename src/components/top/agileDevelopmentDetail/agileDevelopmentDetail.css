@@ -38,7 +38,6 @@
             padding: 7.2rem 10rem 9.8rem;
             position: relative;
             border-top: 1px solid #e7e7e7;
-            transition: all 0.5s;
             z-index: 0;
             @media (--tb) {
                 padding-left: 4rem;

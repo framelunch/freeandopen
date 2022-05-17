@@ -13,7 +13,7 @@
         border-right: 1px solid #e5e5e5;
         @media (--not-sp) {
             position: sticky;
-            top: 0;
+            top: 10rem;
         }
         @media (--tb) {
             padding-left: 4rem;
@@ -51,7 +51,7 @@
                 gap: 3.5rem;
             }
             &--text {
-                margin-top: 6.7rem;
+                margin-top: 4rem;
                 @media (--not-sp) {
                     width: calc(620 / 1160 * 100%);
                 }
@@ -87,33 +87,33 @@
                             }
                         }
                         &.-number01 {
-                            width: calc(141 / 580 * 100%);
+                            width: calc(141 * 0.8 / 580 * 100%);
                             max-width: 14.1rem;
                             @media (--tb) {
-                                width: calc(141 / 580 * 0.8 * 100%);
+                                width: calc(141 * 0.8 / 580 * 0.8 * 100%);
                             }
                             @media (--sp) {
-                                width: calc(141 / 650 * 100%);
+                                width: calc(141 * 0.8 / 650 * 100%);
                             }
                         }
                         &.-number02 {
-                            width: calc(179 / 580 * 100%);
+                            width: calc(179 * 0.8 / 580 * 100%);
                             max-width: 17.9rem;
                             @media (--tb) {
-                                width: calc(179 / 580 * 0.8 * 100%);
+                                width: calc(179 * 0.8 / 580 * 0.8 * 100%);
                             }
                             @media (--sp) {
-                                width: calc(179 / 650 * 100%);
+                                width: calc(179 * 0.8 / 650 * 100%);
                             }
                         }
                         &.-number03 {
-                            width: calc(177 / 580 * 100%);
+                            width: calc(177 * 0.8 / 580 * 100%);
                             max-width: 17.7rem;
                             @media (--tb) {
-                                width: calc(177 / 580 * 0.8 * 100%);
+                                width: calc(177 * 0.8 / 580 * 0.8 * 100%);
                             }
                             @media (--sp) {
-                                width: calc(177 / 650 * 100%);
+                                width: calc(177 * 0.8 / 650 * 100%);
                             }
                         }
                     }
@@ -123,7 +123,7 @@
                     font-size: 3rem;
                     line-height: 1.8;
                     font-weight: 500;
-                    margin-top: 11.5rem;
+                    margin-top: 2rem;
                     @media (--tb) {
                         font-size: calc(3rem * 0.8);
                         margin-top: 4rem;
@@ -140,7 +140,7 @@
                     line-height: 2.375;
                     font-weight: 300;
                     letter-spacing: 0.1em;
-                    margin-top: 6rem;
+                    margin-top: 4rem;
                     font-size: 1.6rem;
                     @media (--tb) {
                         font-size: calc(1.6rem * 0.8);
@@ -202,24 +202,16 @@
                     }
                 }
             }
-
-            .reception-bg {
-                position: absolute;
-                bottom: 0;
-                left: -22rem;
-                z-index: 50;
-                @media (--sp) {
-                    width: 88%;
-                    bottom: 30%;
-                    left: -5.3vw;
-                }
-            }
         }
     }
 
     & .about_detail--pagination {
         position: absolute;
-        bottom: 30px;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         right: -30px;
         span {
             width: 8px;
@@ -232,6 +224,18 @@
             &.-current {
                 background-color: #e74c3c;
             }
+        }
+    }
+
+    .reception-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+        @media (--sp) {
+            width: 88%;
+            bottom: 30%;
+            left: -5.3vw;
         }
     }
 }
