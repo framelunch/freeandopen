@@ -7,30 +7,35 @@
     script: 'work.js',
     assets: {
       commonImage: '/common/image',
-      image: '/work/work3/image'
+      image: '/work/work5/image'
     }
   };
 %>
 <%- include('../common/_head.ejs', { conf }) %>
 <%- include('../../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
-  <div class="client -work3">
+  <div class="client">
     <div class="layout">
       <div class="show-animation" data-animation="title">
         <h2 class="section-title-sub">Client</h2>
         <span class="section-title-child">クライアント</span>
       </div>
       <div class="client_detail">
+        <img src="<%= conf.assets.commonImage %>/vancraft_logo.jpg" alt="" />
         <div class="client_detail--text">
-          <h3>⼤⼿インテリア会社様</h3>
-          <span>インテリア・雑貨</span>
+          <h3>株式会社ヴァンクラフト様</h3>
+          <span>広告</span>
+          <p>
+            企業や商品・ブランドのコンサルティング、マーケティング、プロモーションの戦略立案、実施を行う。また自社サービスの開発・運営なども行っている。
+          </p>
+          <a href="https://www.vancraft.co.jp/" target="_blank">https://www.vancraft.co.jp/</a>
         </div>
       </div>
-      <h4 class="pagetitle">Work 03</h4>
+      <h4 class="pagetitle">Work 05</h4>
     </div>
   </div>
 
-  <div class="system">
+  <div class="system -work5">
     <div class="layout">
       <div class="show-animation" data-animation="title">
         <h2 class="section-title-sub">System</h2>
@@ -39,17 +44,21 @@
       <div class="system_detail">
         <div class="system_detail--item supported">
           <h3>対応システム</h3>
-          <ul>
-            <li>商品情報管理システム</li>
-            <li>品質管理システム</li>
-            <li>各種帳票の自動化</li>
-          </ul>
-        </div>
-        <div class="system_detail--item collaboration">
-          <h3>外部連携</h3>
-          <ul>
-            <li>基幹システム</li>
-          </ul>
+          <div class="system_detail--itemParent">
+            <ul>
+              <li>案件管理システム</li>
+              <li>見積書作成システム</li>
+              <li>請求書作成システム</li>
+            </ul>
+            <ul>
+              <li>売上集計システム</li>
+              <li>原価計算システム</li>
+              <li>小口精算システム</li>
+            </ul>
+            <ul>
+              <li>小口精算承認機能</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -66,27 +75,21 @@
       <div class="layout">
         <div class="problem_detail--item">
           <p>
-            基幹システムが自社の運用に合っていないが、改修費用が高く、機能追加すると固定費も上がってしまう。
+            見積書が案件ごとに個別のExcelファイルに分かれているため、売上の集計や、顧客ごと仕入先ごとの売上原価の集計などが困難だった。
           </p>
           <div class="number">01</div>
         </div>
         <div class="problem_detail--item">
           <p>
-            複数の担当者が複数のExcelで商品情報の入力をしているため、運用フローが煩雑になった。
+            仕入原価や経費もExcelの見積書に入力していたため、原価の計算が煩雑だった。
           </p>
           <div class="number">02</div>
         </div>
         <div class="problem_detail--item">
           <p>
-            資料を作成する際、複数のExcelから必要な情報を集めて転記をすることに莫大な時間がかかる。
+            領収書などの経費については、見積書Excelへの入力と小口精算の入力が2重で発生していた。
           </p>
           <div class="number">03</div>
-        </div>
-        <div class="problem_detail--item">
-          <p>
-            更新する度に申請者・承認者間で発生する口頭指示・メール・グループウェアなどの通知業務に時間がかかる。
-          </p>
-          <div class="number">04</div>
         </div>
       </div>
     </div>
@@ -110,9 +113,9 @@
           <h3>After</h3>
           <img class="-hidden-sp" src="<%= conf.assets.image %>/after_img_pc.png" alt="" />
           <img class="-hidden-pc" src="<%= conf.assets.image %>/after_img_sp.png" alt="" />
-          <h4>現場スタッフとのコミュニケーションで運用に寄り添ったシステムを実現</h4>
+          <h4>リモート体制にも適応した、柔軟なシステムを開発。</h4>
           <p>
-            現場スタッフを中心に、実際に画面を使用頂きながら開発を進めたため、社内の運用に寄り添ったシステムになりました。複数のExcelで管理していた商品情報がFileMakerのみで全て把握/一元管理できる状態になり、情報が集約されました。また、ボタン1つで新商品発売一覧や撮影注意点などの帳票を決まったレイアウトで出力することも可能になったり、商品情報の登録を各部署毎に入力STEPを分けることで、運用フローの改善も実現しました。
+            あらゆる情報を網羅したシステム開発を行い、脱Excel＆ペーパーレスを実現しました。また、クラウドにより昨今のリモート体制にも適応し、いつでもどこからでも全スタッフが情報を閲覧・更新・共有出来るようになりました。
           </p>
         </div>
       </div>
@@ -127,7 +130,7 @@
       </div>
       <div class="voice_detail">
         <p>
-          言われたまま作るのではなく、背景・目的・結果を踏まえてより良くするために一緒に考えてもらえるところが助かっています。社内でFileMakerに対する要望も増えてきており、今後も機能を拡充していく予定です。
+          freeandopenさんに依頼したことで大幅な業務改善が行えました。また運用面に関してもいつも親身に相談に乗っていただき、最適な状態でシステムを管理していただいており大変感謝しています。
         </p>
       </div>
     </div>

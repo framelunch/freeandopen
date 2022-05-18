@@ -257,6 +257,32 @@
             }
         }
     }
+    &.-work5 {
+        .system_detail--item {
+            &.supported {
+                @media (--not-sp) {
+                    width: 100%;
+                    padding-right: 4.5rem;
+                }
+
+                .system_detail--itemParent {
+                    @media (--not-sp) {
+                        display: flex;
+                    }
+                    ul {
+                        @media (--not-sp) {
+                            width: calc(100% / 3);
+                        }
+                        &:not(:first-of-type) {
+                            @media (--sp) {
+                                margin-top: 2.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* problem */

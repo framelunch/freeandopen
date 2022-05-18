@@ -7,26 +7,31 @@
     script: 'work.js',
     assets: {
       commonImage: '/common/image',
-      image: '/work/work3/image'
+      image: '/work/work4/image'
     }
   };
 %>
 <%- include('../common/_head.ejs', { conf }) %>
 <%- include('../../components/header/header.ejs', { conf }) %>
 <main id="main" class="main" role="main">
-  <div class="client -work3">
+  <div class="client">
     <div class="layout">
       <div class="show-animation" data-animation="title">
         <h2 class="section-title-sub">Client</h2>
         <span class="section-title-child">クライアント</span>
       </div>
       <div class="client_detail">
+        <img src="<%= conf.assets.commonImage %>/asterisk_logo.jpg" alt="" />
         <div class="client_detail--text">
-          <h3>⼤⼿インテリア会社様</h3>
-          <span>インテリア・雑貨</span>
+          <h3>株式会社アスタリスク様</h3>
+          <span>人材派遣</span>
+          <p>
+            ものづくりが盛んな愛知県の豊橋市と豊田市の三河エリアを中心に、製造業・工場案件に強みを持った地域最大級の人材派遣会社。
+          </p>
+          <a href="https://www.kabu-asterisk.net/" target="_blank">https://www.kabu-asterisk.net/</a>
         </div>
       </div>
-      <h4 class="pagetitle">Work 03</h4>
+      <h4 class="pagetitle">Work 04</h4>
     </div>
   </div>
 
@@ -40,15 +45,17 @@
         <div class="system_detail--item supported">
           <h3>対応システム</h3>
           <ul>
-            <li>商品情報管理システム</li>
-            <li>品質管理システム</li>
-            <li>各種帳票の自動化</li>
+            <li>派遣者情報管理システム</li>
+            <li>採用情報管理システム</li>
+            <li>取引先／案件管理システム</li>
+            <li>支給／寮管理システム</li>
+            <li>給与管理システム</li>
           </ul>
         </div>
         <div class="system_detail--item collaboration">
           <h3>外部連携</h3>
           <ul>
-            <li>基幹システム</li>
+            <li>給与明細WEBシステム</li>
           </ul>
         </div>
       </div>
@@ -66,27 +73,22 @@
       <div class="layout">
         <div class="problem_detail--item">
           <p>
-            基幹システムが自社の運用に合っていないが、改修費用が高く、機能追加すると固定費も上がってしまう。
+            システムを導入したが、自社の運用に合わなかった。
           </p>
           <div class="number">01</div>
         </div>
         <div class="problem_detail--item">
           <p>
-            複数の担当者が複数のExcelで商品情報の入力をしているため、運用フローが煩雑になった。
+            Excelで派遣社員と案件の引き当てを行っていたため、膨大な時間がかかっていた。<br>
+            また、派遣社員の増加に伴い情報量が増え、運用に限界を感じていた。
           </p>
           <div class="number">02</div>
         </div>
         <div class="problem_detail--item">
           <p>
-            資料を作成する際、複数のExcelから必要な情報を集めて転記をすることに莫大な時間がかかる。
+            複数のExcelや紙の書類で情報管理をしていたため、どこに何の情報があるのか把握しきれていなかったり、同じ情報の入力や入力ミスが相次いでいた。
           </p>
           <div class="number">03</div>
-        </div>
-        <div class="problem_detail--item">
-          <p>
-            更新する度に申請者・承認者間で発生する口頭指示・メール・グループウェアなどの通知業務に時間がかかる。
-          </p>
-          <div class="number">04</div>
         </div>
       </div>
     </div>
@@ -110,9 +112,9 @@
           <h3>After</h3>
           <img class="-hidden-sp" src="<%= conf.assets.image %>/after_img_pc.png" alt="" />
           <img class="-hidden-pc" src="<%= conf.assets.image %>/after_img_sp.png" alt="" />
-          <h4>現場スタッフとのコミュニケーションで運用に寄り添ったシステムを実現</h4>
+          <h4>情報を網羅したシステム開発で、脱Excel＆ペーパーレスを実現。</h4>
           <p>
-            現場スタッフを中心に、実際に画面を使用頂きながら開発を進めたため、社内の運用に寄り添ったシステムになりました。複数のExcelで管理していた商品情報がFileMakerのみで全て把握/一元管理できる状態になり、情報が集約されました。また、ボタン1つで新商品発売一覧や撮影注意点などの帳票を決まったレイアウトで出力することも可能になったり、商品情報の登録を各部署毎に入力STEPを分けることで、運用フローの改善も実現しました。
+            全ての情報を網羅したシステムを開発したことで、情報入力の二度手間や誤入力が減少し、派遣社員や求人案件が増えても、スムーズな情報共有ができるようになりました。また、給与明細のWEBシステムもFreeandopenが開発し、印刷と封入作業がなくなったことで、業務が円滑に進み業務効率化につながりました。
           </p>
         </div>
       </div>
@@ -127,7 +129,9 @@
       </div>
       <div class="voice_detail">
         <p>
-          言われたまま作るのではなく、背景・目的・結果を踏まえてより良くするために一緒に考えてもらえるところが助かっています。社内でFileMakerに対する要望も増えてきており、今後も機能を拡充していく予定です。
+          人材情報管理に関して、他社システムの導入を行いましたが、自社の運用に合わず断念。<br>
+          その後はExcelで管理していましたが、Freeandopenさんと一緒にシステム開発を行ったことで、自社の運用に沿ったシステムが完成し、劇的に作業の手間が減りました。セキュリティの不安も解消し、登録人数が倍になっても対応人数を増やさずに済みました。<br><br>
+          是非、他の企業様にもオススメしたいです。
         </p>
       </div>
     </div>
