@@ -12,14 +12,14 @@
     <div class="headerFixed">
       <div class="layout">
         <div class="nav">
-        <a href="/"><img src="<%= conf.assets.commonImage %>/logo.png" alt=""/></a>
+        <a class="hover" href="/"><img src="<%= conf.assets.commonImage %>/logo.png" alt=""/></a>
         <ul class="nav_list">
           <% menu.forEach(function (value, key) { %>
             <li>
               <% if (conf.category === 'top') { %>
-                <a href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
+                <a class="hover" href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
               <% } else { %>
-                <a href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                <a class="hover" href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
               <% } %>
             </li>
           <% }); %>

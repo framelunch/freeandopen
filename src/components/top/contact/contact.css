@@ -59,6 +59,8 @@
                     display: block;
                     font-weight: 600;
                     line-height: 1.75;
+                    margin-bottom: 0.2rem;
+                    letter-spacing: 0.05em;
                     @media (--sp) {
                         font-size: 1.3rem;
                         letter-spacing: 0.1em;
@@ -112,6 +114,7 @@
                     letter-spacing: 0.1em;
                     font-weight: 700;
                     padding: 2.3rem 8.2rem;
+                    cursor: pointer;
                     @media (--sp) {
                         font-size: 1.4rem;
                         padding: 1.95rem 7rem;
