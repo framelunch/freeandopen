@@ -83,7 +83,7 @@
 
             p {
                 font-size: 1.4rem;
-                line-height: 2.3;
+                line-height: 2.2;
                 letter-spacing: 0.18em;
                 font-weight: 300;
                 margin-top: 2rem;
@@ -99,6 +99,7 @@
                 font-size: 1.3rem;
                 margin-top: 1.5rem;
                 display: block;
+                letter-spacing: 0.05em;
                 @media (--sp) {
                     font-size: 1.2rem;
                 }
@@ -118,6 +119,27 @@
         @media (--sp) {
             font-size: 7rem;
             bottom: 55px;
+        }
+    }
+
+    &.-work2 {
+        .client_detail--description {
+            @media (--not-sp) {
+                display: flex;
+                align-items: center;
+            }
+            .client_detail--descriptionText {
+                @media (--not-sp) {
+                    padding-right: 1rem;
+                }
+            }
+            img {
+                width: calc(180 / 780 * 100%);
+                @media (--sp) {
+                    margin-left: 0;
+                    width: calc(252 / 550 * 100%);
+                }
+            }
         }
     }
 }
@@ -187,6 +209,39 @@
 
                     &:not(:last-child) {
                         margin-bottom: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+    &.-work2 {
+        .system_detail--item {
+            &.supported {
+                @media (--not-sp) {
+                    width: calc(500 / 900 * 100%);
+                }
+            }
+            &.collaboration {
+                @media (--not-sp) {
+                    width: calc(360 / 900 * 100%);
+                }
+            }
+            .system_detail--itemParent {
+                @media (--not-sp) {
+                    display: flex;
+                    padding-right: 4.5rem;
+                    justify-content: space-between;
+                }
+                ul {
+                    li.-title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        &::before {
+                            content: normal;
+                        }
+                    }
+                    &:not(:first-of-type) {
+                        margin-top: 4rem;
                     }
                 }
             }
@@ -298,6 +353,19 @@
             }
         }
     }
+    &.-work2 {
+        .problem_detail--item {
+            p {
+                span {
+                    display: block;
+                    font-weight: 500;
+                }
+                &:not(:first-of-type) {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
 }
 
 /* solution */
@@ -402,13 +470,27 @@
 
             p {
                 font-weight: 300;
-                line-height: 2.375;
+                line-height: 2.2;
                 letter-spacing: 0.18em;
                 padding-right: 8rem;
                 @media (--sp) {
                     padding-right: 0;
                     font-size: 1.3rem;
                     line-height: 2.07;
+                }
+                &:not(:first-of-type) {
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+    &.-work2 {
+        .after {
+            p {
+                span {
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
                 }
             }
         }
@@ -483,6 +565,19 @@
             @media (--sp) {
                 font-size: 1.3rem;
                 line-height: 2.25;
+            }
+        }
+    }
+    &.-work2 {
+        .voice_detail {
+            p {
+                span {
+                    font-weight: 500;
+                    display: block;
+                }
+                &:not(:first-of-type) {
+                    margin-top: 4rem;
+                }
             }
         }
     }

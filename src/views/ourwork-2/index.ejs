@@ -1,0 +1,191 @@
+<%
+  const conf = {
+    category: 'work',
+    title : 'Our Work 01｜【Filemaker開発】株式会社Freeandopen',
+    description : '株式会社Freeandopenが開発に携わった事例を紹介します。',
+    style: 'work.css',
+    script: 'work.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/work/work2/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %>
+<%- include('../../components/header/header.ejs', { conf }) %>
+<main id="main" class="main" role="main">
+  <div class="client -work2">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Client</h2>
+        <span class="section-title-child">クライアント</span>
+      </div>
+      <div class="client_detail">
+        <img src="<%= conf.assets.commonImage %>/shusselection_logo.jpg" alt="" />
+        <div class="client_detail--text">
+          <h3>株式会社シューズセレクション様</h3>
+          <span>傘の企画・製造、卸</span>
+          <div class="client_detail--description">
+            <div class="client_detail--descriptionText">
+              <p>
+                国内シェアNo.1ブランド Waterfront（ウォーターフロント）」を率いる傘メーカー。<br>
+                500種類を超える高品質低価格の
+              </p>
+              <a href="https://www.water-front.co.jp/" target="_blank">https://www.water-front.co.jp/</a>
+            </div>
+            <img src="<%= conf.assets.image %>/client_logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <h4 class="pagetitle">Work 02</h4>
+    </div>
+  </div>
+
+  <div class="system -work2">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">System</h2>
+        <span class="section-title-child">対応システム</span>
+      </div>
+      <div class="system_detail">
+        <div class="system_detail--item supported">
+          <h3>対応システム</h3>
+          <div class="system_detail--itemParent">
+            <ul>
+              <li class="-title">商品管理システム</li>
+              <li>商品マスタ</li>
+              <li>発注管理システム</li>
+              <li>入荷管理システム</li>
+              <li>在庫管理システム</li>
+            </ul>
+            <ul>
+              <li class="-title">営業管理システム</li>
+              <li>テレアポ管理システム</li>
+              <li>営業活動管理システム</li>
+              <li>取引先管理システム</li>
+              <li>予算管理システム</li>
+            </ul>
+          </div>
+        </div>
+        <div class="system_detail--item collaboration">
+          <h3>外部連携</h3>
+          <ul>
+            <li>WMS（ロジザード）、Slack</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem -work2">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Problem</h2>
+        <span class="section-title-child">クライアントの課題</span>
+      </div>
+    </div>
+    <div class="problem_detail">
+      <div class="layout">
+        <div class="problem_detail--item">
+          <p>
+            <span>商品情報</span>
+            商品管理や品番体系が都度の対応になっていた為、管理が煩雑になっていた。
+          </p>
+          <p>
+            <span>営業管理</span>
+            営業状況は個々人が自分のやり方で管理しており、情報がバラバラになっていた。
+          </p>
+          <div class="number">01</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            <span>商品情報</span>
+            倉庫への入出庫情報はメールで連絡を取っていたが、倉庫移転に伴いWMSの自動データ連携が必要となった。 
+          </p>
+          <p>
+            <span>営業管理</span>
+            大まかな数値管理を行っていたが、具体的な数値まで分からなかった。
+          </p>
+          <div class="number">02</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            <span>商品情報</span>
+            発注書や仕様書が紙またはPDFの管理だったため、必要な情報を探すのに時間がかかっていた。
+          </p>
+          <p>
+            <span>営業管理</span>
+            担当者が不在または休みの際に、取引先の過去の実績などがまとまった資料がなく、フォローが行えなかった。
+          </p>
+          <div class="number">03</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="solution -work2">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Solution</h2>
+        <span class="section-title-child">freeandopenのソリューション</span>
+      </div>
+    </div>
+    <div class="solution_detail">
+      <div class="layout">
+        <div class="before">
+          <h3>Before</h3>
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/before_img_pc.png" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/before_img_sp.png" alt="" />
+        </div>
+        <div class="after">
+          <h3>After</h3>
+          <img class="-hidden-sp" src="<%= conf.assets.image %>/after_img_pc.png" alt="" />
+          <img class="-hidden-pc" src="<%= conf.assets.image %>/after_img_sp.png" alt="" />
+          <p>
+            <span>商品情報</span>
+            システム構築と同時に商品情報体系を見直すことにより情報の精度が向上し、WMSとの自動データ連携と時間短縮を実現。また、データのマスタ化により、属人化されていた作業や情報が全体共有されやすくなったり、閲覧権限をマスタ管理することで社内情報の統制も行いやすくなりました。アナログだった発注書や仕様書もデータ化されたことで、紛失防止と検索のしやすさに繋がりました。データ出力のフォーマットも扱いやすく整理されたため、分析精度も上がっています。
+          </p>
+          <p>
+            <span>営業管理</span>
+            システムに入力した情報が自動でSlackに連携されるため、他の担当者の営業状況がすぐに把握できるようになりました。また、数値実績の集計時間が短縮されたことで他の業務に時間を割けるようになったり、営業行動の数値化の実現や、KPI設定を行うことで営業活動の予実管理が分かるようになりました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="voice -work2">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Voice</h2>
+        <span class="section-title-child">お客様の声</span>
+      </div>
+      <div class="voice_detail">
+        <p>
+          <span>商品情報</span>
+          商品体系の変更に伴い、管理しやすい管理画面をすぐに作成してもらえたため、とても助かりました。<br>
+          また、アナログからデジタルに変わったことによって、情報収集が速くなりました。データ出力機能もすぐに作ってもらえるため、分析などが行いやすく会社として非常に重要なシステムになりました。<br>
+          さらにコミュニケーションが取りやすいため、社内SEがいるかのように色々相談させてもらっています。
+        </p>
+        <p>
+          <span>営業管理</span>
+          情報共有がしやすくなったことによって、案件の進捗状況が把握できるようになり、担当者が不在の場合でも他の営業がフォローすることが可能になりました。<br>
+          また、顧客の状況を素早く把握できるようになったため、 次の施策立案が迅速にできるようになり、営業力が上がっていることを実感しています。<br>
+          簡単な改修なら会議中に対応してくれたりと、Freeandopenさんの対応の速さには驚きました。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../../components/common/pagetop/pagetop.ejs', { conf }) %>
+
+  <div class="sub-contact">
+    <span>Contact <br class="sp-br" />Us</span>
+    <p>開発に関するご相談など弊社へのお問い合わせは<br />こちらのフォームからお願いいたします。</p>
+    <a href="/?anchor=contact">お問い合わせフォームへ</a>
+  </div>
+
+</main>
+
+<%- include('../../components/footer/footer.ejs', { conf }) %>
+<%- include('../common/_foot.ejs', { conf }) %>
