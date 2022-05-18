@@ -18,5 +18,9 @@ notice.listen('init', () => {
     pagination: {
       el: '#ourWorkSlide, .swiper-pagination',
     },
+    navigation: {
+      nextEl: '#ourWorkSlide, .swiper-button-next',
+      prevEl: '#ourWorkSlide, .swiper-button-prev',
+    },
   });
 });

@@ -15,7 +15,7 @@
     {
       title: '大手インテリア会社様',
       text: '商品情報管理システム／品質管理システム／<br class="-hidden-sp">各種帳票の自動化',
-      image: '',
+      image: 'noimage_logo',
       link: 'ourwork-3'
     },
     {
@@ -33,6 +33,7 @@
       <span class="section-title-child">開発・運用実績</span>
     </div>
     <div class="swiper" id="ourWorkSlide">
+      <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">
         <% ourwork.forEach(function (value, key) { %>
           <div class="swiper-slide">
@@ -48,7 +49,10 @@
           </div>
         <% }); %>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
   </div>
 </div>
