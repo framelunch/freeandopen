@@ -9,6 +9,9 @@
             padding: 10.2rem 5.3vw 0;
         }
     }
+    > .layout {
+        padding-bottom: 8rem;
+    }
 
     .box {
         background-color: #e74c3c;
@@ -57,25 +60,46 @@
         }
     }
 
+    .our_work-slide {
+        position: relative;
+        z-index: 0;
+        > .layout {
+            padding-top: 0;
+            border-right: none;
+        }
+
+        .our_work-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .layout {
+                padding-top: 0;
+                padding-bottom: 0;
+                position: relative;
+                border-right: none;
+                height: 100%;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100%;
+                    background-color: #f7f7f7;
+                    content: "";
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
     .swiper {
-        padding: 3rem 0 3rem 10rem;
-        margin-top: 8rem;
+        padding: 8rem 0 11rem 10rem;
         margin-left: -10rem;
         overflow: visible;
-        position: relative;
+        position: static;
         @media (--sp) {
-            margin-top: 4rem;
-            padding: 3rem 2rem 3rem;
+            padding: 6rem 2rem 9rem;
             margin-left: -5.3vw;
-        }
-        &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100%;
-            background-color: #f7f7f7;
-            content: "";
         }
         &-wrapper {
             /* gap: 3rem;
@@ -93,13 +117,15 @@
         }
 
         & .swiper-pagination {
-            position: relative;
+            position: absolute;
             text-align: right;
             bottom: auto;
-            margin-bottom: 3rem;
+            top: 4rem;
+            right: 5rem;
+            left: auto;
             @media (--sp) {
-                margin-bottom: 2rem;
-                margin-left: 2rem;
+                top: 2rem;
+                right: 2rem;
             }
             & .swiper-pagination-bullet-active {
                 background-color: #e74c3c;
@@ -107,13 +133,14 @@
         }
 
         & .swiper-button {
-            position: relative;
+            position: absolute;
             display: flex;
             justify-content: flex-end;
-            margin-top: 3rem;
+            right: 5rem;
+            bottom: 3rem;
             @media (--sp) {
-                margin-top: 2rem;
-                margin-left: 2rem;
+                right: 2rem;
+                bottom: 2rem;
             }
             .swiper-button-next,
             .swiper-button-prev {

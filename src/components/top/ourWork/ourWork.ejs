@@ -38,26 +38,33 @@
       <h2 class="section-title">Our Work</h2>
       <span class="section-title-child">開発・運用実績</span>
     </div>
-    <div class="swiper" id="ourWorkSlide">
-      <div class="swiper-pagination"></div>
-      <div class="swiper-wrapper">
-        <% ourwork.forEach(function (value, key) { %>
-          <div class="swiper-slide">
-            <a class="box" href="<%- value.link %>">
-              <% if (value.image) { %>
-              <div class="img-wrapper">
-                <img src="<%= conf.assets.commonImage %>/<%- value.image %>.jpg" alt="" />
-              </div>
-              <% } %>
-              <h2><%- value.title %></h2>
-              <p><%- value.text %></p>
-            </a>
-          </div>
-        <% }); %>
-      </div>
-      <div class="swiper-button">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+  </div>
+  <div id="ourWorkSlide" class="our_work-slide">
+    <div class="our_work-background">
+      <div class="layout"></div>
+    </div>
+    <div class="layout">
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <% ourwork.forEach(function (value, key) { %>
+            <div class="swiper-slide">
+              <a class="box" href="<%- value.link %>">
+                <% if (value.image) { %>
+                <div class="img-wrapper">
+                  <img src="<%= conf.assets.commonImage %>/<%- value.image %>.jpg" alt="" />
+                </div>
+                <% } %>
+                <h2><%- value.title %></h2>
+                <p><%- value.text %></p>
+              </a>
+            </div>
+          <% }); %>
+        </div>
+        <div class="swiper-button">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </div>
   </div>

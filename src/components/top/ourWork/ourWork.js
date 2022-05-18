@@ -3,7 +3,7 @@ import notice from 'libraries-frontend-framelunch/js/notice';
 
 notice.listen('init', () => {
   // eslint-disable-next-line
-  const swiper = new Swiper('#ourWorkSlide', {
+  const swiper = new Swiper('#ourWorkSlide .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 25,
     speed: 500,
