@@ -65,6 +65,15 @@
                     width: 14rem;
                 }
             }
+            @media (--not-sp) {
+                transition-property: opacity;
+                transition-duration: 0.3s;
+            }
+            &:hover {
+                @media (--not-sp) {
+                    opacity: 0.5;
+                }
+            }
         }
 
         &_list {
