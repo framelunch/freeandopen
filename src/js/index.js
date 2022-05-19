@@ -12,6 +12,7 @@ import '../components/top/mv/mv';
 import '../components/top/aboutDetail/aboutDetail';
 import '../components/top/ourWork/ourWork';
 import '../components/top/company/company';
+import '../components/top/contact/contact';
 
 import { preloadImage, getQueryName } from './modules/utils';
 

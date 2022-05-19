@@ -16,25 +16,29 @@
       </div>
 
       <div class="contact_wrapper--form">
-        <form action="" method="">
+        <form>
           <div class="form-item">
             <label for="name">Name<span>*</span></label>
             <input id="name" type="text" name="name" />
+            <span class="form-item__err">お名前を入力してください</span>
           </div>
           <div class="form-item">
             <label for="tel">Tel<span>*</span></label>
             <input id="tel" type="text" name="tel" />
+            <span class="form-item__err">電話番号を入力してください</span>
           </div>
           <div class="form-item">
             <label for="email">E-mail<span>*</span></label>
             <input id="email" type="text" name="email" />
+            <span class="form-item__err">メールアドレスを入力してください</span>
           </div>
           <div class="form-item">
-            <label for="Message">Message</label>
-            <textarea name="Message" id="Message"></textarea>
+            <label for="message">Message<span>*</span></label>
+            <textarea name="message" id="message"></textarea>
+            <span class="form-item__err">メッセージを入力してください</span>
           </div>
           <div class="submit_wrapper">
-            <input type="submit" value="送信" class="submit hover" />
+            <a class="submit hover">送信</a>
           </div>
         </form>
       </div>

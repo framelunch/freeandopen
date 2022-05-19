@@ -96,6 +96,17 @@
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }
+
+                .form-item__err {
+                    font-size: 1.4rem;
+                    color: #e74c3c;
+                }
+
+                &:not(.-err) {
+                    .form-item__err {
+                        display: none;
+                    }
+                }
             }
 
             .submit_wrapper {
