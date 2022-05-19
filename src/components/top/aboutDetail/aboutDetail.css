@@ -21,6 +21,20 @@
         @media (--sp) {
             padding: 0 5.3vw;
         }
+        &::before {
+            @media (--not-sp) {
+                content: "";
+                position: absolute;
+                right: 10rem;
+                top: 0;
+                width: 100vw;
+                height: 100%;
+                background-image: url('/top/image/reception-bg.png');
+                background-repeat: no-repeat;
+                background-position: bottom left;
+                pointer-events: none;
+            }
+        }
         &::after {
             @media (--not-sp) {
                 content: "";

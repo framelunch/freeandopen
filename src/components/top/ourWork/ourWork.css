@@ -63,6 +63,7 @@
     .our_work-slide {
         position: relative;
         z-index: 0;
+        overflow: hidden;
         > .layout {
             padding-top: 0;
             border-right: none;

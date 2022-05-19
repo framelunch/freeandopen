@@ -10,12 +10,10 @@
         width: 100%;
         z-index: 300;
         height: 10rem;
-        @media (--not-sp) {
-            background-color: #f7f7f7;
-            border-bottom: 1px solid #e5e5e5;
-        }
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #e5e5e5;
         @media (--tb-h) {
-            width: auto;
+            width: 100%;
         }
         @media (--sp) {
             height: 6rem;
@@ -53,7 +51,7 @@
             height: auto;
         }
         @media (--sp) {
-            height: 6rem;
+            height: auto;
         }
 
         a {

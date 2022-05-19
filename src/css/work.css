@@ -5,6 +5,12 @@
 @import "../components/common/pagetop/pagetop.css";
 @import "../components/top/animation/animation.css";
 
+.main {
+    @media (--sp) {
+        overflow: hidden;
+    }
+}
+
 /* client */
 .client {
     .layout {
@@ -59,13 +65,13 @@
             }
 
             h3 {
-                margin-top: 2.9rem;
+                padding-top: 2.9rem;
                 font-size: 2rem;
                 letter-spacing: 0.1em;
                 font-weight: 500;
                 @media (--sp) {
                     font-size: 1.5rem;
-                    margin-top: 2.5rem;
+                    padding-top: 2.5rem;
                 }
             }
 
@@ -116,6 +122,7 @@
         position: absolute;
         bottom: 30px;
         right: 0;
+        z-index: -1;
         @media (--sp) {
             font-size: 7rem;
             bottom: 55px;
@@ -145,7 +152,6 @@
 
     &.-work3 {
         .client_detail--text {
-            margin-top: 0;
             border-top: none;
             h3 {
                 margin-top: 0;
@@ -251,7 +257,9 @@
                         }
                     }
                     &:not(:first-of-type) {
-                        margin-top: 4rem;
+                        @media (--sp) {
+                            margin-top: 4rem;
+                        }
                     }
                 }
             }
@@ -668,7 +676,7 @@
             padding: 2rem 0;
             display: flex;
             align-items: center;
-            width: 20rem;
+            width: 24rem;
             margin-left: auto;
             margin-right: auto;
             justify-content: center;

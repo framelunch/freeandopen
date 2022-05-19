@@ -16,6 +16,10 @@ notice.listen('init', () => {
     speed: 500,
     allowTouchMove: false,
   });
+
+  $('.about_detail--list--item--textNo img')
+    .eq(0)
+    .addClass('-show');
 });
 
 notice.listen('scroll', $scrollTop => {
