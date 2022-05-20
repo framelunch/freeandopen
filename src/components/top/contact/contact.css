@@ -132,6 +132,25 @@
                     }
                 }
             }
+
+            .contact_wrapper--formThanks {
+                line-height: 2.375;
+                letter-spacing: 0.18em;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            &:not(.-thanks) {
+                .contact_wrapper--formThanks {
+                    display: none;
+                }
+            }
+
+            &.-thanks {
+                form {
+                    display: none;
+                }
+            }
         }
     }
 }

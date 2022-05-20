@@ -4,6 +4,7 @@ import ajax from 'ajax';
 
 const SEND_PATH = '/tools/send.php';
 const $contact = $('.contact');
+const $form = $('.contact_wrapper--form');
 
 const errorCheck = target => {
   if ($(target).val() === '') {
@@ -34,6 +35,7 @@ notice.listen('init', () => {
     if (!isErr) {
       const postData = JSON.stringify({
         name: name.val(),
+        tel: tel.val(),
         email: email.val(),
         message: message.val(),
       });
@@ -44,6 +46,8 @@ notice.listen('init', () => {
         data: postData,
         dataType: 'json',
       });
+
+      $form.addClass('-thanks');
     } else {
       $('html, body').animate({ scrollTop: $('.contact').offset().top });
     }

@@ -12,6 +12,7 @@ require './PHPMailer/class.phpmailer.php';
 $json = file_get_contents('php://input');
 $post = json_decode($json, true);
 $post_user_name = $post['name'];
+$post_user_tel = $post['tel'];
 $post_user_email = $post['email'];
 $post_user_message = $post['message'];
 
@@ -47,23 +48,24 @@ EOT;
  * 送信内容 ( 管理者向け )
  * ***********************/
 // 送信先
-$to_admin_email = 'sekiguchi@framelunch.jp';
+$to_admin_email = 'oshigoto@freeandopen.co.jp';
 
 // メール件名
-$to_admin_subject = 'ホームページからお問合わせがありました';
+$to_admin_subject = 'お問合せ';
 
 // メール本文
 $to_admin_body = <<<EOT
 
-下記の内容で受け付けました。
-
-■ お名前
+■ Name
 {$post_user_name}
 
-■ メールアドレス
+■ Tel
+{$post_user_tel}
+
+■ E-mail
 {$post_user_email}
 
-■ お問合せ内容
+■ Message
 {$post_user_message}
 
 EOT;
@@ -119,5 +121,5 @@ send($mailer, $to_admin_email, $to_admin_subject, $to_admin_body);
 
 if (!empty($post_user_email)) {
     // ユーザーへ送信
-    send($mailer, $post_user_email, $to_user_subject, $to_user_body);
+    // send($mailer, $post_user_email, $to_user_subject, $to_user_body);
 }
