@@ -94,12 +94,12 @@
     }
 
     .swiper {
-        padding: 12rem 0 11rem 10rem;
+        padding: 3rem 0 8rem 10rem;
         margin-left: -10rem;
         overflow: visible;
         position: static;
         @media (--sp) {
-            padding: 9rem 2rem 9rem;
+            padding: 2rem 2rem 6rem;
             margin-left: -5.3vw;
         }
         &-wrapper {
@@ -120,12 +120,12 @@
         & .swiper-pagination {
             position: absolute;
             text-align: right;
-            bottom: auto;
-            top: 4rem;
+            bottom: 5rem;
             right: 5rem;
             left: auto;
+            z-index: 0;
             @media (--sp) {
-                top: 2rem;
+                bottom: 3rem;
                 right: 2rem;
             }
             & .swiper-pagination-bullet-active {
@@ -134,14 +134,14 @@
         }
 
         & .swiper-button {
-            position: absolute;
+            position: relative;
             display: flex;
-            justify-content: flex-end;
-            left: 10rem;
-            top: 3rem;
+            justify-content: flex-start;
+            left: 0;
+            top: 0;
+            margin-bottom: 3rem;
             @media (--sp) {
-                left: 2rem;
-                top: 2rem;
+                margin-bottom: 2rem;
             }
             .swiper-button-next,
             .swiper-button-prev {
