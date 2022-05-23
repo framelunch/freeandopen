@@ -152,7 +152,6 @@
 
     &.-work3 {
         .client_detail--text {
-            border-top: none;
             h3 {
                 margin-top: 0;
             }
@@ -468,6 +467,29 @@
             @media (--sp) {
                 padding: 4rem 5.3vw 7.5rem;
                 background-color: #f7f7f7;
+            }
+        }
+
+        a {
+            display: block;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 3rem;
+                right: 6rem;
+                width: 36px;
+                height: 41px;
+                background-image: url('/work/common/image/zoom_btn.png');
+                background-size: 36px 41px;
+                background-repeat: no-repeat;
+                @media (--sp) {
+                    width: calc(67px / 2);
+                    height: calc(71px / 2);
+                    background-size: calc(67px / 2) calc(71px / 2);
+                    top: 2rem;
+                    right: 3rem;
+                }
             }
         }
 
