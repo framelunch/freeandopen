@@ -94,12 +94,12 @@
     }
 
     .swiper {
-        padding: 8rem 0 11rem 10rem;
+        padding: 12rem 0 11rem 10rem;
         margin-left: -10rem;
         overflow: visible;
         position: static;
         @media (--sp) {
-            padding: 6rem 2rem 9rem;
+            padding: 9rem 2rem 9rem;
             margin-left: -5.3vw;
         }
         &-wrapper {
@@ -137,22 +137,22 @@
             position: absolute;
             display: flex;
             justify-content: flex-end;
-            right: 5rem;
-            bottom: 3rem;
+            left: 10rem;
+            top: 3rem;
             @media (--sp) {
-                right: 2rem;
-                bottom: 2rem;
+                left: 2rem;
+                top: 2rem;
             }
             .swiper-button-next,
             .swiper-button-prev {
                 position: relative;
                 top: auto;
                 margin-top: 0;
-                width: 23px;
-                height: 45px;
+                width: 60px;
+                height: 60px;
                 background-image: url('/top/image/ourwork_arrow.png');
                 background-repeat: no-repeat;
-                background-size: 23px auto;
+                background-size: 60px auto;
                 outline: none;
                 &::after {
                     content: normal;
@@ -160,14 +160,22 @@
                 &[aria-disabled] {
                     cursor: pointer;
                 }
+
+                @media (--sp) {
+                    width: 44px;
+                    height: 44px;
+                    background-size: 44px auto;
+                }
             }
             .swiper-button-next {
                 left: auto;
                 transform: scale(-1, 1);
+                right: 0;
             }
             .swiper-button-prev {
                 right: auto;
-                margin-right: 5rem;
+                margin-right: 1.5rem;
+                left: 0;
             }
         }
     }
