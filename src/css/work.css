@@ -472,25 +472,6 @@
 
         a {
             display: block;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 3rem;
-                right: 6rem;
-                width: 36px;
-                height: 41px;
-                background-image: url('/work/common/image/zoom_btn.png');
-                background-size: 36px 41px;
-                background-repeat: no-repeat;
-                @media (--sp) {
-                    width: calc(67px / 2);
-                    height: calc(71px / 2);
-                    background-size: calc(67px / 2) calc(71px / 2);
-                    top: 2rem;
-                    right: 3rem;
-                }
-            }
         }
 
         .before {
@@ -546,6 +527,39 @@
                 }
                 &:not(:first-of-type) {
                     margin-top: 4rem;
+                }
+            }
+        }
+
+        .solution_image {
+            position: relative;
+        }
+
+        .solution_lens {
+            position: absolute;
+            top: 3rem;
+            left: 1.5rem;
+            z-index: 1;
+            pointer-events: none;
+            font-size: 11px;
+
+            @media (--sp) {
+                display: flex;
+                align-items: center;
+                top: 2rem;
+                left: 2rem;
+            }
+
+            img {
+                width: 36px;
+                display: block;
+                margin: 0 auto;
+                @media (--not-sp) {
+                    margin-bottom: 1rem;
+                }
+
+                @media (--sp) {
+                    width: 32px;
                 }
             }
         }
