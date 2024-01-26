@@ -1,5 +1,8 @@
 .section-contact {
     .layout {
         padding-top: 10rem;
+        @media (--sp) {
+            padding-top: 5rem;
+        }
     }
 }

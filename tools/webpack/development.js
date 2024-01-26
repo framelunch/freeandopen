@@ -39,7 +39,7 @@ module.exports = {
     ...base.plugins,
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': "'development'" }),
     new webpack.NamedModulesPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
+    // new ForkTsCheckerWebpackPlugin(),
   ],
   devServer: {
     publicPath: base.output.publicPath,

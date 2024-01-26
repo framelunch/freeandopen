@@ -2,8 +2,12 @@
     .layout {
         border-left: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
-        padding-bottom: 8rem;
         padding-top: 10rem;
+        padding-bottom: 8rem;
+        @media (--sp) {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
     }
     .description__content {
         background-color: #fff;
@@ -12,9 +16,17 @@
         padding: 1.6rem 8rem;
         letter-spacing: 0.1em;
         box-shadow: 0 20px 30px rgba(0 0 0 / 0.05);
+        @media (--sp) {
+            margin-top: 2.4rem;
+            padding: 0 3rem;
+        }
         .description__block {
             padding-top: 4rem;
             padding-bottom: 4rem;
+            @media (--sp) {
+                padding-top: 3.2rem;
+                padding-bottom: 3.2rem;
+            }
             &:not(:first-of-type) {
                 border-top: 1px solid #e7e7e7;
             }
@@ -23,16 +35,24 @@
             font-weight: 700;
             font-size: 2.4rem;
             margin-bottom: 3.2rem;
+            @media (--sp) {
+                font-size: 1.9rem;
+            }
         }
         .description__item {
-            display: flex;
-            flex-wrap: wrap;
+            @media (--not-sp) {
+                display: flex;
+                flex-wrap: wrap;
+            }
             .description__item-title {
                 font-weight: 600;
                 font-size: 2.0rem;
                 line-height: 1.8;
                 @media (--not-sp) {
                     width: calc(240 / 1000 * 100%);
+                }
+                @media (--sp) {
+                    font-size: 1.5rem;
                 }
             }
             .description__item-text {
@@ -41,15 +61,28 @@
                 @media (--not-sp) {
                     flex: 1;
                 }
+                @media (--sp) {
+                    font-size: 1.2rem;
+                    margin-top: 0.8rem;
+                }
                 .description__item-square {
                     display: flex;
                     align-items: center;
+                    @media (--sp) {
+                        align-items: flex-start;
+                    }
+                    span {
+                        flex: 1;
+                    }
                     &::before {
                         content: "";
                         width: 10px;
                         height: 10px;
                         background-color: #e74c3c;
                         margin-right: 8px;
+                        @media (--sp) {
+                            margin-top: 0.8em
+                        }
                     }
                 }
                 .description__item-light {
@@ -71,6 +104,9 @@
             }
             &:not(:first-of-type) {
                 margin-top: 4rem;
+                @media (--sp) {
+                    margin-top: 3.2rem;
+                }
             }
         }
     }

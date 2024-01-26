@@ -19,10 +19,17 @@
     .layout {
         padding-left: 10rem;
         padding-right: 10rem;
+        @media (--sp) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     .section-title {
         font-size: 4rem;
         font-weight: 600;
+        @media (--sp) {
+            font-size: 2.5rem;
+        }
     }
 }
