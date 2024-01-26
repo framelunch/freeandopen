@@ -1,0 +1,27 @@
+<%
+  const conf = {
+    category: 'recruit',
+    title : 'Recruit｜【Filemaker開発】株式会社Freeandopen',
+    description : '',
+    style: 'recruit.css',
+    script: 'recruit.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/recruit/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %>
+<%- include('../../components/header/header.ejs', { conf }) %>
+<main id="main" class="main" role="main">
+  <%- include('../../components/recruit/mv/mv.ejs', { conf }) %>
+  <%- include('../../components/recruit/background/background.ejs', { conf }) %>
+  <%- include('../../components/recruit/about/about.ejs', { conf }) %>
+  <%- include('../../components/recruit/description/description.ejs', { conf }) %>
+  <%- include('../../components/recruit/contact/contact.ejs', { conf }) %>
+
+  <%- include('../../components/common/pagetop/pagetop.ejs', { conf }) %>
+</main>
+
+<%- include('../../components/footer/footer.ejs', { conf }) %>
+<%- include('../common/_foot.ejs', { conf }) %>

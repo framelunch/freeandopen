@@ -1,0 +1,77 @@
+.section-description {
+    .layout {
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+        padding-bottom: 8rem;
+        padding-top: 10rem;
+    }
+    .description__content {
+        background-color: #fff;
+        border-radius: 20px;
+        margin-top: 4rem;
+        padding: 1.6rem 8rem;
+        letter-spacing: 0.1em;
+        box-shadow: 0 20px 30px rgba(0 0 0 / 0.05);
+        .description__block {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            &:not(:first-of-type) {
+                border-top: 1px solid #e7e7e7;
+            }
+        }
+        .description-head {
+            font-weight: 700;
+            font-size: 2.4rem;
+            margin-bottom: 3.2rem;
+        }
+        .description__item {
+            display: flex;
+            flex-wrap: wrap;
+            .description__item-title {
+                font-weight: 600;
+                font-size: 2.0rem;
+                line-height: 1.8;
+                @media (--not-sp) {
+                    width: calc(240 / 1000 * 100%);
+                }
+            }
+            .description__item-text {
+                font-size: 1.6rem;
+                line-height: 2.2;
+                @media (--not-sp) {
+                    flex: 1;
+                }
+                .description__item-square {
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background-color: #e74c3c;
+                        margin-right: 8px;
+                    }
+                }
+                .description__item-light {
+                    font-weight: 300;
+                }
+                .description__item-note {
+                    font-size: 1.1rem;
+                    color: #a0a0a0;
+                    text-indent: -1em;
+                    padding-left: 1em;
+                    &::before {
+                        content: "※";
+                    }
+                }
+
+                .-margin {
+                    padding-left: 16px;
+                }
+            }
+            &:not(:first-of-type) {
+                margin-top: 4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "./common/_global.css";
+@import "../components/header/header.css";
+@import "../components/footer/footer.css";
+
+@import "../components/recruit/mv/mv.css";
+@import "../components/recruit/background/background.css";
+@import "../components/recruit/about/about.css";
+@import "../components/recruit/description/description.css";
+@import "../components/top/contact/contact.css";
+@import "../components/recruit/contact/contact.css";
+@import "../components/common/pagetop/pagetop.css";
+@import "../components/top/animation/animation.css";
+
+.main {
+    @media (--sp) {
+        overflow: hidden;
+    }
+
+    .layout {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .section-title {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+}

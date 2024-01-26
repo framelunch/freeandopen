@@ -95,6 +95,7 @@ exports.script = {
   entry: {
     'js/index': './src/js/index.js',
     'js/work': './src/js/work.js',
+    'js/recruit': './src/js/recruit.js',
     'js/common': './src/js/common.js',
   },
 };
