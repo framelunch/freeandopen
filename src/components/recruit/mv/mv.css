@@ -56,7 +56,7 @@
                 height: calc(400 / 1600 * 100vw);
                 max-width: 400px;
                 top: 0;
-                background-image: url("/recruit/image/mv_dot.png");
+                background-image: url("/recruit/image/mv_dot_pc.png");
                 background-size: 100% auto;
                 background-repeat: no-repeat;
             }
@@ -86,7 +86,10 @@
             @media (--sp) {
                 font-size: 2.2rem;
                 text-align: center;
-                margin-top: 2.4rem;
+                padding-top: 2.4rem;
+                background-image: url("/recruit/image/mv_dot_sp.png");
+                background-size: calc(481 / 750 * 100vw);
+                background-repeat: no-repeat;
             }
         }
     }
