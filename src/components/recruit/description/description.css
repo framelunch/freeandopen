@@ -50,6 +50,7 @@
                 line-height: 1.8;
                 @media (--not-sp) {
                     width: calc(240 / 1000 * 100%);
+                    padding-right: 16px;
                 }
                 @media (--sp) {
                     font-size: 1.5rem;

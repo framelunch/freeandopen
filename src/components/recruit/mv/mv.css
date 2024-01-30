@@ -1,5 +1,5 @@
 /* mv */
-.section-mv {
+.main .section-mv {
     background-color: #f7f7f7;
     position: relative;
     z-index: -1;
@@ -10,7 +10,7 @@
         overflow: hidden;
         @media (--not-sp) {
             margin-left: auto;
-            width: calc(1000 / 1600 * 100%);
+            width: calc(824 / 1360 * 100%);
         }
         @media (--tb) {
             width: 72%;
@@ -42,19 +42,23 @@
     }
 
     .layout {
-        text-align: right;
+        padding-right: 0;
+        padding-left: 0;
         @media (--not-sp) {
             border-left: 1px solid #e7e7e7;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 100%;
-        }
-
-        .inner {
-            @media (--not-sp) {
-                position: relative;
+            border-right: 1px solid #e7e7e7;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: calc(400 / 1600 * 100vw);
+                height: calc(400 / 1600 * 100vw);
+                max-width: 400px;
+                top: 0;
+                background-image: url("/recruit/image/mv_dot.png");
+                background-size: 100% auto;
+                background-repeat: no-repeat;
             }
         }
 
@@ -62,7 +66,7 @@
             text-align: left;
             font-size: 4rem;
             line-height: 2;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.05em;
             font-weight: 600;
             transition-property: transform, opacity;
             transition-duration: 1s;
@@ -71,24 +75,18 @@
             @media (--not-sp) {
                 position: absolute;
                 top: 9rem;
-                left: 0;
+                left: 10rem;
                 z-index: 50;
             }
 
             @media (--tb) {
-                top: 14.8rem;
+                top: 4rem;
             }
 
             @media (--sp) {
                 font-size: 2.2rem;
                 text-align: center;
-                letter-spacing: 0.05em;
                 margin-top: 2.4rem;
-            }
-
-            &:not(.-start) {
-                transform: translateX(40px);
-                opacity: 0;
             }
         }
     }

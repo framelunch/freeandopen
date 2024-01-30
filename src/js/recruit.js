@@ -9,6 +9,7 @@ import subscribeEvents from './modules/_events';
 import '../components/common/pagetop/pagetop';
 import '../components/top/animation/animation';
 import '../components/recruit/mv/mv';
+import '../components/recruit/contact/contact';
 
 import { preloadImage, getQueryName } from './modules/utils';
 

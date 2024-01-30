@@ -1,27 +1,23 @@
 <section class="section-mv">
-  <div class="mv__slider">
-    <div class="slide">
-      <%- include('../../image/Picture.ejs', { image: {
-        pc: `${conf.assets.image}/mv_slide1_pc.jpg`,
-        sp: `${conf.assets.image}/mv_slide1_sp.jpg`,
-      } }) %>
-    </div>
-    <div class="slide">
-      <%- include('../../image/Picture.ejs', { image: {
-        pc: `${conf.assets.image}/mv_slide2_pc.jpg`,
-        sp: `${conf.assets.image}/mv_slide2_sp.jpg`,
-      } }) %>
-    </div>
-  </div>
   <div class="layout">
-
-    <div class="inner">
-      <p class="mv__text">
-        時間や場所に縛られずに、<br>
-        一緒にFileMakerを中心にした<br>
-        システム開発をしませんか？
-      </p>
+    <div class="mv__slider">
+      <div class="slide">
+        <%- include('../../image/Picture.ejs', { image: {
+          pc: `${conf.assets.image}/mv_slide1_pc.jpg`,
+          sp: `${conf.assets.image}/mv_slide1_sp.jpg`,
+        } }) %>
+      </div>
+      <div class="slide">
+        <%- include('../../image/Picture.ejs', { image: {
+          pc: `${conf.assets.image}/mv_slide2_pc.jpg`,
+          sp: `${conf.assets.image}/mv_slide2_sp.jpg`,
+        } }) %>
+      </div>
     </div>
-
+    <p class="mv__text">
+      時間や場所に縛られずに、<br>
+      一緒にFileMakerを中心にした<br>
+      システム開発をしませんか？
+    </p>
   </div>
 </section>
