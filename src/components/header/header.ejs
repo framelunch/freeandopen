@@ -13,6 +13,7 @@
       <div class="layout">
         <div class="nav">
         <a href="/"><img src="<%= conf.assets.commonImage %>/logo.png" alt=""/></a>
+        <% if (conf.category !== "recruit") { %>
         <ul class="nav_list">
           <% menu.forEach(function (value, key) { %>
             <li>
@@ -46,6 +47,7 @@
             </ul>
           </nav>
         </div>
+        <% } %>
       </div>
     </div>
   </div>
