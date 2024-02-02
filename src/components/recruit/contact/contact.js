@@ -2,7 +2,7 @@ import $ from 'jquery';
 import notice from 'libraries-frontend-framelunch/js/notice';
 import ajax from 'ajax';
 
-const SEND_PATH = '/tools/send.php';
+const SEND_PATH = '/tools/sendmail.php';
 const $contact = $('.contact');
 const $form = $('.contact_wrapper--form');
 
@@ -42,9 +42,9 @@ notice.listen('init', () => {
       $.ajax({
         type: 'POST',
         url: SEND_PATH,
-        contentType: 'application/json',
+        // contentType: 'application/json',
         data: postData,
-        dataType: 'json',
+        // dataType: 'json',
       });
 
       $form.addClass('-thanks');
