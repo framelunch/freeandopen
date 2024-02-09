@@ -2,7 +2,7 @@ import $ from 'jquery';
 import notice from 'libraries-frontend-framelunch/js/notice';
 import ajax from 'ajax';
 
-const SEND_PATH = '/tools/sendmail.php';
+const SEND_PATH = '/tools/recruit.php';
 const $contact = $('.contact');
 const $form = $('.contact_wrapper--form');
 
