@@ -51,7 +51,7 @@ EOT;
 $to_admin_email = 'oshigoto@freeandopen.co.jp';
 
 // メール件名
-$to_admin_subject = 'エントリー';
+$to_admin_subject = 'エントリー連絡';
 
 // メール本文
 $to_admin_body = <<<EOT
@@ -113,4 +113,12 @@ function send($to, $subject, $message) {
 
     // メールを送信
     mb_send_mail($to, $subject, $message, $headers, $param);
+}
+
+// 管理者へ送信
+send($to_admin_email, $to_admin_subject, $to_admin_body);
+
+if (!empty($post_user_email)) {
+    // ユーザーへ送信
+    // send($post_user_email, $to_admin_subject, $to_admin_body);
 }
