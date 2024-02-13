@@ -6,6 +6,7 @@
     { id: 'our_work', name: 'Our Work' },
     { id: 'company', name: 'Company' },
     { id: 'contact', name: 'Contact Us', class: 'btn', classSp: 'contact-btn' },
+    { id: 'recruit', name: 'Recruit', class: '-recruit', classSp: 'recruit-btn' },
   ]
 %>
 <header id="header" class="header" role="banner">
@@ -16,9 +17,13 @@
         <% if (conf.category !== "recruit") { %>
         <ul class="nav_list">
           <% menu.forEach(function (value, key) { %>
-            <li>
+            <li class="menu-<%- value.id %>">
               <% if (conf.category === 'top') { %>
-                <a href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
+                <% if (value.id === 'recruit') { %>
+                  <a href="/recruit" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                <% } else { %>
+                  <a href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
+                <% } %>
               <% } else { %>
                 <a href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
               <% } %>
@@ -35,9 +40,15 @@
             <ul class="drawer-list">
               <% menu.forEach(function (value, key) { %>
                   <% if (conf.category === 'top') { %>
-                    <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
-                      <a href="#" class="-anchor" data-anchor="<%= value.id %>"><%= value.name %></a>
-                    </li>
+                    <% if (value.id === 'recruit') { %>
+                      <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                        <a href="/recruit"><%= value.name %></a>
+                      </li>
+                    <% } else { %>
+                      <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                        <a href="#" class="-anchor" data-anchor="<%= value.id %>"><%= value.name %></a>
+                      </li>
+                    <% } %>
                   <% } else { %>
                     <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
                       <a href="/?anchor=<%= value.id %>"><%= value.name %></a>

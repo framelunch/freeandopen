@@ -76,16 +76,31 @@
 
         &_list {
             display: flex;
-            gap: 30px;
             @media (max-width: 767px) {
                 display: none;
-            }
-            @media (--tb-h) {
-                gap: 25px;
             }
             @media (--tb) {
                 margin-top: 1.0rem;
             }
+
+            li {
+                &:not(:first-of-type) {
+                    margin-left: 30px;
+                    @media (--tb-h) {
+                        margin-left: 10px;
+                    }
+                    @media (--tb) {
+                        margin-left: 10px;
+                    }
+                }
+                &.menu-recruit {
+                    margin-left: 10px;
+                    @media (--tb) {
+                        margin-left: 8px;
+                    }
+                }
+            }
+
 
             a {
                 text-decoration: none;
@@ -93,6 +108,9 @@
                 font-size: 14px;
                 font-weight: 600;
                 letter-spacing: 0.05em;
+                @media (--tb-h) {
+                    font-size: 12px;
+                }
                 @media (--tb) {
                     font-size: 12px;
                 }
@@ -102,6 +120,12 @@
                 background-color: #000;
                 color: #fff;
                 padding: 10px 12px;
+            }
+
+            .-recruit {
+                background-color: #e74c3c;
+                color: #fff;
+                padding: 10px 24px;
             }
         }
 
@@ -186,9 +210,21 @@
                     &.contact-btn {
                         background-color: #fff;
                         text-align: center;
+                        margin-bottom: 20px !important;
                         a {
                             display: block;
                             color: #000;
+                            font-size: 1.4rem;
+                            padding: 2rem 0;
+                        }
+                    }
+
+                    &.recruit-btn {
+                        background-color: #e74c3c;
+                        text-align: center;
+                        a {
+                            display: block;
+                            color: #fff;
                             font-size: 1.4rem;
                             padding: 2rem 0;
                         }
