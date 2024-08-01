@@ -2,132 +2,81 @@
 /* about_detail */
 .about_detail {
     position: relative;
-    @media (--not-sp) {
-        height: 3000px;
-    }
-    @media (--sp) {
-        background-color: #fff;
-    }
+    background-color: #fff;
     .layout {
-        padding: 0 0 0 10rem;
+        padding: 0 10rem;
         border-right: 1px solid #e5e5e5;
-        @media (--not-sp) {
-            position: sticky;
-            top: 10rem;
-        }
+        border-left: 1px solid #e5e5e5;
         @media (--tb) {
             padding-left: 4rem;
         }
         @media (--sp) {
             padding: 0 5.3vw;
+            z-index: 0;
+            position: relative;
         }
         &::before {
-            @media (--not-sp) {
-                content: "";
-                position: absolute;
-                right: 10rem;
-                top: 0;
-                width: 100vw;
-                height: 100%;
-                background-image: url('/top/image/reception-bg.png');
-                background-repeat: no-repeat;
-                background-position: bottom left;
-                pointer-events: none;
-            }
-        }
-        &::after {
-            @media (--not-sp) {
-                content: "";
-                position: absolute;
-                right: 10rem;
-                top: 0;
-                width: 100vw;
-                height: 100%;
-                background-color: #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-image: url('/top/image/reception-bg.png');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            pointer-events: none;
+            background-size: calc(550 / 1600 * 100%) auto;
+            @media (--sp) {
+                background-size: calc(661 / 750 * 100%) auto;
                 z-index: -1;
+                top: auto;
+                bottom: 10rem;
             }
         }
     }
 
     &--list {
         &--item {
-            display: flex;
-            justify-content: space-between;
             position: relative;
-            @media (--not-sp) {
-                margin-right: 10rem;
-            }
-            @media (--tb) {
-                margin-right: 4rem;
-            }
-            @media (--sp) {
-                flex-direction: column;
-                gap: 3.5rem;
+            .about-item__flex {
+                @media (--not-sp) {
+                    display: flex;
+                }
             }
             &--text {
-                margin-top: 4rem;
                 @media (--not-sp) {
-                    width: calc(620 / 1160 * 100%);
-                }
-                @media (--sp) {
-                    margin-top: 7.5rem;
+                    width: calc(580 / 1160 * 100%);
                 }
                 
                 &No {
                     @media (--not-sp) {
-                        margin-left: -10rem;
                         position: relative;
                         overflow: hidden;
                     }
                     @media (--tb) {
                         margin-left: -2rem;
                     }
-                    &::after {
-                        @media (--not-sp) {
-                            content: "";
-                            display: block;
-                            padding-top: 18%;
-                        }
-                    }
                     & img {
-                        @media (--not-sp) {
-                            position: absolute;
-                            top: 0;
-                            transition-property: top;
-                            transition-duration: 1s;
-                            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-                            &:not(.-show) {
-                                top: calc(100% + 10px);
-                            }
-                        }
                         &.-number01 {
-                            width: calc(141 * 0.8 / 580 * 100%);
-                            max-width: 14.1rem;
-                            @media (--tb) {
-                                width: calc(141 * 0.8 / 580 * 0.8 * 100%);
-                            }
+                            width: calc(70 / 580 * 100%);
+                            max-width: 7rem;
                             @media (--sp) {
-                                width: calc(141 * 0.8 / 650 * 100%);
+                                width: calc(86 / 670 * 100%);
                             }
                         }
                         &.-number02 {
-                            width: calc(179 * 0.8 / 580 * 100%);
-                            max-width: 17.9rem;
-                            @media (--tb) {
-                                width: calc(179 * 0.8 / 580 * 0.8 * 100%);
-                            }
+                            width: calc(82 / 580 * 100%);
+                            max-width: 8.2rem;
                             @media (--sp) {
-                                width: calc(179 * 0.8 / 650 * 100%);
+                                width: calc(100 / 670 * 100%);
                             }
                         }
                         &.-number03 {
-                            width: calc(177 * 0.8 / 580 * 100%);
-                            max-width: 17.7rem;
-                            @media (--tb) {
-                                width: calc(177 * 0.8 / 580 * 0.8 * 100%);
-                            }
+                            width: calc(80 / 580 * 100%);
+                            max-width: 8rem;
                             @media (--sp) {
-                                width: calc(177 * 0.8 / 650 * 100%);
+                                width: calc(99 / 670 * 100%);
                             }
                         }
                     }
@@ -145,7 +94,7 @@
                     @media (--sp) {
                         font-size: 1.9rem;
                         line-height: 1.8;
-                        margin-top: 4rem;
+                        margin-top: 2.4rem;
                         letter-spacing: 0.05em;
                     }
                 }
@@ -162,56 +111,85 @@
                     @media (--sp) {
                         font-size: 1.3rem;
                         line-height: 2;
-                        margin-top: 3rem;
+                        margin-top: 2rem;
                     }
                 }
             }
 
             &--img {
-                position: relative;
-                z-index: 100;
-                overflow: hidden;
                 @media (--not-sp) {
-                    width: calc(540 / 1160 * 100%);
+                    width: calc(580 / 1160 * 100%);
                 }
                 @media (--sp) {
-                    padding-left: 8vw;
+                    margin-top: 3rem;
+                    width: calc(610 / 670 * 100%);
+                    margin-left: auto;
                 }
-                & li {
+
+                img {
                     @media (--not-sp) {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        height: 100%;
-                        overflow: hidden;
-                        transition-property: top;
-                        transition-duration: 1s;
-                        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                        width: calc(540 / 580 * 100%);
                     }
-
-                    &:first-of-type {
-                        @media (--not-sp) {
-                            position: relative;
-                        }
-                    }
-
-                    & img {
+                    @media (--sp) {
                         width: 100%;
-                        display: block;
-                        @media (--not-sp) {
-                            transform: none;
-                            transition-property: top;
-                            transition-duration: 1s;
-                            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-                            position: relative;
-                            top: 0;
+                    }
+                }
+            }
+
+            &.-item-01 {
+                .layout {
+                    padding-top: 15rem;
+                    @media (--sp) {
+                        padding-top: 5rem;
+                    }
+                    .about_detail--list--item--img {
+                        img {
+                            @media (--not-sp) {
+                                margin-left: 4rem;
+                            }
                         }
                     }
-
-                    &:not(.-show) {
-                        top: 100%;
-                        & img {
-                            top: -100%;
+                }
+            }
+            &.-item-02 {
+                .layout {
+                    padding-top: 13rem;
+                    @media (--not-sp) {
+                        flex-direction: row-reverse;
+                    }
+                    @media (--sp) {
+                        padding-top: 5rem;
+                    }
+                    &::before {
+                        @media (--not-sp) {
+                            transform: scale(-1, 1);
+                        }
+                    }
+                    .about_detail--list--item--textNo {
+                        img {
+                            @media (--not-sp) {
+                                margin-left: 4rem;
+                            }
+                        }
+                    }
+                    .about_detail--list--itemTextWrapper {
+                        @media (--not-sp) {
+                            margin-left: 4rem;
+                        }
+                    }
+                }
+            }
+            &.-item-03 {
+                .layout {
+                    padding-top: 13rem;
+                    @media (--sp) {
+                        padding-top: 5rem;
+                    }
+                    .about_detail--list--item--img {
+                        img {
+                            @media (--not-sp) {
+                                margin-left: 4rem;
+                            }
                         }
                     }
                 }

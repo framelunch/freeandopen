@@ -24,64 +24,26 @@
   ]
 %>
 <div class="about_detail">
-    <div class="layout">
-      <div class="about_detail--list">
-        <div class="-hidden-sp">
-          <div class="about_detail--list--item">
-            <div class="about_detail--list--item--text">
-              <div class="about_detail--list--item--textNo">
-                <% about.forEach(function (value, key) { %>
-                  <img class="-number<%= value.id %>" src="<%= conf.assets.image %>/<%- value.numberImage %>" alt="" />
-                <% }); %>
-              </div>
-              <div class="about_detail--list--itemTextWrapper swiper" id="aboutDetailSwiper">
-                <div class="swiper-wrapper">
-                  <% about.forEach(function (value, key) { %>
-                  <div class="about_detail--list--itemText swiper-slide">
-                    <h2><%- value.title %></h2>
-                    <p><%- value.text %></p>
-                  </div>
-                  <% }); %>
-                </div>
-              </div>
+  <div class="about_detail--list">
+      <% about.forEach(function (value, key) { %>
+      <div class="about_detail--list--item -item-<%= value.id %>">
+        <div class="about-item__flex layout">
+          <div class="about_detail--list--item--text">
+            <div class="about_detail--list--item--textNo">
+              <img class="-number<%= value.id %>" src="<%= conf.assets.image %>/<%- value.numberImage %>" alt="" />
             </div>
-            <div class="about_detail--list--item--img">
-              <ul>
-                <% about.forEach(function (value, key) { %>
-                <li><img src="<%= conf.assets.image %>/<%- value.image %>" alt="" /></li>
-                <% }); %>
-              </ul>
-            </div>
-            <div class="about_detail--pagination -hidden-sp">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="about_detail--list--itemTextWrapper">
+              <div class="about_detail--list--itemText">
+                <h2><%- value.title %></h2>
+                <p><%- value.text %></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="-hidden-pc">
-          <% about.forEach(function (value, key) { %>
-          <div class="about_detail--list--item">
-            <div class="about_detail--list--item--text">
-              <div class="about_detail--list--item--textNo">
-                <img class="-number<%= value.id %>" src="<%= conf.assets.image %>/<%- value.numberImage %>" alt="" />
-              </div>
-              <div class="about_detail--list--itemTextWrapper">
-                <div class="about_detail--list--itemText">
-                  <h2><%- value.title %></h2>
-                  <p><%- value.text %></p>
-                </div>
-              </div>
-            </div>
-            <div class="about_detail--list--item--img">
-              <ul>
-                <li><img src="<%= conf.assets.image %>/<%- value.image %>" alt="" /></li>
-              </ul>
-            </div>
-            <img src="<%= conf.assets.image %>/reception-bg.png" alt="" class="reception-bg" />
+          <div class="about_detail--list--item--img">
+            <img src="<%= conf.assets.image %>/<%- value.image %>" alt="" />
           </div>
-          <% }); %>
         </div>
       </div>
-    </div>
+      <% }); %>
+  </div>
 </div>
