@@ -1,0 +1,194 @@
+@import "./common/_global.css";
+@import "../components/header/header.css";
+@import "../components/footer/footer.css";
+
+@import "../components/common/pagetop/pagetop.css";
+@import "../components/common/contact/contact.css";
+@import "../components/top/animation/animation.css";
+@import "../components/company/adviser/adviser.css";
+
+.main {
+    @media (--sp) {
+        overflow: hidden;
+    }
+    .company,
+    .message,
+    .adviser {
+        .layout {
+            @media (--not-sp) {
+                border-left: 1px solid #e5e5e5;
+                border-right: 1px solid #e5e5e5;
+                padding: 8rem 23rem 10rem;
+                position: relative;
+            }
+            @media (--sp) {
+                padding-left: 5.3vw;
+                padding-right: 5.3vw;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.company {
+    > .layout {
+        @media (--sp) {
+            padding-top: 4rem;
+        }
+    }
+    .company__info {
+        margin-top: 2.4rem;
+        background-color: #fff;
+        box-shadow: 0 0 30px 20px rgba(0 0 0 / 5%);
+        border-radius: 20px;
+        padding: 6.4rem 5.6rem;
+        @media (--sp) {
+            padding: 2.4rem 3.2rem;
+        }
+        dl {
+            @media (--not-sp) {
+                display: flex;
+                align-items: flex-start;
+            }
+            dt,
+            dd {
+                font-size: 1.6rem;
+                line-height: 1.6;
+                letter-spacing: 0.05em;
+            }
+            dt {
+                font-weight: bold;
+                @media (--not-sp) {
+                    width: 10rem;
+                    text-align: right;
+                }
+            }
+            dd {
+                @media (--not-sp) {
+                    flex: 1;
+                    padding-left: 2.4rem;
+                }
+            }
+            &:not(:first-of-type) {
+                margin-top: 2.4rem;
+            }
+        }
+    }
+}
+
+.message {
+    @media (--sp) {
+        margin-top: 7.2rem;
+    }
+    > .layout {
+        padding-bottom: 2.4rem;
+    }
+    .message__content {
+        background-color: #fff;
+        > .layout {
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+            @media (--sp) {
+                padding-top: 4rem;
+            }
+        }
+        .message__card {
+            background-color: #e74c3c;
+            .message-head {
+                border-bottom: 1px solid #fff;
+                @media (--not-sp) {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+                .messag-head__image {
+                    @media (--not-sp) {
+                        width: calc(260 / 900 * 100%);
+                    }
+                }
+                .messag-head__text {
+                    color: #fff;
+                    font-size: 1.6rem;
+                    line-height: 2;
+                    padding: 4rem 8rem;
+                    position: relative;
+                    @media (--not-sp) {
+                        flex: 1;
+                    }
+                    @media (--sp) {
+                        padding: 4rem 3rem;
+                    }
+                    &::before,
+                    &::after {
+                        content: "";
+                        background-image: url('/work/common/image/voice_figure.png');
+                        background-repeat: no-repeat;
+                        background-size: 32px auto;
+                        width: 32px;
+                        height: 29px;
+                        position: absolute;
+                        @media (--sp) {
+                            width: 22px;
+                            height: 19px;
+                            background-size: 22px auto;
+                        }
+                    }
+                    &::before {
+                        top: 3rem;
+                        left: 3rem;
+                        @media (--sp) {
+                            top: 2rem;
+                            left: 1.5rem;
+                        }
+                    }
+                    &::after {
+                        bottom: 3rem;
+                        right: 3rem;
+                        transform: scale(-1, -1);
+                        @media (--sp) {
+                            bottom: 2rem;
+                            right: 1.5rem;
+                        }
+                    }
+            
+                }
+            }
+            .message-profile {
+                padding: 2.4rem 8rem 4rem;
+                @media (--sp) {
+                    padding: 3.2rem 3rem;
+                }
+                .message-profile__name {
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    line-height: 2;
+                    letter-spacing: 0.06em;
+                    img {
+                        width: 117px;
+                        margin-left: 2rem;
+                        @media (--sp) {
+                            width: 82px;
+                        }
+                    }
+                }
+                .message-profile__text {
+                    color: #fff;
+                    font-size: 1.4rem;
+                    line-height: 2;
+                    letter-spacing: 0.06em;
+                    margin-top: 2.4rem;
+                    @media (--sp) {
+                        margin-top: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagetop {
+    background: none;
+}

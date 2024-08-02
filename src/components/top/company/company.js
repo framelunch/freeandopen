@@ -47,7 +47,7 @@ const embedMap = () => {
 };
 
 notice.listen('init', () => {
-  const target = document.querySelector('.company');
+  const target = document.querySelector('.access');
 
   const options = {
     root: null,

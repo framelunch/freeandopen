@@ -1,0 +1,98 @@
+<%
+  const conf = {
+    category: 'company',
+    title : '会社概要｜【Filemaker開発】株式会社Freeandopen',
+    description : '',
+    style: 'company.css',
+    script: 'company.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/company/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %>
+<%- include('../../components/header/header.ejs', { conf }) %>
+<main id="main" class="main" role="main">
+  <section class="company">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Company</h2>
+        <span class="section-title-child">会社概要</span>
+      </div>
+      <div class="company__info">
+        <dl>
+          <dt>会社名</dt>
+          <dd>株式会社 Freeandopen（Freeandopen.inc.）</dd>
+        </dl>
+        <dl>
+          <dt>設立</dt>
+          <dd>0000年 0月 0日</dd>
+        </dl>
+        <dl>
+          <dt>事業内容</dt>
+          <dd>事業内容についての説明文この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+        </dl>
+        <dl>
+          <dt>資本金</dt>
+          <dd>0000万円</dd>
+        </dl>
+        <dl>
+          <dt>所在地</dt>
+          <dd>静岡office<br>
+            〒438-0045<br>
+            静岡県磐田市上岡田810-9<br><br>
+            渋谷office<br>
+            〒150-6139<br>
+            東京都渋谷区渋谷2-24-12 39F　WeWork 渋谷スクランブルスクエア(38-105)</dd>
+        </dl>
+        <dl>
+          <dt>代表取締役</dt>
+          <dd>兼子 佳也</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="message">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Message</h2>
+        <span class="section-title-child">社長メッセージ</span>
+      </div>
+    </div>
+    <div class="message__content">
+      <div class="layout">
+        <div class="message__card">
+          <div class="message-head">
+            <div class="messag-head__image">
+              <%- include('../../components/image/Picture.ejs', { image: {
+                  pc: `${conf.assets.image}/message_img_pc.jpg`,
+                  sp: `${conf.assets.image}/message_img_sp.jpg`,
+              } }) %>
+            </div>
+            <div class="messag-head__text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。</div>
+          </div>
+          <div class="message-profile">
+            <div class="message-profile__name">
+              代表取締役
+              <%- include('../../components/image/Image.ejs', { image: {
+                src: `${conf.assets.image}/name.png`,
+                alt: '兼子佳也'
+            } }) %>
+            </div>
+            <div class="message-profile__text">ここにプロフィール文が入ります。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。はダミーです。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('../../components/company/adviser/adviser.ejs', { conf }) %>
+
+  <%- include('../../components/common/pagetop/pagetop.ejs', { conf }) %>
+  <%- include('../../components/work/contact/contact.ejs', { conf }) %>
+</main>
+
+<%- include('../../components/footer/footer.ejs', { conf }) %>
+<%- include('../common/_foot.ejs', { conf }) %>

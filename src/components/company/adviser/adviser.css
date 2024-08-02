@@ -1,0 +1,62 @@
+.adviser {
+    @media (--sp) {
+        padding-bottom: 5.6rem;
+    }
+    .adviser__head {
+        background-color: #fff;
+        @media (--sp) {
+            padding-top: 5rem;
+        }
+        .layout {
+            padding-bottom: 3.2rem;
+        }
+    }
+    .adviser__content {
+        > .layout {
+            padding-top: 6rem;
+            @media (--sp) {
+                padding-top: 4rem;
+            }
+        }
+        .adviser-card {
+            background-color: #fff;
+            box-shadow: 0 0 20px 10px rgba(0 0 0 / 5%);
+            @media (--not-sp) {
+                display: flex;
+                align-items: flex-start;
+            }
+            .adviser-card__image {
+                @media (--not-sp) {
+                    width: calc(230 / 900 * 100%);
+                }
+            }
+            .adviser-card__info {
+                line-height: 1.8;
+                letter-spacing: 0.06em;
+                padding: 3.2rem 4rem;
+                @media (--not-sp) {
+                    flex: 1;
+                }
+                @media (--sp) {
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                }
+                .adviser-card__post {
+                    color: #e74c3c;
+                    font-size: 1.2rem;
+                }
+                .adviser-card__name {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+                .adviser-card__text {
+                    font-size: 1.4rem;
+                    margin-top: 2.4rem;
+                }
+            }
+            &:not(:first-of-type) {
+                margin-top: 4rem;
+            }
+        }
+    }
+}

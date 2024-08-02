@@ -4,7 +4,8 @@
     { id: 'filemaker_development', name: 'Filemaker Development' },
     { id: 'agile_development', name: 'Agile Development' },
     { id: 'our_work', name: 'Our Work' },
-    { id: 'company', name: 'Access' },
+    { id: 'access', name: 'Access' },
+    { id: 'company', name: 'Company' },
     { id: 'contact', name: 'Contact Us', class: 'btn', classSp: 'contact-btn' },
     { id: 'recruit', name: 'Recruit', class: '-recruit', classSp: 'recruit-btn' },
   ]
@@ -21,11 +22,17 @@
               <% if (conf.category === 'top') { %>
                 <% if (value.id === 'recruit') { %>
                   <a href="/recruit" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
-                <% } else { %>
+                  <% } else if (value.id === 'company') { %>
+                    <a href="/company" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                  <% } else { %>
                   <a href="#" class="-anchor <% if (value.class) { %><%= value.class %><% } %>" data-anchor="<%= value.id %>"><%= value.name %></a>
                 <% } %>
               <% } else { %>
-                <a href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                <% if (value.id === 'company') { %>
+                  <a href="/company" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                <% } else { %>
+                  <a href="/?anchor=<%= value.id %>" <% if (value.class) { %>class="<%= value.class %>"<% } %>><%= value.name %></a>
+                <% } %>
               <% } %>
             </li>
           <% }); %>
@@ -44,15 +51,25 @@
                       <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
                         <a href="/recruit"><%= value.name %></a>
                       </li>
-                    <% } else { %>
+                      <% } else if (value.id === 'company') { %>
+                        <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                          <a href="/company"><%= value.name %></a>
+                        </li>
+                      <% } else { %>
                       <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
                         <a href="#" class="-anchor" data-anchor="<%= value.id %>"><%= value.name %></a>
                       </li>
                     <% } %>
                   <% } else { %>
-                    <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
-                      <a href="/?anchor=<%= value.id %>"><%= value.name %></a>
-                    </li>
+                    <% if (value.id === 'company') { %>
+                      <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                        <a href="/company"><%= value.name %></a>
+                      </li>
+                    <% } else { %>
+                      <li class="drawer-item<% if (value.classSp) { %> <%= value.classSp %><% } %>">
+                        <a href="/?anchor=<%= value.id %>"><%= value.name %></a>
+                      </li>
+                    <% } %>
                   <% } %>
               <% }); %>
             </ul>

@@ -1,0 +1,51 @@
+<%
+    const advisers = [
+        {
+            image: {
+                pc: 'adviser_01_pc.jpg',
+                sp: 'adviser_01_sp.jpg',
+            },
+            post: '役職/職種',
+            name: '苗字 名前',
+            text: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字',
+        },
+        {
+            image: {
+                pc: 'adviser_02_pc.jpg',
+                sp: 'adviser_02_sp.jpg',
+            },
+            post: '役職/職種',
+            name: '苗字 名前',
+            text: 'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字',
+        },
+    ]
+%>
+<section class="adviser">
+    <div class="adviser__head">
+      <div class="layout">
+        <div class="show-animation" data-animation="title">
+          <h2 class="section-title-sub">Adviser</h2>
+          <span class="section-title-child">アドバイザー紹介</span>
+        </div>
+      </div>
+    </div>
+    <div class="adviser__content">
+      <div class="layout">
+        <% advisers.forEach(function (value, key) { %>
+            <div class="adviser-card">
+                <div class="adviser-card__image">
+                    <%- include('../../image/Picture.ejs', { image: {
+                        pc: `${conf.assets.image}/${value.image.pc}`,
+                        sp: `${conf.assets.image}/${value.image.sp}`,
+                    } }) %>
+                </div>
+                <div class="adviser-card__info">
+                    <div class="adviser-card__post"><%- value.post %></div>
+                    <div class="adviser-card__name"><%- value.name %></div>
+                    <div class="adviser-card__text"><%- value.text %></div>
+                </div>
+            </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>

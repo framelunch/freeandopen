@@ -1,0 +1,56 @@
+/* sub-contact */
+.sub-contact {
+    background-color: #262626;
+    position: relative;
+    padding: 8rem 0;
+    text-align: center;
+    span {
+        font-size: 16rem;
+        font-weight: 700;
+        color: #212121;
+        line-height: 0.65;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        @media (--sp) {
+            font-size: 7rem;
+            line-height: 1;
+            text-align: left;
+        }
+    }
+
+    p {
+        color: #fff;
+        position: relative;
+        z-index: 50;
+        line-height: 1.875;
+        letter-spacing: 0.14em;
+        @media (--sp) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 1.3rem;
+            line-height: 2;
+        }
+    }
+
+    a {
+        background-color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 2.8rem 16.2rem;
+        margin-top: 4.3rem;
+        line-height: 1;
+        font-size: 1.8rem;
+        font-weight: 500;
+        @media (--sp) {
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            width: 24rem;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+    }
+}

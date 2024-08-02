@@ -238,7 +238,7 @@
                     }
 
                     &:not(:last-child) {
-                        margin-bottom: 5.2rem;
+                        margin-bottom: 4.0rem;
                     }
                 }
             }
