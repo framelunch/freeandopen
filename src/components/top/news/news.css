@@ -1,0 +1,40 @@
+.news {
+    background-color: #e74c3c;
+    ul {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+        @media (--sp) {
+            padding-left: 5.3vw;
+            padding-right: 5.3vw;
+        }
+        li {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 1.6rem;
+            padding-bottom: 1.6rem;
+            @media (--sp) {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+            .news__date,
+            .news__text {
+                font-size: 1.6rem;
+                color: #fff;
+                line-height: 1.6;
+                letter-spacing: 0.05em;
+                @media (--sp) {
+                    font-size: 1.2rem;
+                }
+            }
+            .news__date {
+                width: 110px;
+                @media (--sp) {
+                    width: 88px;
+                }
+            }
+            .news__text {
+                flex: 1;
+            }
+        }
+    }
+}

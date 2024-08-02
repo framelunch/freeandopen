@@ -1,0 +1,18 @@
+<%
+  const news = [
+    { date: '2024.07.17', text: '<a href="/notice">当社社名や社員名を装った「なりすましメール」にご注意について</a>' },
+  ]
+%>
+
+<div class="news">
+  <div class="layout">
+    <ul>
+      <% news.forEach(function (value, key) { %>
+        <li>
+          <div class="news__date"><%- value.date %></div>
+          <div class="news__text"><%- value.text %></div>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</div>

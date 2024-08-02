@@ -10,6 +10,7 @@
 @import "../components/top/ourWork/ourWork.css";
 @import "../components/top/company/company.css";
 @import "../components/top/contact/contact.css";
+@import "../components/top/news/news.css";
 
 body {
     @media (--not-sp) {
