@@ -21,174 +21,198 @@
                 padding: 8rem 23rem 10rem;
                 position: relative;
             }
+            @media (--tb-h) {
+                padding-left: 12rem;
+                padding-right: 12rem;
+            }
+            @media (--tb) {
+                padding-left: 8rem;
+                padding-right: 8rem;
+            }
             @media (--sp) {
                 padding-left: 5.3vw;
-                padding-right: 5.3vw;
+                padding-rigtht: 5.3vw;
             }
         }
         img {
             max-width: 100%;
         }
     }
-}
 
-.company {
-    > .layout {
-        @media (--sp) {
-            padding-top: 4rem;
-        }
-    }
-    .company__info {
-        margin-top: 2.4rem;
-        background-color: #fff;
-        box-shadow: 0 0 30px 20px rgba(0 0 0 / 5%);
-        border-radius: 20px;
-        padding: 6.4rem 5.6rem;
-        @media (--sp) {
-            padding: 2.4rem 3.2rem;
-        }
-        dl {
-            @media (--not-sp) {
-                display: flex;
-                align-items: flex-start;
-            }
-            dt,
-            dd {
-                font-size: 1.6rem;
-                line-height: 1.6;
-                letter-spacing: 0.05em;
-            }
-            dt {
-                font-weight: bold;
-                @media (--not-sp) {
-                    width: 10rem;
-                    text-align: right;
-                }
-            }
-            dd {
-                @media (--not-sp) {
-                    flex: 1;
-                    padding-left: 2.4rem;
-                }
-            }
-            &:not(:first-of-type) {
-                margin-top: 2.4rem;
-            }
-        }
-    }
-}
 
-.message {
-    @media (--sp) {
-        margin-top: 7.2rem;
-    }
-    > .layout {
-        padding-bottom: 2.4rem;
-    }
-    .message__content {
-        background-color: #fff;
+    .company {
         > .layout {
-            padding-top: 6rem;
-            padding-bottom: 2rem;
             @media (--sp) {
                 padding-top: 4rem;
             }
         }
-        .message__card {
-            background-color: #e74c3c;
-            .message-head {
-                border-bottom: 1px solid #fff;
+        .company__info {
+            margin-top: 2.4rem;
+            background-color: #fff;
+            box-shadow: 0 0 30px 20px rgba(0 0 0 / 5%);
+            border-radius: 20px;
+            padding: 6.4rem 5.6rem;
+            @media (--sp) {
+                padding: 2.4rem 3.2rem;
+            }
+            dl {
                 @media (--not-sp) {
                     display: flex;
-                    flex-direction: row-reverse;
+                    align-items: flex-start;
                 }
-                .messag-head__image {
+                dt,
+                dd {
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                    letter-spacing: 0.05em;
+                }
+                dt {
+                    font-weight: bold;
                     @media (--not-sp) {
-                        width: calc(260 / 900 * 100%);
+                        width: 10rem;
+                        text-align: right;
                     }
                 }
-                .messag-head__text {
-                    color: #fff;
-                    font-size: 1.6rem;
-                    line-height: 2;
-                    padding: 4rem 8rem;
-                    position: relative;
+                dd {
                     @media (--not-sp) {
                         flex: 1;
+                        padding-left: 2.4rem;
                     }
-                    @media (--sp) {
-                        padding: 4rem 3rem;
-                    }
-                    &::before,
-                    &::after {
-                        content: "";
-                        background-image: url('/work/common/image/voice_figure.png');
-                        background-repeat: no-repeat;
-                        background-size: 32px auto;
-                        width: 32px;
-                        height: 29px;
-                        position: absolute;
-                        @media (--sp) {
-                            width: 22px;
-                            height: 19px;
-                            background-size: 22px auto;
-                        }
-                    }
-                    &::before {
-                        top: 3rem;
-                        left: 3rem;
-                        @media (--sp) {
-                            top: 2rem;
-                            left: 1.5rem;
-                        }
-                    }
-                    &::after {
-                        bottom: 3rem;
-                        right: 3rem;
-                        transform: scale(-1, -1);
-                        @media (--sp) {
-                            bottom: 2rem;
-                            right: 1.5rem;
-                        }
-                    }
-            
+                }
+                &:not(:first-of-type) {
+                    margin-top: 2.4rem;
                 }
             }
-            .message-profile {
-                padding: 2.4rem 8rem 4rem;
+        }
+    }
+    
+    .message {
+        @media (--sp) {
+            margin-top: 7.2rem;
+        }
+        > .layout {
+            padding-bottom: 2.4rem;
+            padding-top: 0;
+        }
+        .message__content {
+            background-color: #fff;
+            > .layout {
+                padding-top: 6rem;
+                padding-bottom: 2rem;
                 @media (--sp) {
-                    padding: 3.2rem 3rem;
+                    padding-top: 4rem;
                 }
-                .message-profile__name {
-                    display: flex;
-                    align-items: center;
-                    color: #fff;
-                    font-size: 1.4rem;
-                    line-height: 2;
-                    letter-spacing: 0.06em;
-                    img {
-                        width: 117px;
-                        margin-left: 2rem;
-                        @media (--sp) {
-                            width: 82px;
+            }
+            .message__card {
+                background-color: #e74c3c;
+                .message-head {
+                    border-bottom: 1px solid #fff;
+                    @media (--not-sp) {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                    .messag-head__image {
+                        @media (--not-sp) {
+                            width: calc(260 / 900 * 100%);
                         }
                     }
+                    .messag-head__text {
+                        color: #fff;
+                        padding: 4rem 8rem;
+                        position: relative;
+                        h3 {
+                            font-size: 2.4rem;
+                            line-height: 1.6;
+                            @media (--sp) {
+                                font-size: 1.8rem;
+                            }
+                        }
+                        p {
+                            font-size: 1.6rem;
+                            line-height: 2;
+                            margin-top: 1.8rem;
+                            @media (--sp) {
+                                font-size: 1.3rem;
+                            }
+                        }
+                        @media (--not-sp) {
+                            flex: 1;
+                        }
+                        @media (--sp) {
+                            padding: 4rem 3rem;
+                        }
+                        &::before,
+                        &::after {
+                            content: "";
+                            background-image: url('/work/common/image/voice_figure.png');
+                            background-repeat: no-repeat;
+                            background-size: 32px auto;
+                            width: 32px;
+                            height: 29px;
+                            position: absolute;
+                            @media (--sp) {
+                                width: 22px;
+                                height: 19px;
+                                background-size: 22px auto;
+                            }
+                        }
+                        &::before {
+                            top: 3rem;
+                            left: 3rem;
+                            @media (--sp) {
+                                top: 2rem;
+                                left: 1.5rem;
+                            }
+                        }
+                        &::after {
+                            bottom: 3rem;
+                            right: 3rem;
+                            transform: scale(-1, -1);
+                            @media (--sp) {
+                                bottom: 2rem;
+                                right: 1.5rem;
+                            }
+                        }
+                
+                    }
                 }
-                .message-profile__text {
-                    color: #fff;
-                    font-size: 1.4rem;
-                    line-height: 2;
-                    letter-spacing: 0.06em;
-                    margin-top: 2.4rem;
+                .message-profile {
+                    padding: 2.4rem 8rem 4rem;
                     @media (--sp) {
-                        margin-top: 1.6rem;
+                        padding: 3.2rem 3rem;
+                    }
+                    .message-profile__name {
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        font-size: 1.4rem;
+                        line-height: 2;
+                        letter-spacing: 0.06em;
+                        img {
+                            width: 117px;
+                            margin-left: 2rem;
+                            @media (--sp) {
+                                width: 82px;
+                            }
+                        }
+                    }
+                    .message-profile__text {
+                        color: #fff;
+                        font-size: 1.4rem;
+                        line-height: 2;
+                        letter-spacing: 0.06em;
+                        margin-top: 2.4rem;
+                        @media (--sp) {
+                            margin-top: 1.6rem;
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
         }
     }
+    
 }
-
 .pagetop {
     background: none;
 }

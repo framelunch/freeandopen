@@ -1,4 +1,4 @@
-.adviser {
+.main .adviser {
     @media (--sp) {
         padding-bottom: 5.6rem;
     }
@@ -26,6 +26,9 @@
                 align-items: flex-start;
             }
             .adviser-card__image {
+                img {
+                    width: 100%;
+                }
                 @media (--not-sp) {
                     width: calc(230 / 900 * 100%);
                 }

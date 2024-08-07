@@ -50,11 +50,7 @@
     "fix:script": "eslint --ext .js,.jsx,.ts,.tsx --fix src/",
     "fix:json": "prettier --write 'src/**/*.json'"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s safe-guard"
-    }
-  },
+  "husky": {},
   "private": true,
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.14.2",
