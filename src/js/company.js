@@ -12,6 +12,17 @@ import '../components/top/animation/animation';
 class Main {
   onDOMContentLoaded = () => {
     notice.publish('init', []);
+
+    const headerFixed = $('.headerFixed');
+
+    $('.company__info dl dd a').each((_index, element) => {
+      $(element).on('click', () => {
+        const anchorId = $(element).data('anchor-id');
+        const target = $(`div[data-anchor="${anchorId}"]`);
+        const targetTop = $(target).offset().top - headerFixed.height();
+        $('html, body').animate({scrollTop: targetTop});
+      });
+    });
   };
 }
 

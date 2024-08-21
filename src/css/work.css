@@ -129,7 +129,8 @@
         }
     }
 
-    &.-work2 {
+    &.-work2,
+    &.-work3 {
         .client_detail--description {
             @media (--not-sp) {
                 display: flex;
@@ -146,14 +147,6 @@
                     margin-left: 0;
                     width: calc(252 / 550 * 100%);
                 }
-            }
-        }
-    }
-
-    &.-work3 {
-        .client_detail--text {
-            h3 {
-                margin-top: 0;
             }
         }
     }

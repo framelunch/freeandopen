@@ -24,7 +24,7 @@
                 sp: 'adviser_03_sp.jpg',
             },
             post: 'Adviser_03',
-            name: '高野一朗',
+            name: '高野 一朗',
             text: '株式会社ベイクルーズにて17年間、店舗スタッフから始まりマーチャンダイザーやEC事業責任者を経て、全社横断CRM事業の部署立上げと運営を7年ほど取組む。現在はファッションブランドやアパレル企業に向けて店舗スタッフとCRMの相乗効果を高める視点からプロデュースやコンサルティングを行ない、ソリューションコーディネーターとしても活動中。業種業態の枠を飛び越えた、あらゆる機会を創るopportunity creator。 また、2020年秋よりファッションに関わるクリエイターをマネジメントするエージェンシーを立上げ運営している。',
         },
     ]
@@ -41,7 +41,7 @@
     <div class="adviser__content">
       <div class="layout">
         <% advisers.forEach(function (value, key) { %>
-            <div class="adviser-card">
+            <div class="adviser-card" data-anchor="<%- value.post %>">
                 <div class="adviser-card__image">
                     <%- include('../../image/Picture.ejs', { image: {
                         pc: `${conf.assets.image}/${value.image.pc}`,
