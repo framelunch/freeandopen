@@ -82,6 +82,7 @@
                         display: block;
                         text-decoration: underline;
                         cursor: pointer;
+                        color: #2eaade;
                     }
                 }
                 &:not(:first-of-type) {
@@ -126,10 +127,18 @@
                         padding: 4rem 8rem;
                         position: relative;
                         h3 {
-                            font-size: 2.4rem;
-                            line-height: 1.6;
-                            @media (--sp) {
-                                font-size: 1.8rem;
+                            display: flex;
+                            flex-direction: column;
+                            span {
+                                font-size: 2.4rem;
+                                line-height: 1.6;
+                                font-weight: bold;
+                                @media (--sp) {
+                                    font-size: 2rem;
+                                }
+                                &:nth-of-type(2) {
+                                    text-align: right;
+                                }
                             }
                         }
                         p {
