@@ -73,7 +73,7 @@ exports.replace = {
 
 exports.view = {
   src: ['src/views/**/*.ejs', '!src/views/**/_*'],
-  watch: ['src/views/**/*.ejs'],
+  watch: ['src/views/**/*.ejs', 'src/components/**/*.ejs'],
 };
 
 const useScss = process.env.USE_SCSS === 'true';
