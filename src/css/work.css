@@ -594,62 +594,99 @@
     &_detail {
         background-color: #e74c3c;
         color: #fff;
-        padding: 4rem 8rem;
+        padding: 3.5rem 8rem 4rem;
         margin-top: 2.8rem;
         position: relative;
         @media (--sp) {
-            padding: 5rem 3rem;
+            padding: 4.75rem 3rem 5rem;
         }
-        &::before,
-        &::after {
-            content: "";
-            background-image: url('/work/common/image/voice_figure.png');
-            background-repeat: no-repeat;
-            background-size: 32px auto;
-            width: 32px;
-            height: 29px;
-            position: absolute;
-            @media (--sp) {
-                width: 22px;
-                height: 19px;
-                background-size: 22px auto;
-            }
-        }
-        &::before {
-            top: 1.5rem;
-            left: 3rem;
-            @media (--sp) {
-                top: 2rem;
-                left: 1.5rem;
-            }
-        }
-        &::after {
-            bottom: 1.5rem;
-            right: 3rem;
-            transform: scale(-1, -1);
-            @media (--sp) {
-                bottom: 2rem;
-                right: 1.5rem;
-            }
-        }
-        p {
+        > p {
+            position: relative;
             line-height: 2.375;
             letter-spacing: 0.1em;
             @media (--sp) {
                 font-size: 1.3rem;
                 line-height: 2.25;
             }
+            &::before,
+            &::after {
+                content: "";
+                background-image: url('/work/common/image/voice_figure.png');
+                background-repeat: no-repeat;
+                background-size: 32px auto;
+                width: 32px;
+                height: 29px;
+                position: absolute;
+                @media (--sp) {
+                    width: 22px;
+                    height: 19px;
+                    background-size: 22px auto;
+                }
+            }
+            &::before {
+                top: -1.5rem;
+                left: -5rem;
+                @media (--sp) {
+                    top: -2.25rem;
+                    left: -1.25rem;
+                }
+            }
+            &::after {
+                bottom: -1.5rem;
+                right: -5rem;
+                transform: scale(-1, -1);
+                @media (--sp) {
+                    bottom: -2.25rem;
+                    right: -1.25rem;
+                }
+            }
+        }
+    }
+    &_image {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        @media (--sp) {
+            margin-top: 3rem;
+        }
+        > p {
+            width: 122px;
+            min-width: 122px;
+            margin-right: 2rem;
+            text-align: center;
+            @media (--sp) {
+                width: 92px;
+                min-width: 92px;
+                margin-right: 1.5rem;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        > div {
+            width: 100%;
+            p {
+                line-height: 1.875;
+                letter-spacing: 0.175rem;
+                font-size: 1.2rem;
+                @media (--sp) {
+                    font-size: 1.1rem;
+                }
+                span {
+                    font-size: 2rem;
+                    @media (--sp) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
     &.-work2 {
         .voice_detail {
-            p {
+            > p {
                 span {
                     font-weight: 500;
                     display: block;
-                }
-                &:not(:first-of-type) {
-                    margin-top: 4rem;
                 }
             }
         }

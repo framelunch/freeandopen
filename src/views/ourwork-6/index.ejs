@@ -1,0 +1,164 @@
+<%
+  const conf = {
+    category: 'work',
+    title : 'Our Work 06｜【Filemaker開発】株式会社Freeandopen',
+    description : '株式会社Freeandopenが開発に携わった事例を紹介します。',
+    style: 'work.css',
+    script: 'work.js',
+    assets: {
+      commonImage: '/common/image',
+      image: '/work/work6/image'
+    }
+  };
+%>
+<%- include('../common/_head.ejs', { conf }) %>
+<%- include('../../components/header/header.ejs', { conf }) %>
+<main id="main" class="main" role="main">
+  <div class="client -work3">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Client</h2>
+        <span class="section-title-child">クライアント</span>
+      </div>
+      <div class="client_detail">
+        <img src="<%= conf.assets.commonImage %>/parco_logo.jpg" alt="Parco" />
+        <div class="client_detail--text">
+          <h3>株式会社パルコ</h3>
+          <span>商業デベロッパーとしての小売業</span>
+          <div class="client_detail--description">
+            <div class="client_detail--descriptionText">
+              <p>
+                パルコは、商業デベロッパーとして小売業と不動産業のハイブリッド型ビジネスモデルを構築。<br>全国16箇所のショッピングセンターPARCOや、創業当初より文化芸術の持つ力を信じ支援し、ともにつくってきた演劇、出版事業を中心に、音楽、映画、展覧会、ゲーム、コンテンツ事業を展開。
+              </p>
+              <a href="https://www.parco.co.jp/" target="_blank">https://www.parco.co.jp/</a>
+            </div>
+            <img src="<%= conf.assets.image %>/online-parco_logo.png" alt="online-parco" />
+          </div>
+        </div>
+      </div>
+      <h4 class="pagetitle">Work 06</h4>
+    </div>
+  </div>
+
+  <div class="system">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">System</h2>
+        <span class="section-title-child">対応システム</span>
+      </div>
+      <div class="system_detail">
+        <div class="system_detail--item supported">
+          <h3>対応システム</h3>
+          <ul>
+            <li>経理精算管理システム</li>
+          </ul>
+        </div>
+        <div class="system_detail--item collaboration">
+          <h3>外部連携</h3>
+          <ul>
+            <li>Google Cloud Platform</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="problem">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Problem</h2>
+        <span class="section-title-child">クライアントの課題</span>
+      </div>
+    </div>
+    <div class="problem_detail">
+      <div class="layout">
+        <div class="problem_detail--item">
+          <p>
+            パルコECのテナント精算がExcelによる手動集計であるため業務が属人化していた。
+          </p>
+          <div class="number">01</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            経理精算に関連する決済手段の拡充が困難であった。
+          </p>
+          <div class="number">02</div>
+        </div>
+        <div class="problem_detail--item">
+          <p>
+            売上拡大に伴い、CSVファイルのデータが増大し、Excelで開けなくなり、将来的なワークロードの増加懸念があった。
+          </p>
+          <div class="number">03</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="solution">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Solution</h2>
+        <span class="section-title-child">freeandopenのソリューション</span>
+      </div>
+    </div>
+    <div class="solution_detail">
+      <div class="layout">
+        <div class="before">
+          <h3>Before</h3>
+          <div class="solution_image">
+            <a href="<%= conf.assets.image %>/before_img_pc.png" target="_blank" class="-hidden-sp hover"><img src="<%= conf.assets.image %>/before_img_pc.png" alt="" /></a>
+            <a href="<%= conf.assets.image %>/before_img_sp.png" target="_blank" class="-hidden-pc"><img src="<%= conf.assets.image %>/before_img_sp.png" alt="" /></a>
+            <div class="solution_lens">
+              <img src="/work/common/image/zoom_btn.png" alt="">
+              （拡大ボタン）
+            </div>
+          </div>
+        </div>
+        <div class="after">
+          <h3>After</h3>
+          <div class="solution_image">
+            <a href="<%= conf.assets.image %>/after_img_pc.png" target="_blank" class="-hidden-sp hover"><img src="<%= conf.assets.image %>/after_img_pc.png" alt="" /></a>
+            <a href="<%= conf.assets.image %>/after_img_sp.png" target="_blank" class="-hidden-pc"><img src="<%= conf.assets.image %>/after_img_sp.png" alt="" /></a>
+            <div class="solution_lens">
+              <img src="/work/common/image/zoom_btn.png" alt="">
+              （拡大ボタン）
+            </div>
+          </div>
+          <p>
+            ECサイトリニューアルを機に、ECシステムからGoogleBigQuery（DWH）を通じてデータ連携し、運用フリーで毎月月初にFileMakerにて５種類の経理精算帳票を出力。これにより業務の属人化を解消し、支払方法も従来の２種類から５種類に増加し、利用者に多様な決済手段でECサイトを利用いただけるようになった。また、経理精算の業務時間を大幅に削減し、他業務に振り分けることで業務効率化を実現し、同時に精算金額のズレも是正することが可能となり、金銭的リスクも低減することに成功した。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="voice">
+    <div class="layout">
+      <div class="show-animation" data-animation="title">
+        <h2 class="section-title-sub">Voice</h2>
+        <span class="section-title-child">お客様の声</span>
+      </div>
+      <div class="voice_detail">
+        <p>
+          モールECサイトのリニューアルにあたり、属人化していたテナント精算業務のシステム化が最も困難な課題のひとつでした。Freeandopenさんのプロトタイプ＆アジャイル開発スタイルは、現場要望と構築システムのギャップを最小限にできるだけではなく、次々と発生する想定外事象にも迅速に対応いただけることが大きな強みであると実感しました。<br>
+          自由闊達な現場要望も嫌な顔せず真摯に耳を傾けていただけ、なんでも相談しやすい雰囲気を作っていただけるのもFreeandopenさんとお仕事をさせていただくうえでうれしい事のひとつです。
+        </p>
+        <div class="voice_image">
+          <p><img src="<%= conf.assets.image %>/voice_img.png" alt=""></p>
+          <div>
+            <p>株式会社パルコ<br>
+              オンラインビジネス部<br>
+              業務部長<span>　在田 正弘</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../../components/common/pagetop/pagetop.ejs', { conf }) %>
+  <%- include('../../components/work/contact/contact.ejs', { conf }) %>
+</main>
+
+<%- include('../../components/footer/footer.ejs', { conf }) %>
+<%- include('../common/_foot.ejs', { conf }) %>
