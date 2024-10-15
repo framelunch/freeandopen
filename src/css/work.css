@@ -594,11 +594,11 @@
     &_detail {
         background-color: #e74c3c;
         color: #fff;
-        padding: 3.5rem 8rem 4rem;
+        padding: 4rem 8rem;
         margin-top: 2.8rem;
         position: relative;
         @media (--sp) {
-            padding: 4.75rem 3rem 5rem;
+            padding: 5rem 3rem;
         }
         > p {
             position: relative;
@@ -645,7 +645,7 @@
     &_image {
         display: flex;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         @media (--sp) {
             margin-top: 3rem;
         }
